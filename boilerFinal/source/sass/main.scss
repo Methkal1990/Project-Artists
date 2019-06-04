@@ -1,0 +1,58 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// vendors
+
+
+// abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+
+// base 
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
+// components
+@import "components/subMenu";
+@import "components/video";
+@import "components/featuredImage";
+@import "components/zoominout";
+@import "components/gallerey";
+@import "components/mation-portrait";
+// layout
+@import "layout/navbar";
+@import "layout/header";
+
+// pages
+@import "pages/artist1";
+@import "pages/artist2";
+@import "pages/diala";
+@import "pages/abu-hajar";
+@import "pages/michaele";
+@import "pages/hamid";
+@import "pages/kefah";
+@import "pages/khaled";
+@import "pages/diana";
+@import "pages/maya";
+@import "pages/ismael";
+@import "pages/athrodeel";
+@import "pages/anwar";
+@import "pages/bassam";
+
+
+
+
+// themes
+
+// responsive
+@import "base/responsive";
+
+// test 
+
+
+
+

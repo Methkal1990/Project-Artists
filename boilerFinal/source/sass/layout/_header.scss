@@ -1,0 +1,100 @@
+.hero-section-box {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hero-section-box .hero-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8rem;
+}
+
+.hero-section-box .hero-section-content .hero-title {
+    font-size: 9rem;
+    animation-duration: 3s;
+    font-weight: 900;
+}
+
+.hero-section-box .hero-section-content .hero-art {
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.hero-section-box .hero-section-content .hero-quote {
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.hero-section-box .icon-box {
+    align-self: flex-end;
+    padding: 3px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.hero-section-box .icon-box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.social-media-share {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    z-index: 1000;
+}
+
+.social-media-share .nice-line {
+    width: 1px;
+    height: 20rem;
+    background: #fff;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.social-media-share a {
+    padding: 3px;
+}
+
+.social-media-share i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+div.text h2.text-inner{
+    font-size: 8rem;
+  }
+
+  .featured-episode-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.featured-episode-box .episode-number{
+    display: block;
+    font-size: 30rem;
+    color: #817d7daf;
+    text-shadow: 15px 15px 20px #000;
+}
+.featured-episode-box .episode-title{
+    display: block;
+    position: absolute;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 15px 15px 20px #333;
+}

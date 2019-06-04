@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Text Gradient Brand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+      }
+      h1 {
+        /*font family and size*/
+        font-family: "Open Sans";
+        color: rgba(0, 0, 0, 0.84);
+        fill: rgba(0, 0, 0, 0.84);
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 50px; /*this will effect the gradient text effect*/
+        letter-spacing: -0.42px;
+        font-style: normal;
+      }
+      h1:hover {
+        /* gradient text effect */
+        /* works only until 35px */
+        /* use it for hover mostly */
+        cursor: pointer;
+        background: linear-gradient(to right, #ee0979, #ff6a00);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello from COCO</h1>
+  </body>
+</html>

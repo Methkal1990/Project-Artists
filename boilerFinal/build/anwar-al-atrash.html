@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Anwar Al-Atrash</title>
+    <link rel="stylesheet" href="assets/css/shorthand/common.min.css" />
+    <link rel="stylesheet" href="assets/css/shorthand/story.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css/animate.css" />
+    <link rel="stylesheet" href="assets/js/animate-on-scroll/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      // smooth scrolling
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              },
+            );
+          } // End if
+        });
+      });
+    </script>
+    <style>
+    .item:nth-child(7) {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.item:nth-child(2){
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+.item:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+
+.item:nth-child(4){
+    grid-row: 3/4;
+    grid-column: 2 / 3;
+}
+.item:nth-child(6) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+.item:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+    </style>
+  </head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar-box">
+            <div class="navbar">
+              <a class="logo" href="#">L'art de sobreviure</a>
+              <div class="menu-icon-lines">
+                <div class="icon-line"></div>
+                <div class="icon-line"></div>
+                <div class="icon-line"></div>
+              </div>
+            </div>
+          </nav>
+          <!-- hero section -->
+          <section class="hero-section-box hero-section-box-13">
+            <div class="hero-section-content">
+              <h1 class="hero-title animated fadeInDown">ANWAR AL ATRASH</h1>
+              <h2 class="hero-art">Pintor</h2>
+              <p class="hero-quote">
+                    “Amb les meves obres vull que les persones canviïn els seus pensaments negatius”
+              </p>
+            </div>
+      
+            <div class="icon-box animated flash">
+              <a class="scroll-down-icon" href="#first"
+                ><i class="fa fa-angle-double-down fa-2x"></i
+              ></a>
+            </div>
+          </section>
+          <!-- social media buttons -->
+          <div class="social-media-share">
+            <div class="nice-line uiModBack"></div>
+            <a href="#"><i class="fab fa-facebook uiMod"></i></a>
+            <a href="#"><i class="fab fa-twitter uiMod"></i></a>
+            <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
+            <a href="#"><i class="fab fa-instagram uiMod"></i></a>
+          </div>
+          <!-- submenu -->
+          <nav id="subMenuNav" class="submenu animated">
+            <div class="left">
+              <div class="icon">
+                <i class="fas fa-home"></i>
+              </div>
+            </div>
+            <div class="middle">
+              <ul>
+                <li><a href="#first" class="sliding-link"><span class="episode-name">Evolució artística a l’exili</span><span class="eps-num">1</span></a></li>
+                <li><a href="#second" class="sliding-link"><span class="episode-name">Prejudicis</span><span class="eps-num">2</span></a></li>
+                <li>
+                  <a href="#third" class="sliding-link"><span class="episode-name">Una nova vida</span><span class="eps-num">3</span> </a>
+                </li>
+         
+              </ul>
+            </div>
+      
+            <div class="right">
+              <div class="sub-logo">
+                <a class="sub-logo-link" href="#"
+                  ><span>L'art de</span><br /><span>sobreviure</span></a
+                >
+              </div>
+            </div>
+          </nav>
+    <!-- episode 1 -->
+<!-- change the id to what suits the title of the section -->
+<div
+  id="first"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">01</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Evolució artística a l’exili</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+    <picture class="section-background-image text-over-media-background-image">
+      <!-- change the image -->
+      <img
+        src="assets/img/anwar-atrash/Foto2.jpg"
+        data-object-fit="cover"
+        data-autoscale-content-ratio="1.77777777778"
+      />
+    </picture>
+  </div>
+</div>
+
+<div
+                  id="scrollmation-background-57137"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-57137"
+                  data-scrollmation="background"
+                  data-viewport-height
+                  data-viewport-height-property="min-height"
+                >
+                  <div
+                    class="tiny-scrollmation"
+                    data-viewport-height
+                    data-viewport-height-scale="0.66"
+                  ></div>
+                  <style>
+                    .section-scrollmation-57137 .tiny-scrollmation {
+                      background-image: url(assets/img/anwar-atrash/Foto4.jpg);
+                      background-position: top right;
+                    }
+                  </style>
+  
+                  <div class="two-column-grid">
+                    <div class="column column-left main-column scrollmation-text">
+                      <div class="block text-block">
+                          
+
+    <p>
+        “No esperis que et rebin amb una catifa vermella” és una frase que l’Anwar Al Atrash, nascut a Damasc el 1979, ha sentit moltes vegades. Abans d’arribar a Alemanya, on encara viu, l’havia llegit a internet. La utilitzaven alguns alemanys quan comentaven l’arribada de refugiats al seu país. Una vegada, ja a Europa, la va sentir en una oficina d’immigració. Però va ser quan li va dir un altre refugiat -un amic que, com ell, havia patit els prejudicis i les dificultats de l’exili- que va pensar que havia de tractar aquesta situació a través del seu art. Així va néixer <em>Red Carpet</em> (‘catifa vermella’), una performance en què l’Anwar se situa davant d’una estora vermella, de peu, mentre recita un monòleg sobre els prejudicis que acompanyen aquesta expressió. 
+    </p>
+    <br>
+    <div class="block media-block media-block-image">
+            <div class="inline-media">
+              <div class="inline-image">
+                <img class="image" src="assets/img/anwar-atrash/Foto3.jpg" />
+              </div>
+            </div>
+          </div>
+    <br>
+    <!-- maybe some media -->
+    <p>
+        Aquest és només un dels exemples de l’evolució artística que ha experimentat l’Anwar des que va venir a Europa a finals del 2015. 
+    </p>
+    <br>
+    <p>
+        Treballant des dels 10 anys per ajudar la seva família després de la mort del seu pare, va aconseguir estudiar Belles Arts a la universitat. Malgrat això, va haver de combinar el seu treball com a artista amb feines en el món del disseny gràfic i de la producció audiovisual per poder sobreviure. Així, va acabar a Abu Dhabi com a freelance, des d’on va venir a Europa.
+    </p>
+    <!-- map -->
+    <br>
+    <div class="videoWrapper">
+            <iframe width="100%" height="576" src="https://maphub.net/embed/59233?button=0&panel=0" frameborder="0"></iframe>
+    </div>
+    <br>
+    <p>
+        A Síria, el seu art era molt més acadèmic, i no havia utilitzat el vídeo com a mitjà artístic, ni havia fet performances o instal·lacions. Segons explica, a les universitats del seu país s’ensenya art d’una manera clàssica, centrada en la pintura i l’escultura, i l’art contemporani no hi té cabuda. Assegura que “com a estudiant o com a artista, tu has de fer un esforç personal per apropar-te a aquest tipus d’art”. I això no vol dir que al panorama artístic de Síria no es poguessin trobar instal·lacions o performances, sinó que es feien de forma individual i alternativa i no des dels corrents artístics oficials. 
+    </p>
+    <br>
+    <p>
+        Alhora, també havia d’enfrontar-se a la manca de llibertat d’expressió, tant amb temes socials com polítics. De fet, l’Anwar recorda com quan va presentar el seu treball final a la universitat, un dels professors del jurat el va titllar de “malalt” per parlar de com es desenvolupa la sexualitat a l’Orient Mitjà. 
+    </p>
+    <br>
+    <p>
+        Per això, quan va arribar a Berlín va poder desenvolupar una faceta que no havia pogut explorar en profunditat anteriorment. Amb <em>Red Carpet</em>, per exemple, va utilitzar d’una manera artística el so, la performance i el treball conceptual. I actualment utilitza tota mena de mitjans artístics, que escull segons allò que vulgui expressar. 
+    </p>
+    <br>
+    <p>
+        Per l’Anwar, el seu art ha canviat molt perquè també ho ha fet la seva situació: ha hagut de marxar del seu país, després de viure la guerra, i s’ha trobat sent nouvingut rodejat d’una cultura i una escena artística noves. A Alemanya, considera que gaudeix de més llibertat d’expressió i que pot lluitar pels seus drets com a ésser humà, que pot fer sentir la seva veu. Alhora, però, ha patit racisme i prejudicis. S’ha sentit ben i mal rebut a la vegada. I tot això ha afectat la manera en què enfoca el seu art. 
+    </p>
+    <br>
+    <p>
+        Ara, l’Anwar utilitza el seu art per expressar allò que vol que els altres coneguin. Abans, pensava que li serviria com a teràpia. Durant els primers sis mesos de la revolució, no va saber com reaccionar, però després va començar a fer coses per ell mateix. A través de pintar les cases i la natura de la ciutat on havia viscut, explorava la seva relació amb aquest lloc, i se centrava en la possibilitat de tornar-la a sentir. Amb el temps, però, ha vist que l’art, quan es tracta d’aspectes tan personals, és una tasca molt dura, i no una teràpia. 
+    </p>
+    <!-- fotos galery -->
+    <br>
+
+</div>
+</div>
+</div>
+
+<div class="scrollmation-slides-wrapper">
+<div
+  class="scrollmation-slides scrollmation viewport-height"
+  data-scrollmation-slides
+>
+  <aside class="scrollmation-background-container">
+    <img
+      src="assets/img/anwar-atrash/Foto4.jpg"
+     
+      data-scrollmation-slide
+      
+      data-autoscale-anchor="right"
+    
+    />
+  </aside>
+</div>
+</div>
+</div>
+<br><br><br>
+<div class="gallery gallery-7">
+        <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/anwar-atrash/Gallery.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/anwar-atrash/Gallery.jpg"></a>
+        </div>
+        <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/anwar-atrash/Gallery2.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/anwar-atrash/Gallery2.jpg"></a>
+        </div>
+        <div class="item" data-lightbox="mygallery" data-title="medhat" style="background-image:url(assets/img/anwar-atrash/Gallery7.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="medhat" href="assets/img/anwar-atrash/Gallery7.jpg"></a>
+        </div>
+        <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/anwar-atrash/Gallery3.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/anwar-atrash/Gallery3.jpg"></a>
+        </div>
+        <div class="item" style="background-image:url(assets/img/anwar-atrash/Gallery4.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/anwar-atrash/Gallery4.jpg"></a>
+        </div>
+        <div class="item" data-lightbox="mygallery" data-title="medhat" style="background-image:url(assets/img/anwar-atrash/Gallery5.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="medhat" href="assets/img/anwar-atrash/Gallery5.jpg"></a>
+        </div>
+        <div class="item" data-lightbox="mygallery" data-title="medhat" style="background-image:url(assets/img/anwar-atrash/Gallery6.jpg)">
+          <a class="image-dist" data-lightbox="mygallery" data-title="medhat" href="assets/img/anwar-atrash/Gallery6.jpg"></a>
+        </div>
+      </div>
+<br><br><br>
+
+<!-- change the id to what suits the title of the section -->
+<div
+  id="second"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">02</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Prejudicis</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+    <picture class="section-background-image text-over-media-background-image">
+      <!-- change the image -->
+      <img
+        src="assets/img/anwar-atrash/Foto5.jpg"
+        data-object-fit="cover"
+        data-autoscale-content-ratio="1.77777777778"
+      />
+    </picture>
+  </div>
+</div>
+
+<div
+  id="scrollmation-background-57125"
+  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-57125"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-57125 .tiny-scrollmation {
+      background-image: url(assets/img/anwar-atrash/Foto6.jpg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-right main-column scrollmation-text">
+      <div class="block text-block">
+
+    <!-- episode 2 -->
+    <p>
+        El projecte principal de l’Anwar Al Atrash es titula <em>The Missing Vision</em> (‘La visió perduda’) i gira al voltant dels prejudicis. Sorgeix, com <em>Red Carpet</em>, de la seva experiència com a nouvingut a Alemanya. Quan més va patir, explica, va ser el primer any, perquè en arribar al país amb un visat el van enviar a Chemnitz, una ciutat de l’Estat de Saxònia. “Allà vaig patir prejudicis i també el fet de ser categoritzat, cosa que va suposar un gran xoc, perquè havia llegit als mitjans sobre això, però viure-ho és diferent. Així que durant un any em vaig sentir com en una presó, fins que vaig poder venir a Berlín”, relata. 
+    </p>
+    <!-- foto 6 -->
+    <br>
+    <p>
+        A la capital alemanya, l’Anwar ha trobat una ciutat molt més oberta i multicultural, tot i que assegura que ha vist racisme contra les persones negres. Allà, treballa fent tallers artístics “des del segon dia”, perquè no pot viure només del seu art. Els imparteix, però també els rep. I recorda especialment un taller sobre història de l’art que, diu, li’n va mostrar una nova faceta: “Després d’això, vaig començar a utilitzar nous llenguatges, noves maneres d’expressar el meu interior. Aquí vaig començar a fer les coses per una raó, per expressar-me com a persona.”
+    </p>
+    <br>
+    <p>
+        <em>The Missing Vision</em> és un projecte de passat, de present i de futur, un projecte a llarg termini. L’any 2018 va participar en una exposició al KulturMarcktHalle de Berlín amb una obra que combinava el dibuix d’un ull amb filtres i capes transparents en una piràmide també diàfana. El que pretenia era “distorsionar la visió, interrompre-la”, amb la voluntat de mostrar com les persones tenen filtres mentals que els impedeixen veure les coses tal com són. Els filtres, per l’Anwar, són els prejudicis que provenen de la cultura, de la por i de la propaganda política. Aquells que ell mateix ha patit i que, confessa, també tenia, perquè “quan veia una persona enfadada, sense conèixer-la, pensava que simplement era racista”. 
+    </p>
+    <!-- foto 7 -->
+    <br>
+    <div class="block media-block media-block-image">
+            <div class="inline-media">
+              <div class="inline-image">
+                <img class="image" src="assets/img/anwar-atrash/Foto7.jpg" />
+              </div>
+            </div>
+          </div>
+    <br>
+    <p>
+        Fer pensar el públic és un dels objectius principals de l’Anwar. Amb les seves creacions, pretén que les persones es replantegin la seva manera de pensar, o que reflexionin sobre les qüestions que ell tracta, com els prejudicis: “L’art no és només bellesa. I tot i que crec que no permet fer una revolució, penso que sí que permet fer prendre consciència. Amb les meves obres vull que les persones canviïn els seus pensaments negatius, però jo també ho faig, i justament per això treballo des d’una experiència personal, i no intentant descriure les experiències dels altres”. 
+    </p>
+    <br>
+
+</div>
+</div>
+</div>
+<div class="scrollmation-slides-wrapper">
+<div
+  class="scrollmation-slides scrollmation viewport-height"
+  data-scrollmation-slides
+>
+  <aside class="scrollmation-background-container">
+    <img
+      src="assets/img/anwar-atrash/Foto6.jpg"
+      data-scrollmation-slide
+      data-tablet-img="assets/img/anwar-atrash/Foto6.jpg"
+      data-object-fit="cover"
+    />
+  </aside>
+</div>
+</div>
+</div>
+
+<!-- change the id to what suits the title of the section -->
+<div
+  id="third"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">03</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Una nova vida</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+    <picture class="section-background-image text-over-media-background-image">
+      <!-- change the image -->
+      <img
+        src="assets/img/anwar-atrash/Foto8.jpg"
+        data-object-fit="cover"
+        data-autoscale-content-ratio="1.77777777778"
+      />
+    </picture>
+  </div>
+</div>
+<div id="text-86582" class="section section-text inner-column-centered ">
+        <div class="main-column">
+          <div class="block text-block">
+    <!-- episode 3 -->
+    <p>
+        L’Anwar rebutja que se’l consideri un “artista refugiat” i critica durament les galeries que utilitzen aquesta etiqueta per vendre, independentment que l’art que presenten sigui bo o no. “Soc un ésser humà. Sí, vaig venir aquí com a refugiat, però ja no ho soc: treballo, pago els meus impostos… aquesta és la meva ciutat”, assegura. A més, tampoc li agradaria ser anomenat “artista sirià”, perquè creu que la identitat és “quelcom problemàtic”, però admet que tothom vol saber la nacionalitat dels artistes, i ho accepta. 
+    </p>
+    <br>
+    <p>
+        A Europa, l’Anwar ha començat una nova vida, tant personal com artística. Aquí va néixer la seva segona filla i hi ha desenvolupat una segona etapa quant a l’art. La performance, la instal·lació, la creació audiovisual i les formes d’art contemporani en general han passat a formar part de les seves creacions, tot i que no ha abandonat la pintura. Des de la seva experiència personal expressa allò que sent i allò que vol que els altres coneguin. Però no s’atreveix a retratar la situació de Síria perquè considera que no pot abastar la complexitat del que ha passat al seu país: “Han passat vuit anys i encara no ho podria explicar”. 
+    </p>
+    <br><br><br><br>
+</div>
+</div>
+</div>
+
+
+    <script src="assets/js/shorthand/head.min.js"></script>
+    <script src="assets/js/shorthand/common.min.js"></script>
+    <script src="assets/js/shorthand/story.min.js"></script>
+    <script src="assets/js/animate-on-scroll/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

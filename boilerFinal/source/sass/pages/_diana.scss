@@ -1,0 +1,13 @@
+.hero-section-box-7 {
+    background: linear-gradient(40deg, #1d4757e0, #22309bbb),
+        url(../img/Diana-Abdulkarim/Foto1.jpg) top left/100%;
+
+}
+
+@media screen and (max-width:600px){
+    .hero-section-box-5 {
+        background: linear-gradient(40deg, #1d4757e0, #22309bbb),
+            url(../img/Diana-Abdulkarim/Foto1.jpg) top center/cover;
+    
+    }
+}

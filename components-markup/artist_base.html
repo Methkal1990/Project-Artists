@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>artist base</title>
+    <link rel="stylesheet" href="assets/css/shorthand/common.min.css" />
+    <link rel="stylesheet" href="assets/css/shorthand/story.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/animate.css/animate.css" />
+    <link rel="stylesheet" href="assets/js/animate-on-scroll/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      // smooth scrolling
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              },
+            );
+          } // End if
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar-box">
+      <div class="navbar">
+        <a class="logo" href="#">Project Artists</a>
+        <div class="menu-icon-lines">
+          <div class="icon-line"></div>
+          <div class="icon-line"></div>
+          <div class="icon-line"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section class="hero-section-box hero-section-box-1">
+      <div class="hero-section-content">
+        <h1 class="hero-title animated fadeInDown">Medhat AlDaabal</h1>
+        <h2 class="hero-art">Ballarí</h2>
+        <p class="hero-quote">"Ballo per dir coses que ningú pugui jutjar"</p>
+      </div>
+
+      <div class="icon-box animated flash">
+        <a class="scroll-down-icon" href="#"
+          ><i class="fa fa-angle-double-down fa-2x"></i
+        ></a>
+      </div>
+    </section>
+    <!-- social media buttons -->
+    <div class="social-media-share">
+      <div class="nice-line uiModBack"></div>
+      <a href="#"><i class="fab fa-facebook uiMod"></i></a>
+      <a href="#"><i class="fab fa-twitter uiMod"></i></a>
+      <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
+      <a href="#"><i class="fab fa-instagram uiMod"></i></a>
+    </div>
+    <!-- submenu -->
+    <nav id="subMenuNav" class="submenu animated">
+      <div class="left">
+        <div class="icon">
+          <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="middle">
+        <ul>
+          <li><a href="#first" class="sliding-link">Episode 1</a></li>
+          <li><a href="#second" class="sliding-link">Episode 2</a></li>
+          <li><a href="#third" class="sliding-link">Episode 3</a></li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <div class="sub-logo">
+          <a class="sub-logo-link" href="#"
+            ><span>Project</span><br /><span>Artists</span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+
+    
+    <script src="assets/js/shorthand/head.min.js"></script>
+    <script src="assets/js/shorthand/common.min.js"></script>
+    <script src="assets/js/shorthand/story.min.js"></script>
+    <script src="assets/js/animate-on-scroll/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

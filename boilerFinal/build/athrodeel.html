@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Athrodeel</title>
+    <link rel="stylesheet" href="assets/css/shorthand/common.min.css" />
+    <link rel="stylesheet" href="assets/css/shorthand/story.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/animate.css/animate.css" />
+    <link rel="stylesheet" href="assets/js/animate-on-scroll/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      // smooth scrolling
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              },
+            );
+          } // End if
+        });
+      });
+    </script>
+    <style>
+    #player {
+  height: 0;
+  width: 0
+}
+.speaker{
+  background-image: url(assets/mp3/audio.png);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  bottom: 18px;
+  left: 10px;
+  display: block;
+  z-index: 1000;
+}
+.speakerplay {
+  background-position: 0 0;
+}
+
+#player{
+  position: fixed;
+}
+    </style>
+  </head>
+<body>
+        <iframe src="assets/mp3/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+        <audio id="player" controls autoplay loop>
+  
+            <source src="assets/mp3/athrodeel.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+
+
+            <nav class="navbar-box">
+                    <div class="navbar">
+                      <a class="logo" href="#">L'art de sobreviure</a>
+                      <div class="menu-icon-lines">
+                        <div class="icon-line"></div>
+                        <div class="icon-line"></div>
+                        <div class="icon-line"></div>
+                      </div>
+                    </div>
+                  </nav>
+                  <!-- hero section -->
+                  <section class="hero-section-box hero-section-box-12">
+                    <div class="hero-section-content">
+                      <h1 class="hero-title animated fadeInDown">Athrodeel</h1>
+                      <h2 class="hero-art">Grup de música</h2>
+                      <p class="hero-quote">“Volem agafar la pau d’aquí i portar-la a Síria”</p>
+                    </div>
+              
+                    <div class="icon-box animated flash">
+                      <a class="scroll-down-icon" href="#first"
+                        ><i class="fa fa-angle-double-down fa-2x"></i
+                      ></a>
+                    </div>
+                  </section>
+                  <!-- social media buttons -->
+                  <div class="social-media-share">
+                    <div class="nice-line uiModBack"></div>
+                    <a href="#"><i class="fab fa-facebook uiMod"></i></a>
+                    <a href="#"><i class="fab fa-twitter uiMod"></i></a>
+                    <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
+                    <a href="#"><i class="fab fa-instagram uiMod"></i></a>
+                  </div>
+                  <!-- submenu -->
+                  <nav id="subMenuNav" class="submenu animated">
+                    <div class="left">
+                      <!-- <div class="icon">
+                        <i class="fas fa-home"></i>
+                      </div> -->
+                    </div>
+                    <div class="middle">
+                      <ul>
+                          <li><a href="#first" class="sliding-link"> <span class="episode-name">La meva terra</span><span class="eps-num">1</span></a></li>
+                          <li><a href="#second" class="sliding-link"><span class="episode-name">Sons de la Mediterrània</span><span class="eps-num">2</span></a></li>
+                          <li><a href="#third" class="sliding-link"> <span class="episode-name">Converses musicals</span><span class="eps-num">3</span></a></li>
+                          <li><a href="#fourth" class="sliding-link"> <span class="episode-name">Nous camins</span><span class="eps-num">4</span></a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="right">
+                      <div class="sub-logo">
+                        <a class="sub-logo-link" href="#"
+                        ><span>L'art de</span><br /><span>sobreviure</span></a
+                      >
+                      </div>
+                    </div>
+                  </nav>
+              
+                  <!-- audio background -->
+                  <div class="speaker speakerplay"></div>
+                  
+
+    <!-- episode 1 -->
+    <!-- change the id to what suits the title of the section -->
+<div
+id="first"
+class="section section-text-over-media section-text-over-image section-text-over-media-106239 has-text viewport-height"
+>
+<div class="text text-over-media-inner center center x-small">
+  <div class="featured-episode-box">
+    <!-- you can change the content and number to what suits you -->
+    <span class="episode-number">01</span>
+    <span
+      class="episode-title"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      >La meva terra</span
+    >
+  </div>
+</div>
+
+<div class="background-overlay"></div>
+
+<div class="section-background section-background-fixed">
+  <video autoplay muted loop class="myVideo">
+    <!-- change the video -->
+    <source src="assets/mp4/athrodeel.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+</div>
+
+<div
+  id="scrollmation-background-57125"
+  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-57125"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-57125 .tiny-scrollmation {
+      background-image: url(assets/img/Athrodeel/Foto2.jpg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-right main-column scrollmation-text">
+      <div class="block text-block">
+
+    <p>
+        L’idioma siríac és un antic dialecte de l’arameu que va aparèixer al segle I d.C. a la ciutat d’Edessa, situada a la frontera entre Turquia i Síria. Amb el pas del temps es va estendre fins a convertir-se en la llengua literària de tot l’Orient Mitjà, fins que al segle IX va ser desbancada per l’àrab clàssic, que havia entrat a la regió amb la invasió musulmana. El seu rastre, però, no es va esvair, i encara avui és la llengua sagrada de diverses confessions cristianes orientals.
+    </p>
+    <br>
+    <p>
+        Es tracta d’un dels llenguatges escrits més antics de Síria. En siríac, Athrodeel vol dir ‘la meva terra’. Amb aquest nom s’identifica el duet de músics format per Ahmad Diab (guitarra) i Aseel Masoud (veu), una parella d’artistes sirians que viuen a Barcelona.  
+    </p>
+    <br>
+    <p>
+        Amb la seva música, l’Ahmad i l’Aseel volen transmetre l’enorme riquesa cultural del seu país: “Tothom creu que Síria és el país de la guerra, i pensen “Oh, pobrets” -és queixa l’Ahmad-. Però nosaltres no som “pobrets”, podem fer moltes altres coses”. El guitarrista, a més, defensa que Síria és un terra de moltes cultures, no només l’aràbiga, que va ser “l’última en arribar”. Per això van escollir una paraula siríaca com a nom del grup: emprant un llenguatge tan antic, volen demostrar que la seva terra és molt més del que aparenta.
+    </p>
+    <br>
+    <p>
+        En aquest sentit, l’Aseel comenta que Síria és una terra “plena de recursos, d’art, de bellesa, de relacions socials i famílies”. Per ella, presentar tot això a l’estranger és un deure, i per això utilitza la música, un llenguatge que “arriba al cor” i pot ser gaudit per tothom sense la necessitat de tenir un idioma en comú. 
+    </p>
+    <!-- video -->
+    <br>
+    <div class="videoWrapper">
+            <!-- your iframe here -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BqH2oHtO9iY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+    <br>
+    <p>
+            El cant sempre ha format part de la vida de l’Aseel. Nascuda a Swaida, amb 5 anys ja cantava damunt dels escenaris. “Per mi, la música és una passió i un recurs d’energia en la meva vida diària que em permet fer qualsevol altra cosa”, explica. També va intentar tocar el piano i la guitarra, però al final va decidir que volia consagrar-se a l’instrument de la veu. Per això, ha estudiat cant àrab, cant clàssic, i des del 2009 també està en el món de l’òpera. Amb Athrodeel, l’Aseel vol combinar totes aquestes influències “i fer noves versions de la música cultural però d’una manera més moderna, amb guitarra i veu”. 
+    </p>
+    <br>
+
+</div>
+</div>
+</div>
+<div class="scrollmation-slides-wrapper">
+<div
+  class="scrollmation-slides scrollmation viewport-height"
+  data-scrollmation-slides
+>
+  <aside class="scrollmation-background-container">
+    <img
+      src="assets/img/Athrodeel/Foto2.jpg"
+      data-scrollmation-slide
+      data-tablet-img="assets/img/Athrodeel/Foto2.jpg"
+      data-object-fit="cover"
+    />
+  </aside>
+</div>
+</div>
+</div>
+<div id="text-86582" class="section section-text inner-column-centered ">
+        <div class="main-column">
+          <div class="block text-block">
+    <p>
+        L’Ahmad, per la seva part, va néixer a Damasc, i als 7 anys ja va començar a estudiar guitarra. El seu somni era venir a Espanya per aprendre la música flamenca, “el millor estil per a la guitarra”, perquè li dona una llibertat que trobava a faltar a les seves classes al conservatori: “Pels clàssics la partitura és sagrada i no pots canviar una nota, però el flamenc és una música molt oberta, pots tocar el que vulguis, pots improvisar”. A ell no li interessava interpretar a la perfecció una peça de Vivaldi o de Beethoven, sinó deixar-se guiar per la inspiració o per l’estat d’ànim del moment i així trobar nous camins que s’allunyessin de la melodia original.
+    </p>
+    <br>
+    <p>
+        En canvi, al conservatori el seu professor no li deixava ni asseure’s amb la guitarra a sobre d’una cama, que és la postura habitual dels músics flamencs. Si tocava una sola nota fora de lloc, el professor li interrompia dient que allò no estava escrit. Per l’Ahmad, aquest tipus d’aprenentatge li tallava les ales. 
+    </p>
+    <br>
+    <p>
+        “Això també és cultural perquè els músics orientals tenen més facilitat per improvisar”, apunta l’Aseel. Tal com explica, la música tradicional àrab està formada pels modes melòdics anomenats <em>maqamat</em>. Amb origen a l’Antiga Grècia, els <em>maqamat</em> aporten una sèrie de tonalitats i ritmes que formen una base melòdica sobre la qual el músic pot improvisar amb total llibertat.
+    </p>
+    <br>
+    <p>
+        Cada <em>maqam</em>, a més, està relacionat amb un estat d’ànim diferent: el <em>Hijaz</em>, per exemple, s’associa a un estat d’ànim espiritual, més proper a Déu, mentre que el <em>Bayati</em> transmet vitalitat, el <em>Saba</em> tristesa i dolor, i així successivament. Per l’Aseel, aquest sistema dona molta llibertat per tocar “la teva música, la teva ànima, les teves idees”, i genera un gran contrast amb la rigidesa típica de la música clàssica: “Per nosaltres la música no és una cosa estructurada, sinó que és un llenguatge per representar el teu estat d’ànim i les teves emocions”, afirma la cantant.
+    </p>
+    
+
+</div>
+</div>
+</div>
+<br>
+<br><br><br><br>
+    <!-- genially -->
+    <div style="width: 80%;margin:0 auto;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0; display: flex;justify-content: center;align-items: center;"><iframe frameborder="0" width="1200px" height="675px" style="position: absolute; top: 0; left: 0; width: 100%; height: 80%;" src="https://view.genial.ly/5cefcb50e4094f0f52df3c5f" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+    
+    <div id="text-86582" class="section section-text inner-column-centered ">
+            <div class="main-column">
+              <div class="block text-block">
+    <p>
+        L’Ahmad reconeix la importància d’estudiar música clàssica, però hi veu una gran mancança: “No pots tocar durant 50 anys la mateixa música de la mateixa manera, és molt avorrit”. Assegura que per escoltar <em>Les Quatre Estacions</em> de Vivaldi no li cal anar a un concert, perquè amb YouTube ja li és suficient. Si va a un concert és perquè vol descobrir alguna cosa nova.
+    </p>
+    <br>
+    <p>
+        L’Aseel és més comprensiva. Creu que escoltar música en viu sempre és una “experiència”, siguin peces clàssiques o fruits de la improvisació. En aquest sentit, els dos músics estan en desacord i discuteixen amigablement sobre el tema enmig de l’entrevista. Són matrimoni des de fa quatre anys, però la seva relació sentimental mai ha afectat Athrodeel. Al contrari, ha consolidat el projecte i l’ha fet més fort.
+    </p>
+    <br>
+</div>
+</div>
+</div>
+
+    <!-- episode 2 -->
+
+<!-- change the id to what suits the title of the section -->
+<div
+  id="second"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">02</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Sons de la Mediterrània</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+    <picture class="section-background-image text-over-media-background-image">
+      <!-- change the image -->
+      <img
+        src="assets/img/Athrodeel/Foto1-1.jpg"
+        data-object-fit="cover"
+        data-autoscale-content-ratio="1.77777777778"
+      />
+    </picture>
+  </div>
+</div>
+
+
+
+
+    <div
+  id="scrollmation-background-57125"
+  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-57125"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-57125 .tiny-scrollmation {
+      background-image: url(assets/img/Athrodeel/Foto3-1.jpg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-right main-column scrollmation-text">
+      <div class="block text-block">
+    <p>
+        L’Aseel i l’Ahmad coneixen la música àrab i la clàssica occidental perquè a Síria sempre s’han ensenyat les dues. Segons el duet, l’escena musical siriana abans de la guerra era molt rica i variada. A Damasc existia un conservatori clàssic i un d’oriental, amb molts alumnes i professors d’arreu del món, especialment de Rússia i Armènia. També era molt típica l’organització de “dies culturals” a les dependències de les ambaixades, on es realitzaven concerts internacionals amb bandes sirianes i estrangeres. “Va venir Julio Iglesias i bandes de tot el món, del Brasil, dels Estats Units, de França…”, assegura l’Ahmad amb orgull. 
+    </p>
+    <br>
+    <p>
+        En aquella època, tanmateix, cap dels dos es dedicava professionalment a la música. L’Ahmad estudiava Relacions Internacionals a la Universitat de Damasc i l’Aseel, per la seva part, es formava per ser metgessa. Els dos es van conèixer a la universitat, concretament a l’equip de bàsquet: ella era jugadora i ell n’era l’entrenador. Va ser llavors quan van començar a ser parella i van decidir muntar una banda musical mentre estudiaven, un projecte que va durar set anys.
+    </p>
+    <br>
+    <p>
+        Per ells, la censura del règim d’Assad no afectava l’esfera musical. “Mai vam tenir aquest tipus de problemes -comenta l’Aseel-. Ara els mitjans tenen l’interès d’ensenyar a la resta del món que el problema de Síria és la dictadura i el govern contra el poble, però el problema és molt més gran”. En aquest sentit, l’esclat de la revolució, lluny d’aportar esperança, la va fer recelar. “Per nosaltres va ser tan sobtat, tan estrany i poc comprensible... -recorda l’Aseel-. No vaig tenir gens de ganes de participar-hi perquè no entenia el perquè”.  
+    </p>
+    <br>
+    <p>
+        L’Ahmad tampoc va voler involucrar-se en la revolució perquè, segons explica, de seguida es va associar amb la religió islàmica: “Jo crec en Déu, però la política és una cosa i la religió és una altra, per a la teva casa i la teva família”, afirma el guitarrista. Ell no s’animava a anar a les manifestacions perquè veia que tots els assistents “sortien al carrer cada divendres després d’anar a la mesquita”.  
+    </p>
+    <br>
+    <p>
+        Això no vol dir que fossin partidaris del règim. L’Ahmad reconeix que el país necessitava un canvi a gran escala, i que no era normal que la petita elit política dels Assad hagués concentrat el poder des de feia més de 40 anys. Amb tot, a ell no li interessa tant quin president estigui en el govern, sinó simplement que el seu país “vagi bé”. I quan es van produir les primeres víctimes mortals després de la revolució, l’Ahmad va pensar que les morts no valien la pena: “Vaig perdre nou amics propers. Vull canvi però no vull sang, no vull que ningú mori”.
+    </p>
+    <br>
+    <!-- foto4.1 -->
+    <div class="block media-block media-block-image">
+            <div class="inline-media">
+              <div class="inline-image">
+                <img class="image" src="assets/img/Athrodeel/Foto4-1.jpg" />
+              </div>
+          
+              
+            </div>
+          </div>
+          
+    <br>
+    <p>
+        Amb això en ment, l’any 2012 l’Ahmad va decidir marxar de Síria per continuar els seus estudis. La seva primera intenció va ser anar a Andalusia, on estaven les millors escoles de flamenc, però com que no sabia parlar castellà, va decidir venir a Barcelona, on sí que hi havia escoles de música en anglès. Primer, però, el guitarrista es va matricular en un màster d’Administració i Direcció d’Empreses.
+    </p>
+    <br>
+    <p>
+        L’Ahmad també va escollir Barcelona per ser una ciutat mediterrània. Ell mateix reconeix que no podria viure a països com Dinamarca o Alemanya, on “sempre fa fred i la gent és freda”. Però la Ciutat Comtal és una experiència ben diferent: “Barcelona és molt viva i hi ha moltes coses, per mi Barcelona mai acaba -explica el guitarrista amb un somriure-. Hi ha molts estrangers i cada persona porta la seva cultura. Sempre hi ha coses per aprendre”.
+    </p>
+    <!-- foto 4 -->
+    <br>
+    <div class="block media-block media-block-image">
+            <div class="inline-media">
+              <div class="inline-image">
+                <img class="image" src="assets/img/Athrodeel/Foto4.jpg" />
+              </div>
+          
+              
+            </div>
+          </div>
+    <br>
+    <p>
+        Un any després, el 2013, l’Aseel va graduar-se en Medicina General a Síria, i va ser llavors quan va decidir seguir-lo a Barcelona per viure amb ell, també amb la intenció de continuar els seus estudis. L’adaptació va ser instantània: “Catalunya, com qualsevol país mediterrani, és una cultura tan familiar per nosaltres que no ens va costar gens adaptar-nos -comenta la cantant-. Encara que no parlis l’idioma, la gent és tan amable que pot ajudar-te en qualsevol cosa”. 
+    </p>
+    <br>
+    <p>
+        Però malgrat aquesta facilitat, a l’Aseel la va sorprendre una cosa dels catalans: quan deia que era siriana, molta gent li preguntava per què no portava el vel islàmic. “Al principi em va semblar molt estrany -recorda l’artista- Per què m’estaven preguntant allò? Per mi era molt natural”. Finalment va arribar a la conclusió que la culpa d’aquest estereotip no era de la gent, era culpa “dels mitjans i la premsa de cada país, que transmeten una imatge falsa”. 
+    </p>
+    <br>
+    <p>
+        Per això, l’Aseel sent que té la “responsabilitat” de mostrar com és Síria de debò, un país ple de cultures i de religions que van més enllà de l’Islam. “Fins i tot hi ha moltes noies musulmanes que no porten mocador perquè segueixen un islam més moderat”, comenta. Per ella, la clau de Síria és precisament la seva diversitat cultural: “Per això la música de Síria és tan variada i oberta. Quan l’escoltes et dona una sensació familiar, i pots fer-te-la teva”.
+    </p>
+    <br>
+    <p>
+        L’Ahmad confessa que li fa molt de mal que els barcelonins només els vegin com a refugiats. “Nosaltres no som refugiats, jo pago els meus impostos, treballem i vivim aquí i ens agrada molt aquest país”, assenyala el guitarrista. Actualment, ell està treballant en un restaurant turístic proper a la Sagrada Família, i l’Aseel exerceix com a metgessa a l’Hospital del Mar, a més d’estudiar un màster en Musicoteràpia.
+    </p>
+    <br>
+</div>
+</div>
+</div>
+<div class="scrollmation-slides-wrapper">
+<div
+  class="scrollmation-slides scrollmation viewport-height"
+  data-scrollmation-slides
+>
+  <aside class="scrollmation-background-container">
+    <img
+      src="assets/img/Athrodeel/Foto3-1.jpg"
+      data-scrollmation-slide
+      data-tablet-img="assets/img/Athrodeel/Foto3-1.jpg"
+      data-object-fit="cover"
+    />
+  </aside>
+</div>
+</div>
+</div>
+
+    <!-- episode 3 -->
+
+
+<!-- change the id to what suits the title of the section -->
+<div
+  id="third"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">03</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Converses musicals</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+        <video autoplay muted loop class="myVideo" height="100vh">
+                <!-- change the video -->
+                <source src="assets/mp4/athrodeel2.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+  </div>
+</div>
+
+<div
+  id="scrollmation-background-57125"
+  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-57125"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-57125 .tiny-scrollmation {
+      background-image: url(assets/img/Athrodeel/Foto5.jpg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-right main-column scrollmation-text">
+      <div class="block text-block">
+
+
+    <p>
+        La feina diària i els estudis són molt importants en les vides de l’Ahmad i l’Aseel, però la seva faceta musical continua sent essencial. En arribar a Barcelona, els dos es van apuntar al Conservatori Municipal, on de seguida van conèixer altres músics i van experimentar amb nous estils. L’Aseel explica que el conservatori els va proporcionar “molts contactes” i “confiança” per adaptar-se en la nova societat.
+    </p>
+    <br>
+    <p>
+        L’Ahmad estava decidit a aprendre la música flamenca, i amb aquest objectiu es va apuntar a classes particulars amb un professor de Cadis. Però aquestes lliçons no el van satisfer, perquè la seva forma d’ensenyar era simplement tocar la guitarra i fer “copiar” als alumnes els seus moviments de forma mecànica. Aquesta forma d’aprenentatge, diu l’Ahmad, és la pròpia dels antics músics flamencs gitanos, que “toquen molt bé però no saben el que fan, no coneixen els acords o les harmonies, simplement toquen”. Però a ell això no li va funcionar: “Per aprendre haig d’entendre el que faig i després posar la meva personalitat”, explica el guitarrista. 
+    </p>
+    <br>
+    <p>
+        Per això l’Ahmad va trobar un nou professor, Manuel Granados, del Conservatori Superior del Liceu, l’únic que ha teoritzat els acords flamencs en un llibre, <em>Estudio Técnico de la Guitarra Flamenca</em>. Gràcies a ell, l’Ahmad va poder conèixer amb profunditat l’estil que l’havia atret des de feia tant de temps. 
+    </p>
+    <br>
+    <p>
+        Això el va portar a descobrir moltes similituds entre el flamenc i la música tradicional àrab: “Per exemple, el mode <em>Hijaz</em> s’assembla molt a la bulería, i la barreja entre els dos és molt xula”, afirma amb alegria. La síntesi entre els dos estils els va conduir, a ell i a l’Aseel, a un projecte més ambiciós: la creació del grup Love in Syria ('Amor a Síria').
+    </p>
+    <!-- video -->
+    <br>
+    <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UkEkuFArllc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    
+    <p>
+        Love in Syria és un conjunt format per 16 músics dirigits per l’Ahmad i l’Aseel. Set són sirians que viuen arreu d’Europa, i la resta són companys i companyes del Conservatori Municipal. Es tracta, per tant, d’un equip internacional que demostra que la cultura siriana “és tan oberta -diu l’Aseel- que pot compartir moltes coses amb altres cultures i altres músiques, i pot tocar per a tothom”. 
+    </p>
+    <br>
+    <p>
+        En els seus concerts, el grup presenta al públic instruments tradicionals de la música siriana, com el tambor o el <em>qanun</em>, l’arpa oriental, un instrument horitzontal que el músic ha de tocar assegut perquè es col·loca sobre els genolls. Love in Syria combina aquest component més tradicional amb ritmes de jazz o blues a piano, guitarres flamenques i també amb el so clàssic dels violins i els violoncels. 
+    </p>
+    <!-- video -->
+    <br>
+    <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hsZ1IOVxXwU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <p>
+        Sent fidels a l’herència oriental de l’Aseel i l’Ahmad, la improvisació té un paper importantíssim en els concerts de Love in Syria. Sempre toquen amb una estructura preestablerta, però les seves partitures tenen molts espais en blanc que cada músic pot omplir amb la màxima llibertat. 
+    </p>
+    <br>
+    <p>
+        Per això els seus assaigs mai són iguals: els músics es deixen guiar per la inspiració i les sensacions del moment, creant melodies espontànies que es corresponen amb els seus estats d’ànim. “És com un dibuix -explica l’Aseel-. Nosaltres necessitem una estructura, un paper sobre el qual dibuixar, però després cada músic n’escull els colors”. 
+    </p>
+    <br>
+    <p>
+        Una de les tècniques d’improvisació que més utilitzen és l’anomenada “conversa musical”, en què un músic interpreta una petita frase o “melodia de pregunta” que després reprèn un altre instrument. Aquest segon finalitza la frase amb una “melodia de resposta”.
+    </p>
+    <br>
+    <!-- video -->
+    <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9nuk-KrX5f8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <p>
+        La “conversa musical” no només és pròpia de la música àrab, sinó que també es troba present en un gran nombre de tradicions musicals arreu del món, perquè imita la mateixa conversa humana, la forma natural que tenim de comunicar-nos. 
+    </p>
+    <br>
+    <p>
+        La comunicació, de fet, és per l’Ahmad un component fonamental en els seus concerts: “Jo mai toco amb partitura perquè necessito mirar a la resta de músics, haig de veure les seves emocions, parlar-los i contestar-los”. D’aquesta manera, l’escenari està “viu”, i tots aquests sentiments poden ser transmesos al públic.
+    </p>
+    <br>
+    <p>
+        L’Aseel no improvisa les cançons que canta. Ella té un compendi de temes tradicionals escrits, però després fa “una recomposició de cadascun”. Durant els concerts, a més, porta un vestit blanc típic de Síria, amb brodats daurats confeccionats a Damasc. Per ella, el vestuari també és una forma de representar la cultura del seu país més enllà de la guerra, que és l’objectiu principal del grup: “La riquesa cultural és la nostra única cosa fixa -explica l’Aseel-. No hi ha cap guerra que pugui durar tota la vida i, quan acabi, totes aquestes coses continuaran allà. Per això a través de la nostra música volem presentar aquest costat del país”.
+    </p>
+    <br>
+    <p>
+        El projecte, de fet, es diu Love in Syria perquè la parella pretén demostrar que a Síria també hi ha molt d’amor, no només guerra. Com diu l’Ahmad, repetint el lema del grup, el que volen és “canviar el so de les armes pel so de la música”.
+    </p>
+    <br>
+</div>
+</div>
+</div>
+<div class="scrollmation-slides-wrapper">
+<div
+  class="scrollmation-slides scrollmation viewport-height"
+  data-scrollmation-slides
+>
+  <aside class="scrollmation-background-container">
+    <img
+      src="assets/img/Athrodeel/Foto5.jpg"
+      data-scrollmation-slide
+      data-tablet-img="assets/img/Athrodeel/Foto5.jpg"
+      data-object-fit="cover"
+    />
+  </aside>
+</div>
+</div>
+</div>
+
+    <!-- Episode 4 -->
+
+<!-- change the id to what suits the title of the section -->
+<div
+  id="fourth"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">04</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Nous camins</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+    <picture class="section-background-image text-over-media-background-image">
+      <!-- change the image -->
+      <img
+        src="assets/img/Athrodeel/Foto6.jpg"
+        data-object-fit="cover"
+        data-autoscale-content-ratio="1.77777777778"
+      />
+    </picture>
+  </div>
+</div>
+
+<div
+                  id="scrollmation-background-57137"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-57137"
+                  data-scrollmation="background"
+                  data-viewport-height
+                  data-viewport-height-property="min-height"
+                >
+                  <div
+                    class="tiny-scrollmation"
+                    data-viewport-height
+                    data-viewport-height-scale="0.66"
+                  ></div>
+                  <style>
+                    .section-scrollmation-57137 .tiny-scrollmation {
+                      background-image: url(assets/img/Athrodeel/Foto7.jpg);
+                      background-position: top right;
+                    }
+                  </style>
+  
+                  <div class="two-column-grid">
+                    <div class="column column-left main-column scrollmation-text">
+                      <div class="block text-block">
+
+    <p>
+        Fins ara, Love in Syria ha ofert dos concerts anuals al Liceu. Ambdós van tenir un públic d’unes 500 persones, cosa que omple de satisfacció a la parella de músics. Saben que el seu missatge no acabarà amb la guerra, però ells continuen lluitant per mostrar una imatge més benigna de la seva terra.
+    </p>
+    <br>
+    <p>
+        Ara, Athrodeel està preparant un nou projecte, <em>Records d’Andalusia</em>, tres grans concerts en companyia de músics flamencs que realitzaran aquest estiu a Síria, al Gran Teatre de Damasc. La seva intenció, diu l’Ahmad, és “agafar la pau d’aquí i portar-la allà”.
+    </p>
+    <br>
+    <p>
+        Aquesta no serà la primera vegada que tornen a Síria després de marxar a viure a Barcelona. L’Aseel, per exemple, ha anat ja quatre vegades a passar les vacances d’estiu. “Hi ha guerra al país, però als mitjans no els interessa ensenyar que hi ha ciutats tranquil·les”, denuncia. En aquest sentit, ella creu que la situació està millorant a poc a poc, i que la joventut siriana “és capaç d’adaptar-se a qualsevol situació, perillosa o no”.
+    </p>
+    <br>
+    <p>
+        Considerant la seva pròpia experiència, l’Aseel ho té clar: “Si tens un somni i pots organitzar-te una mica, pots aconseguir-lo encara que hi hagi guerra o foc en el teu trajecte.” En aquest cas, “només has de desviar-te una mica del camí per poder arribar-hi”. 
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+</div>
+</div>
+
+<div class="scrollmation-slides-wrapper">
+<div
+  class="scrollmation-slides scrollmation viewport-height"
+  data-scrollmation-slides
+>
+  <aside class="scrollmation-background-container">
+    <img
+      src="assets/img/Athrodeel/Foto7.jpg"
+     
+      data-scrollmation-slide
+      
+      data-autoscale-anchor="right"
+    
+    />
+  </aside>
+</div>
+</div>
+</div>
+
+    <script src="assets/js/shorthand/head.min.js"></script>
+    <script src="assets/js/shorthand/common.min.js"></script>
+    <script src="assets/js/shorthand/story.min.js"></script>
+    <script src="assets/js/animate-on-scroll/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+    <script>
+    // background audio control
+
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

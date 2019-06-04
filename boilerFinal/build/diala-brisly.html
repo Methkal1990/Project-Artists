@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Diala Brisly</title>
+    <link rel="stylesheet" href="assets/css/shorthand/common.min.css" />
+    <link rel="stylesheet" href="assets/css/shorthand/story.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css/animate.css" />
+    <link rel="stylesheet" href="assets/js/animate-on-scroll/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      // smooth scrolling
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              },
+            );
+          } // End if
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar-box">
+      <div class="navbar">
+        <a class="logo" href="#">L'art de sobreviure</a>
+        <div class="menu-icon-lines">
+          <div class="icon-line"></div>
+          <div class="icon-line"></div>
+          <div class="icon-line"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section class="hero-section-box hero-section-box-3">
+      <div class="hero-section-content">
+        <h1 class="hero-title animated fadeInDown">Diala Brisly</h1>
+        <h2 class="hero-art">Dibuixant</h2>
+        <p class="hero-quote">
+          “L’art és la meva vida. Si deixés de dibuixar, no sé què faria”
+        </p>
+      </div>
+
+      <div class="icon-box animated flash">
+        <a class="scroll-down-icon" href="#first"
+          ><i class="fa fa-angle-double-down fa-2x"></i
+        ></a>
+      </div>
+    </section>
+    <!-- social media buttons -->
+    <div class="social-media-share">
+      <div class="nice-line uiModBack"></div>
+      <a href="#"><i class="fab fa-facebook uiMod"></i></a>
+      <a href="#"><i class="fab fa-twitter uiMod"></i></a>
+      <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
+      <a href="#"><i class="fab fa-instagram uiMod"></i></a>
+    </div>
+    <!-- submenu -->
+    <nav id="subMenuNav" class="submenu animated">
+      <div class="left">
+        <div class="icon">
+          <i class="fas fa-home"></i>
+        </div>
+      </div>
+      <div class="middle">
+        <ul>
+          <li><a href="#first" class="sliding-link"><span class="episode-name">Llar</span><span class="eps-num">1</span></a></li>
+          <li><a href="#second" class="sliding-link"><span class="episode-name">Pèrdua</span><span class="eps-num">2</span></a></li>
+          <li>
+            <a href="#third" class="sliding-link"><span class="episode-name">Salvant una generació</span><span class="eps-num">3</span> </a>
+          </li>
+          <li>
+            <a href="#fourth" class="sliding-link"><span class="episode-name">Nou escenari artístic</span><span class="eps-num">4</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <div class="sub-logo">
+          <a class="sub-logo-link" href="#"
+            ><span>L'art de</span><br /><span>sobreviure</span></a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- change the id to what suits the title of the section -->
+    <div
+      id="first"
+      class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+    >
+      <div class="text text-over-media-inner left center large">
+        <div class="featured-episode-box">
+          <!-- you can change the content and number to what suits you -->
+          <span class="episode-number">01</span>
+          <span
+            class="episode-title"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            >Llar</span
+          >
+        </div>
+      </div>
+
+      <div class="background-overlay"></div>
+
+      <div class="section-background section-background-fixed">
+        <picture
+          class="section-background-image text-over-media-background-image"
+        >
+          <!-- change the image -->
+          <img
+            src="assets/img/Diala-Brisly/Foto2.jpg"
+            data-object-fit="cover"
+            data-autoscale-content-ratio="1.77777777778"
+          />
+        </picture>
+      </div>
+    </div>
+
+    <div
+                  id="scrollmation-background-57137"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-57137"
+                  data-scrollmation="background"
+                  data-viewport-height
+                  data-viewport-height-property="min-height"
+                >
+                  <div
+                    class="tiny-scrollmation"
+                    data-viewport-height
+                    data-viewport-height-scale="0.66"
+                  ></div>
+                  <style>
+                    .section-scrollmation-57137 .tiny-scrollmation {
+                      background-image: url(assets/img/Diala-Brisly/Foto3.jpg);
+                      background-position: top right;
+                    }
+                  </style>
+  
+                  <div class="two-column-grid">
+                    <div class="column column-left main-column scrollmation-text">
+                      <div class="block text-block">
+                          <p>
+                            <!-- content with p tags here -->
+                            La casa de la Diala Brisly no és a Damasc, ni a París, ni a Berlín. No és cap indret del món ni es troba a cap ciutat. La dibuixant, que ha il·lustrat una desena de llibres i fa tallers artístics amb infants, creu que la seva llar és allà on se sent prou còmoda per fer art, per fer allò que li dona sentit a la seva vida: “Si deixés de dibuixar, no sé què faria”, confessa.
+                          </p>
+                          <br>
+                          <p>
+                            Nascuda a Damasc, la Diala va començar estudiant a l’Institut d’Enginyeria Mecànica i en pocs mesos va adonar-se que no li motivava aquest terreny. Després, va provar sort amb Literatura Àrab i Enginyeria Civil, sense graduar-se en cap de les dues disciplines.
+                          </p>
+                          <br>
+                          <p>
+                            Finalment, va apostar per Educació i va fer les pràctiques en una empresa d’animació infantil anomenada Spacetoon. D’aquesta manera, es va introduir en el terreny del dibuix, des de bon començament vinculant-lo amb el món dels infants. Abans de començar a treballar en aquesta companyia, l’únic que dibuixava era “art realista”, però se sentia “sempre perduda”.
+                          </p>
+                          <br>
+                          <p>
+                            Va passar 5 anys a Spacetoon i després va decidir fer-se autònoma, per poder tirar endavant diversitat de projectes, endinsant-se en nous mons com el còmic, però sempre sense creuar els límits que establia el règim sirià. “No pots parlar dels tres tabús [política, sexe i religió], però fins i tot si vols fer alguna cosa més neutral, és molt difícil”, assegura la il·lustradora. 
+                          </p>
+                          <br>
+                          <p>
+                            “A Síria, has de ser no-res”, assegura la Diala. “No volen que siguis religiós, no volen que siguis gay, no volen que siguis raper -sosté-. No volen que siguis”. Segons la dibuixant, el problema no és el conservadorisme del país, sinó el fet que vulguin anul·lar-te la identitat, el “no ser res”. Si escoltes música rock, t’ho prohibeixen. Si escoltes l’Alcorà, també. “Tot està prohibit”, conclou la dibuixant. 
+                          </p>
+                          <br>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="scrollmation-slides-wrapper">
+                    <div
+                      class="scrollmation-slides scrollmation viewport-height"
+                      data-scrollmation-slides
+                    >
+                      <aside class="scrollmation-background-container">
+                        <img
+                          src="assets/img/Diala-Brisly/Foto3.jpg"
+                         
+                          data-scrollmation-slide
+                          
+                          data-autoscale-anchor="right"
+                        
+                        />
+                      </aside>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="text-86582" class="section section-text inner-column-centered ">
+                  <div class="main-column">
+                    <div class="block text-block">
+                      <p>
+                        <!-- content is here -->
+                        El seu art, però, va experimentar un gir amb el moviment popular que va néixer als carrers de Síria el 2011. “El desencadenant va ser la revolució siriana”, recorda la Diala. Va ser aleshores quan va començar a explorar nous horitzons artístics amb l’objectiu d’expressar els seus sentiments: “Estava políticament compromesa amb el meu art”, explica.
+                      </p>
+                      <br>
+                      Però la implicació en la revolució no es limitava a l’àmbit de l’art: “Solia preparar hospitals en el terreny, recollir diners, comprar medicines i empaquetar-les”, comenta la Diala. Primer es dedicava només a aquest treball “clandestí”, de fet, però l’any següent el va estar combinant amb el dibuix. El 2013, la seva participació en la revolta va haver de cenyir-se al món de l’art, perquè era “impossible” continuar amb la feina a l’hospital, argumenta l’artista.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- change the id to what suits the title of the section -->
+<div
+id="second"
+class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+<div class="text text-over-media-inner left center large">
+  <div class="featured-episode-box">
+    <!-- you can change the content and number to what suits you -->
+    <span class="episode-number">02</span>
+    <span
+      class="episode-title"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      >Pèrdua</span
+    >
+  </div>
+</div>
+
+<div class="background-overlay"></div>
+
+<div class="section-background section-background-fixed">
+  <picture class="section-background-image text-over-media-background-image">
+    <!-- change the image -->
+    <img
+      src="assets/img/Diala-Brisly/gallery26.jpg"
+      data-object-fit="cover"
+      data-autoscale-content-ratio="1.77777777778"
+    />
+  </picture>
+</div>
+</div>
+
+<div
+  id="scrollmation-background-57125"
+  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-57125"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-57125 .tiny-scrollmation {
+      background-image: url(assets/img/Diala-Brisly/Foto5.jpg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-right main-column scrollmation-text">
+      <div class="block text-block">
+        <p>
+            <!-- content with p here -->
+            Els últims mesos que la Diala va viure a Síria gairebé ja no sortia al carrer per culpa dels bombardejos. “Damasc s’havia convertit en una ciutat morta”, assegura. El 2013 l’artista es va veure forçada a traslladar-se a Istanbul. Passava els dies tancada a casa i sense quedar amb amics: “Se’m feia difícil sentir-me afortunada mentre hi havia gent morint a Síria, em sentia molt culpable”, reconeix. Durant aquella època, la Diala mirava les notícies contínuament i il·lustrava qualsevol cosa que passava al seu país: “Estava enganxada a les notícies i dibuixava, dibuixava, dibuixava”, repeteix.
+        </p>
+        <br>
+        <p>
+          Al començament del 2014, el germà de la Diala, que encara era a Síria, va morir. “Vaig parar de dibuixar durant un mes”, recorda l’artista. Amb la il·lustració que va trencar el seu silenci, <em>Be my leg, I will be your arm</em> (‘Sigues la meva cama, seré el teu braç’), la dibuixant volia transmetre que ella ara havia descobert “què significa de veritat perdre” una persona. La mort del seu germà li va fer sentir-se més propera a “altres que havien perdut part de les seves famílies”. “Ens hem de donar suport els uns als altres perquè cadascú de nosaltres ha perdut alguna cosa”, reflexiona la dibuixant. 
+        </p>
+        <br>
+        <p>
+          Aquesta pèrdua també li va fer canviar la manera d’afrontar la vida, tant a ella com a la seva germana: “Quan sortim, sortim per ell; quan bevem, bevem per ell; quan ballem, ballem per ell”. “A ell li agradava molt la vida -recorda la Diala-. Em va fer voler aferrar-me a aquesta vida amb tota la meva ment”. “No ens podem rendir, no, és molt egoista fer això”, conclou, contundent, l’artista.
+        </p>
+        <br>
+        <div class="block media-block media-block-image">
+          <div class="inline-media">
+            <div class="inline-image">
+              <img class="image" src="assets/img/Diala-Brisly/Foto6.jpg" />
+            </div>
+          </div>
+        </div>
+        <br>
+        <p>
+          Tot i que seguia tancada a casa, des de la ciutat turca el 2015 l’artista va començar a col·laborar en una revista infantil que es distribuïa a Síria, <em>Zaytun and Zaytuna</em> ('olives i oliva'). La Diala explica que al seu país, en general “res està permès”: “Pel règim, els projectes culturals són allò que fa més por, els fan sentir-se amenaçats”, sosté. La dibuixant considera que Estat Islàmic té la mateixa mentalitat però amb una “ideologia religiosa”.  
+        </p>
+        <br>
+        <p>
+          La Diala insisteix que <em>Zaytun and Zaytuna</em> no tenia cap ideologia, tot i que hi treballaven opositors del règim. “Ho volíem fer neutral per només recordar als infants com ser normals de nou”, assegura. La dibuixant explica que volien demostrar com hi ha altres professions a banda de ser soldat, com es poden fer diversitat de coses i no només lluitar. Però la revista no era sostenible perquè s’alimentava únicament de donacions, i fa un parell d’anys la van deixar de distribuir. 
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="scrollmation-slides-wrapper">
+    <div
+      class="scrollmation-slides scrollmation viewport-height"
+      data-scrollmation-slides
+    >
+      <aside class="scrollmation-background-container">
+        <img
+          src="assets/img/Diala-Brisly/Foto5.jpg"
+          data-scrollmation-slide
+          data-tablet-img="assets/img/Diala-Brisly/Foto5.jpg"
+          data-object-fit="cover"
+        />
+      </aside>
+    </div>
+  </div>
+</div>
+
+
+<!-- change the id to what suits the title of the section -->
+<div
+  id="third"
+  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+  <div class="text text-over-media-inner left center large">
+    <div class="featured-episode-box">
+      <!-- you can change the content and number to what suits you -->
+      <span class="episode-number">03</span>
+      <span
+        class="episode-title"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        >Salvant una generació</span
+      >
+    </div>
+  </div>
+
+  <div class="background-overlay"></div>
+
+  <div class="section-background section-background-fixed">
+    <picture class="section-background-image text-over-media-background-image">
+      <!-- change the image -->
+      <img
+        src="assets/img/Diala-Brisly/Foto7.jpg"
+        data-object-fit="cover"
+        data-autoscale-content-ratio="1.77777777778"
+      />
+    </picture>
+  </div>
+</div>
+
+<div
+  id="scrollmation-background-57125"
+  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-57125"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-57125 .tiny-scrollmation {
+      background-image: url(assets/img/Diala-Brisly/Foto8.jpg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-right main-column scrollmation-text">
+      <div class="block text-block">
+        <p>
+            <!-- content with p here -->
+            A Turquia, malgrat els quilòmetres de distància, la Diala seguia sense poder oblidar les explosions i la destrucció que marcaven el dia a dia del seu país. El patiment del poble sirià alimentava el seu sentiment de culpa.
+        </p>
+        <br>
+        <p>
+          Amb ganes d’aprofitar més la seva vida i poder millorar la d’altres persones, la Diala va decidir desplaçar-se a Beirut. “No ajudava que em sentís culpable tota l’estona i que m’aïllés a mi mateixa”, sosté. Als camps de refugiats del Líban, va començar a treballar amb infants perquè “políticament” no podia canviar res, però almenys tenia la possibilitat de donar suport a una “educació alternativa”. 
+        </p>
+        <br>
+        <p>
+          “Vaig perdre l’esperança pel canvi polític, però Síria no és només un tros de terra -assenyala la Diala amb contundència-. Aquests nens són la següent generació, i no els podem deixar enrere perquè ens prenguem el luxe de perdre l’esperança”. La dibuixant insisteix que els infants no estan implicats en la guerra, sinó que són “víctimes”.
+        </p>
+        <br>
+        <p>
+          Al Líban, va començar treballant com a voluntària, però més endavant va aconseguir feina en diverses ONGs que operaven en els camps. “Volia animar els nens a tornar a l’escola”, explica la Diala. Segons ella, la majoria de centres educatius dels camps de refugiats són tendes, i això no incentiva els infants a anar-hi. A més, a l’estiu hi fa molta calor, i a l’hivern, un fred intens. Per això l’artista anava d’escola en escola, intentant fer-les “boniques”.
+        </p>
+        <br>
+        
+      </div>
+    </div>
+  </div>
+  <div class="scrollmation-slides-wrapper">
+    <div
+      class="scrollmation-slides scrollmation viewport-height"
+      data-scrollmation-slides
+    >
+    <aside class="scrollmation-background-container">
+      <img
+        src="assets/img/Diala-Brisly/Foto8.jpg"
+        data-scrollmation-slide
+        data-tablet-img="assets/img/Diala-Brisly/Foto8.jpg"
+        data-object-fit="cover"
+      />
+    </aside>
+    </div>
+  </div>
+</div>
+
+<div
+                  id="scrollmation-background-57137"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-57137"
+                  data-scrollmation="background"
+                  data-viewport-height
+                  data-viewport-height-property="min-height"
+                >
+                  <div
+                    class="tiny-scrollmation"
+                    data-viewport-height
+                    data-viewport-height-scale="0.66"
+                  ></div>
+                  <style>
+                    .section-scrollmation-57137 .tiny-scrollmation {
+                      background-image: url(assets/img/Diala-Brisly/Foto9.jpg);
+                      background-position: top right;
+                    }
+                  </style>
+  
+                  <div class="two-column-grid">
+                    <div class="column column-left main-column scrollmation-text">
+                      <div class="block text-block">
+                        <p>
+                          A la vegada, la Diala organitzava tallers amb infants que no només havien patit el trauma de la guerra, sinó que també s’estaven enfrontant a fer vida en un camp de refugiats. “Malgrat això, quan et veuen arribar amb colors i diversió, ho obliden tot i s’impliquen molt”, comenta la dibuixant.
+                        </p>
+                        <br>
+                        <p>
+                          L’artista explica que, al principi, els dibuixos dels nens il·lustraven gent morta, bombes, sang. “Era evident que necessitaven expressar-se”, afirma. Per ajudar-los, la Diala proposava nous temes perquè els infants creessin una nova memòria visual: “No pots substituir els records tristos, però almenys pots intentar fer que creïn la seva pròpia realitat, l’ambient en què viuen”.
+                        </p>
+                        <br>
+                        <p>
+                          “Els nens creuen que els salvaràs, que els ajudaràs a sobreviure, però jo intentava dir-los que només estava allà per facilitar la seva situació i que ells eren els herois”, reflexiona l’artista. Els feia dibuixar-se a ells mateixos perquè reforcessin la seva individualitat. Encara que mai havia estudiat artteràpia, va documentar-se sobre aquesta disciplina i també va demanar consells a amics psicòlegs per poder-la aplicar en els tallers.
+                        </p>
+                        <br>
+                        <p>
+                          La Diala no dubta a reconèixer que amb els tallers no només ajudava als infants, sinó que també a si mateixa: “Aconseguia una teràpia a canvi, perquè els nens saben com viure el moment, com estar animats”. Això la va motivar a tornar a sortir i estar sana perquè, si volia ajudar als altres, havia de cuidar-se primer a ella. “Vaig aprendre això dels nens”, comenta.
+                        </p>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="scrollmation-slides-wrapper">
+                    <div
+                      class="scrollmation-slides scrollmation viewport-height"
+                      data-scrollmation-slides
+                    >
+                      <aside class="scrollmation-background-container">
+                        <img
+                          src="assets/img/Diala-Brisly/Foto9.jpg"
+                         
+                          data-scrollmation-slide
+                          
+                          data-autoscale-anchor="right"
+                        
+                        />
+                      </aside>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- change the id to what suits the title of the section -->
+<div
+id="fourth"
+class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
+>
+<div class="text text-over-media-inner left center large">
+  <div class="featured-episode-box">
+    <!-- you can change the content and number to what suits you -->
+    <span class="episode-number">04</span>
+    <span
+      class="episode-title"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      >Nou escenari artístic</span
+    >
+  </div>
+</div>
+
+<div class="background-overlay"></div>
+
+<div class="section-background section-background-fixed">
+  <picture class="section-background-image text-over-media-background-image">
+    <!-- change the image -->
+    <img
+      src="assets/img/Diala-Brisly/Foto10.jpg"
+      data-object-fit="cover"
+      data-autoscale-content-ratio="1.77777777778"
+    />
+  </picture>
+</div>
+</div>
+
+<div
+                  id="scrollmation-background-57137"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-57137"
+                  data-scrollmation="background"
+                  data-viewport-height
+                  data-viewport-height-property="min-height"
+                >
+                  <div
+                    class="tiny-scrollmation"
+                    data-viewport-height
+                    data-viewport-height-scale="0.66"
+                  ></div>
+                  <style>
+                    .section-scrollmation-57137 .tiny-scrollmation {
+                      background-image: url(assets/img/Diala-Brisly/Foto11.jpg);
+                      background-position: top right;
+                    }
+                  </style>
+  
+                  <div class="two-column-grid">
+                    <div class="column column-left main-column scrollmation-text">
+    <div class="block text-block">
+      <p>
+        <!-- content is here -->
+        La Diala dibuixa primer per ella mateixa, perquè sent “una frustració” i traduir-la al paper li permet expressar els sentiments. Però, alhora, amb aquesta acció pot explicar històries d’una manera diferent. “L’art té una missió -afirma-. No és un luxe; juga un paper important, sobretot amb nens que han patit traumes”.
+      </p>
+      <br>
+      <p>
+        Des que viu a Europa, l’artista admet que ha notat que les seves il·lustracions són molt més ben rebudes. “La llibertat marca la diferència -comenta-. He pogut desenvolupar més les meves tècniques i el meu art perquè he conegut noves coses”.  Segons explica, a Síria no només hi ha moltes prohibicions, sinó que, a més, socialment la gent està “exhausta”. “A ningú li importa l’art”, reconeix. 
+      </p>
+      <br>
+      <p>
+        La il·lustradora ha viscut a Alemanya, i des del 2016 viu a França. A Berlín, gaudia molt participant en exposicions i tallers amb persones de diverses nacionalitats. A París, la Diala continua treballant en contes infantils i fent tallers tant per a adults com per a infants per Europa. També fa murals en llenços i els envia al Líban. 
+      </p>
+      <br>
+      <div class="block media-block media-block-image">
+        <div class="inline-media">
+          <div class="inline-image">
+            <img class="image" src="assets/img/Diala-Brisly/Foto12.jpg" />
+          </div>
+        </div>
+      </div>
+      <br>
+      <p>
+Tanmateix, no es pot dedicar a l’art tant com voldria, i això la fa estar força deprimida, perquè sent que ja no fa vida d’artista. “Fa dos anys i mig que visc aquí, i encara haig de fer molts papers -explica-. S’ha de ser part del sistema i pagar impostos, hi ha moltes coses a fer”.
+      </p>
+      <br>
+      <p>
+        Encara que no amaga que el seu art ha estat marcat per la guerra i l’exili, la Diala explica que ara està intentant reduir els dibuixos que només aborden aquestes temàtiques: “La destrucció viu a dins nostre, no només en els edificis”, lamenta. Per això, ha impulsat un projecte més personal. 
+      </p>
+      <br>
+      La Diala reconeix que, a vegades, pateix per si el seu art només està tenint èxit perquè ve de Síria. “Prefereixo no estar en un cercle d’artistes sirians, no tothom que té un llapis i un paper es pot anomenar artista”, assenyala. Aquest és un dels motius pels quals ha tirat endavant aquest nou projecte més personal, que es desmarca del discurs de la guerra. També li permet posar en pràctica exercicis que porta a terme amb infants.
+    </div>
+  </div>
+</div>
+
+<div class="scrollmation-slides-wrapper">
+  <div
+    class="scrollmation-slides scrollmation viewport-height"
+    data-scrollmation-slides
+  >
+    <aside class="scrollmation-background-container">
+      <img
+        src="assets/img/Diala-Brisly/Foto11.jpg"
+       
+        data-scrollmation-slide
+        
+        data-autoscale-anchor="right"
+      
+      />
+    </aside>
+  </div>
+</div>
+</div>
+<br>
+<!-- gallery -->
+<div class="gallery gallery-4">
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/survival1.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/survival1.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/survival2.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/survival2.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/survival3.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/survival3.jpg"></a>
+  </div>
+  <div class="item" style="background-image:url(assets/img/Diala-Brisly/survival4.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/survival4.jpg"></a>
+  </div>
+</div>
+
+<div id="text-86582" class="section section-text inner-column-centered ">
+  <div class="main-column">
+    <div class="block text-block">
+      <p>
+        <!-- content is here -->
+        A quilòmetres de distància, la Diala continua implicant-se tant com pot a millorar la vida de les persones que estan patint, de manera directa o indirecta, les conseqüències de la guerra que fa més de vuit anys que castiga el seu país. La seva inspiració, els seus herois, són aquells que, des de dins de Síria, continuen intentant fer el país més habitable amb l’art, malgrat les adversitats, les prohibicions i la devastació.
+      </p>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+<!-- last gallery -->
+
+<div class="gallery gallery-17">
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto2.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto2.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto3.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto3.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto4.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto4.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto5.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto5.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto7.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto7.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto6.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto6.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto8.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto8.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto9.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto9.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto10.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto10.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto11.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto11.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto12.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto12.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery21.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery22.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery23.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery23.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery24.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery24.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery25.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery25.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery26.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery26.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery27.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery27.jpg"></a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <script src="assets/js/shorthand/head.min.js"></script>
+    <script src="assets/js/shorthand/common.min.js"></script>
+    <script src="assets/js/shorthand/story.min.js"></script>
+    <script src="assets/js/animate-on-scroll/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

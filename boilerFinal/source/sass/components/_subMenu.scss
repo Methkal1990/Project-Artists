@@ -1,0 +1,72 @@
+nav.submenu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #157ca2;
+    height: 65px;
+    z-index: 1000;
+    top: auto;
+    color: #fff;
+    
+}
+nav.submenu .left {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+}
+nav.submenu .left .icon {
+    width: 30px;
+    height: 30px;
+    float: left;
+    padding-right: 20px;
+}
+
+nav.submenu .left .icon i {
+    font-size: 18px;
+    padding: 6px;
+}
+
+nav.submenu .middle {
+    text-align: center;
+    display: flex;
+    align-content: space-between;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .065rem;
+    font-weight: 200;
+    width: 100%;
+}
+nav.submenu .middle ul {
+    padding: 22px 0;
+    margin: 0 auto;
+}
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+nav.submenu .middle ul li {
+    float: left;
+    display: inline-block;
+    padding: 0 10px;
+}
+nav.submenu .middle ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+nav.submenu .middle ul li a:hover{
+  text-shadow: 3px 3px 10px #fff;
+  font-size: 1.8rem;
+}
+nav.submenu .right {
+    position: absolute;
+    top: 13px;
+    right:20px;
+}
+nav.submenu .right .sub-logo a.sub-logo-link{
+  font-size: 1.7rem;
+  color: #fff;
+}

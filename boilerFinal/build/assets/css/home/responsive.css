@@ -1,0 +1,14 @@
+/* 
+break points:
+table : 768px
+mobiles : 500px
+ */
+
+
+
+@media(max-width:768px){
+    /*to hide the nav bar on small screens and just show the button that open the side menu*/
+    .navbar-nav{
+        display: none;
+    }
+}

@@ -1,0 +1,88 @@
+@media only screen and (min-width:769px){
+    #subMenuNav .middle .eps-num{
+        display: none;
+    }
+}
+@media only screen and (max-width:850px){
+    .hero-section-box .hero-section-content .hero-title{
+        font-size: 6rem;
+    }
+    .hero-section-box .hero-section-content .hero-art{
+        font-size: 2.5rem;
+    }
+    .hero-section-box .hero-section-content .hero-quote{
+        font-size: 1.8rem;
+    }
+    .featured-episode-box .episode-number{
+        font-size: 20rem;
+    }
+    .featured-episode-box .episode-title{
+        font-size: 3.5rem;
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    .hero-section-box .hero-section-content .hero-title{
+        font-size: 5rem;
+    }
+    #subMenuNav .middle .episode-name{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    .hero-section-box .hero-section-content .hero-title{
+        font-size: 4rem;
+    }
+
+    .hero-section-box .icon-box a{
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width:500px){
+
+    .hero-section-box{
+        grid-template-columns: 1fr;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .hero-section-box .hero-section-content{
+        padding-left: 0;
+        
+    }
+    .hero-section-box .hero-section-content .hero-title{
+        font-size: 4rem;
+        
+    }
+
+    .hero-section-box .hero-section-content .hero-art{
+        font-size: 2rem;
+    }
+    .hero-section-box .hero-section-content .hero-quote{
+        font-size: 1.5rem;
+    }
+
+    .hero-section-box .icon-box{
+        padding: 1rem 0 0 0;
+        align-self: auto;
+    }
+
+    .social-media-share{
+        display: none;
+    }
+
+    .navbar .logo{
+        padding-left: 3.5rem;
+        
+    }
+}
+
+
+@media only screen and (max-width:730px){
+ 
+}

@@ -1,0 +1,13 @@
+.hero-section-box-12 {
+    background: linear-gradient(40deg, #1d4757e0, #22309bbb),
+        url(../img/Athrodeel/Foto1-2.jpg) top right/cover;
+
+}
+
+@media screen and (max-width:600px){
+    .hero-section-box-12 {
+        background: linear-gradient(40deg, #1d4757e0, #22309bbb),
+            url(../img/Athrodeel/Foto1-2.jpg) top right/cover;
+    
+    }
+}

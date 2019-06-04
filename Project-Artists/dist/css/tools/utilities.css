@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/* 
+colors:
+primary: #33b5e5
+secondary dark: #157ca2
+secondary light: #77cded
+max width : 1150px
+*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    /* we set to 10px(62.5%) to control the whole measurements of the page that rem by changing only this value */
+    font-size: 62.5%; /*this is equal to 10px*/
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.container{
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 3.2rem;
+    overflow: hidden;
+}
+.lead{
+    color: #000000bf;
+    font-size: 1.8rem; 
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.0063rem; /*-0.0072rem for mobile*/
+    line-height: 3.318rem; /* 2.844rem for mobile*/
+}
+
+.title{
+font-size: 4.6rem; /* big screens *3.4rem for mobiles**/
+font-weight: 400;
+color: #000000bf;
+fill: #000000bf;
+line-height: 5.25rem; /* *40px for mobile**/
+letter-spacing: normal;
+font-style: normal;
+
+}
+
+.heading-light{
+    color: #0000008a;
+    font-size: 2.4rem;/* 2.1rem for mobile*/
+    font-weight: 600;
+    line-height: 2.8rem;/*2.4rem for mobile*/
+    letter-spacing: -.042rem; /* -0.029rem for mobiles*/
+    font-style: normal;
+}
+
+.heading-dark{
+    color: #000000bf;
+    fill: #000000bf;
+    font-size: 2.4rem;/* 2.1rem for mobile*/
+    font-weight: 600;
+    line-height: 2.8rem;/*2.4rem for mobile*/
+    letter-spacing: -.042rem; /* -0.029rem for mobiles*/
+    font-style: normal;
+}
+
+.caption{
+    color: #0000008a;
+    font-size: 1.1rem;
+    line-height: 2.8rem;/*2.4rem for mobile*/
+    font-style: normal;
+}
+
+.underline{
+    text-decoration: none;
+    color: #000000bf;
+    border-bottom: 0.1rem solid currentColor;
+    display: inline-block;
+    line-height: 0.84;
+}
+
+.primary-color{
+    background: #33b5e5;
+    color: #fff;
+}
+
+.primary-dark{
+    background:#157ca2;
+    color: #fff;
+}
+
+.primary-light{
+    background:#77cded;
+    color: #383838e0; 
+}
+
+.primary-gradient{
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: #157ca2;
+    color: #fff;
+    padding: 0.8rem 2.4rem;
+}
+
+/* padding */
+.py-1 {
+    padding: 2.4rem 0;
+}
+
+.py-2 {
+    padding: 3.2rem 0;
+}
+
+.py-3 {
+    padding: 4.8rem 0;
+}
+
+.p-1 {
+    padding: 2.4rem;
+}
+
+.p-2 {
+    padding: 3.2rem;
+}
+
+.p-3 {
+    padding: 4.8rem;
+}

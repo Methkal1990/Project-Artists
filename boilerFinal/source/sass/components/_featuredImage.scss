@@ -1,0 +1,117 @@
+/*featured image component*/
+figure{
+    margin: 0;
+}
+.featured-image-component {
+    font-size: 6.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 10px hsl(0, 0%, 0%);
+    font-weight: 600;
+    z-index: 10;
+    word-break: initial;
+    margin: 0;
+}
+
+/*featured image component right caption*/
+.figure-box-right {
+    display: flex;
+    height: 50vh;   
+}
+
+.figure-box-right .image-right {
+    max-width: 900px;
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+}
+
+.figure-box-right .image-caption-right {
+    align-self: center;
+    line-height: 1.1;
+    transform: translateX(-70px);
+
+}
+
+@media only screen and (max-width: 1340px) {
+    .figure-box-right {
+        flex-direction: column;
+        height: initial;
+    }
+
+    .figure-box-right .image-caption-right {
+        font-size: 4rem;
+        transform: translate(0);
+        align-self: center;
+    }
+}
+/*feature image component left caption*/
+.figure-box-left {
+    display: flex;
+    height: 50vh;
+}
+
+.figure-box-left .image-left {
+    max-width: 900px;
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+}
+
+.figure-box-left .image-caption-left {
+    align-self: center;
+    line-height: 1.1;
+    transform: translateX(80px);
+
+}
+
+@media only screen and (max-width: 1340px) {
+    .figure-box-left {
+        flex-direction: column;
+        height: initial;
+    }
+
+    .figure-box-left .image-caption-left {
+        font-size: 3rem;
+        transform: translate(0);
+        align-self: center;
+        order: 2;
+    }
+}
+
+/*feature image component center*/
+.figure-box-center {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure-box-center .image-center {
+    max-width: 900px;
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+}
+
+.figure-box-center .image-caption-center {
+    transform: translateY(10rem);
+    width: 30rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .figure-box-center {
+        flex-direction: column;
+        height: initial;
+    }
+
+    .figure-box-center .image-caption-center {
+        font-size: 3rem;
+        transform: translate(0);
+        align-self: center;
+        order: 2;
+        width: initial;
+        text-align: left;
+    }
+}

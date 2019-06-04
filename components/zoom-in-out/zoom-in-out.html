@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zoom-in-out</title>
+    <style>
+    .zoom-map-box{
+        height: 70vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        cursor: zoom-in;
+    }
+    .zoom-map-box .image-out{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .zoom-map-box .image-zoom{
+        height: 100%;
+    }
+    .zoom-map-box .map-description{
+        position: absolute;
+        padding: 1rem;
+    }
+    </style>
+</head>
+<body>
+    <div class="zoom-map-box">
+        <img class="image-out" onclick="zoomInFunc()" src="img1.jpg" alt="">
+        <img class="image-zoom" onclick="zoomOutFunc()" src="img2.jpg" alt="">
+        <p class="map-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quos, eos, minima magni voluptatem eligendi, a officia perferendis ipsa commodi nobis unde dignissimos id neque error sequi? Officiis, corporis quis</p>
+    </div>
+
+    <script>
+        const map = document.querySelector('.zoom-map-box');
+        const zoomInFunc = () =>{
+            document.querySelector('.image-out').style.zIndex='-1';
+            document.querySelector('.image-zoom').style.zIndex='0';
+        };
+        const zoomOutFunc = () => {
+            document.querySelector('.image-zoom').style.zIndex='-1';
+            document.querySelector('.image-out').style.zIndex='0';
+        }
+    </script>
+</body>
+</html>

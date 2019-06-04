@@ -1,0 +1,38 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-family: "Pacifico", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 7rem;
+    font-size: 3rem;
+}
+
+.navbar .menu-icon-lines {
+    display: flex;
+    width: 3rem;
+    justify-content: space-between;
+    padding: 2.5px;
+    cursor: pointer;
+}
+
+.navbar .icon-line {
+    width: 2.5px;
+    height: 3rem;
+    background: #fff;
+}
+
+.navbar .menu-items a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: block;
+    margin: 8rem 0;
+}

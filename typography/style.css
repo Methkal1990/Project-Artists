@@ -1,0 +1,112 @@
+
+body{
+    background: #fff;
+    font-family: 'Lato';
+}
+
+/* post title in post page */
+h1{
+   
+    font-weight: 400;
+    color: #000000bf;
+    fill: #000000bf;
+    line-height: 52.5px; /*40px for mobile*/
+    letter-spacing: normal;
+    font-style: normal;
+    font-size: 46px;/*34px for mobile*/
+}
+
+/* caption */
+.caption{
+    color: #0000008a;
+    font-size: 11px;
+    line-height: 28px;/*24px for mobile*/
+    font-style: normal;
+}
+
+/* home page posts titles */
+#postsHeading{
+    color: #000000bf;
+    fill: #000000bf;
+    font-size: 24px;/* 21px for mobile*/
+    font-weight: 600;
+    line-height: 28px;/*24px for mobile*/
+    letter-spacing: -.42px; /* -0.29px for mobiles*/
+    font-style: normal;
+
+}
+
+/* subheading
+/*it's h2 same as h2 properities for post pages except for the color it should be rgba(0, 0, 0, 0.54)
+;*/
+#subheading{
+    
+    color: #0000008a;
+    font-size: 24px;/* 21px for mobile*/
+    font-weight: 600;
+    line-height: 28px;/*24px for mobile*/
+    letter-spacing: -.42px; /* -0.29px for mobiles*/
+    font-style: normal;
+
+}
+
+/* text */
+p{
+    color: #000000bf;
+    font-size: 18px; 
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.063px; /*-0.072px for mobile*/
+    line-height: 33.18px; /* 28.44px for mobile*/
+}
+
+/* underline */
+.underline{
+    /* border-bottom: 1px solid currentColor; */
+    text-decoration: none;
+    color: #000000bf;
+    border-bottom: 1px solid currentColor;
+    display: inline-block;
+    line-height: 0.84;
+}
+/*colors*/
+.color_palette{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.color_palette .dark{
+    width: 33%;
+    height: 50px;
+    border: 1px solid #fff;
+    background:#157ca2;
+    color: #fff;
+}
+
+.color_palette .base{
+    width: 33%;
+    height: 50px;
+    border: 1px solid #fff;
+    background: #33b5e5;
+    color: #fff;
+}
+.color_palette .light{
+    width: 33%;
+    height: 50px;
+    border: 1px solid #fff;
+    background:#77cded ;
+    color: #383838e0;   
+}
+
+.gradientBlue{
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+}

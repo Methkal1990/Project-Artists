@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- you need animate on scroll style sheets and javascript in addition to jquery -->
+    <link rel="stylesheet" href="../animate-on-scroll/aos.css">
+    <title>episode</title>
+    <style>
+        body{
+            height: 300vh;
+        }
+    .featured-episode-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+    .featured-episode-box .episode-number{
+        display: block;
+        font-size: 30rem;
+        color: #ccc;
+    }
+    .featured-episode-box .episode-title{
+        display: block;
+        position: absolute;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+    </style>
+</head>
+<body>
+    <div class="featured-episode-box">
+        <span class="episode-number">01</span>
+        <span class="episode-title" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">First Episode</span>
+    </div>
+    <div class="featured-episode-box">
+        <span class="episode-number">02</span>
+        <span class="episode-title" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">First Episode</span>
+    </div>
+    <div class="featured-episode-box">
+        <span class="episode-number">03</span>
+        <span class="episode-title" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">First Episode</span>
+    </div>
+    <div class="featured-episode-box">
+        <span class="episode-number">04</span>
+        <span class="episode-title" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">First Episode</span>
+    </div>
+    <div class="featured-episode-box">
+        <span class="episode-number">05</span>
+        <span class="episode-title" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">First Episode</span>
+    </div>
+    <!-- javascript for animate on scroll -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+    <script src="../animate-on-scroll/aos.js"></script>
+    <script>
+            AOS.init({
+                duration: 2000,
+            });
+    </script>
+</body>
+</html>
