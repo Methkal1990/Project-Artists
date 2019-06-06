@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Artistes</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Pacifico"
+    rel="stylesheet"
+  />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/home/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home/home-page.css">
+    <link rel="stylesheet" href="assets/css/home/menu.css">
+    <link rel="stylesheet" href="assets/css/home/responsive.css">
+</head>
+<style>
+.img-container{
+    filter: grayscale(1);
+}
+.navbar .logo {
+    font-family: "Pacifico", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    
+    font-size: 3vmin;
+}
+.filler{
+    width: 80%;
+}
+</style>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+                <ul class="navbar-nav">
+                    <!-- <li><a href="#">Home</a></li>
+                    <li><a href="#">Artistes</a></li>
+                    <li><a href="#">About</a></li> -->
+                    <a class="logo" href="#">L'art de sobreviure</a>
+                </ul>
+                <div class="filler"></div>
+        <div class="open-slide">
+            <a href="#!" onclick="openSlideMenu()" id="toggle">
+                    <div class="menu-icon-lines">
+                            <div class="icon-line"></div>
+                            <div class="icon-line"></div>
+                            <div class="icon-line"></div>
+                          </div>
+            </a>
+        </div>
+       
+    </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
+    <!-- here there is an issue -->
+    <section id="slider-container">
+            <div class="buttons" style="display: none">
+                    <button id="prev"></button>
+                    <button id="next"></button>
+            </div>
+    </section>
+    <section id="title">
+        <h1>Els Artistes</h1>
+    </section>
+    <!-- cards section -->
+    <section id="cards">
+        <div class="row active-with-click grid">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Red">
+                    <h2>
+                        <span>Diala Brisly</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                            Dibuixant
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/diala.jpg">
+                        </div>
+                        <div class="mc-description">
+                            La casa de la Diala Brisly no és a Damasc, ni a París, ni a Berlín. No és cap indret del món ni es troba a cap ciutat. La dibuixant...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./diala-brisly.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Deep-Purple">
+                    <h2>
+                        <span>Mohammad Abu Hajar</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Raper
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/abu-hajar.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Nascut a Tartous, el Mohammad Abu Hajar és una de les primeres cinc persones que es va dedicar al món del rap a Síria. Tot va començar quan va...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./abu-hajar.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Deep-Orange">
+                    <h2>
+                        <span>Diana Abdulkarim</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Cineasta
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/diana.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Una branca cau del seu arbre i va a parar al riu, on és arrossegada pel corrent fins que una persona anònima l’agafa amb cura i la col·loca en un altre arbre...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./diana-karim.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Pink">
+                    <h2>
+                        <span>Hamid Sulaiman</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Dibuixant
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/hamid.jpg">
+                        </div>
+                        <div class="mc-description">
+                                “Soc l’únic sirià que ha escrit una novel·la gràfica sobre el que està passant a Síria”, afirma, satisfet, el Hamid Sulaiman. Nascut a Damasc, el dibuixant està...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./hamid-sulaiman.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Orange">
+                    <h2>
+                        <span>Kefah Ali Deeb</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Pintora i escriptora
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/kefah.jpg">
+                        </div>
+                        <div class="mc-description">
+                                La porta d'Ishtar és una de les vuit entrades que permetien l’accés a la ciutat de Babilònia, situada a l’antiga Mesopotàmia. Es tracta...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./kefah-ali-deeb.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Indigo">
+                    <h2>
+                        <span>Khaled Barakeh</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Artista conceptual
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/khaled.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Durant els tres mesos que va viure a Frankfurt, el Khaled Barakeh va estar-se en un pis on tots els mobles flotaven. L’artista va...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./khaled-baraka.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Blue">
+                    <h2>
+                        <span>Medhat AlDaabal</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Ballarí
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/medhat.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Encara que des dels 17 anys ja tenia clar que volia dedicar-se al
+                                món de la dansa, el Medhat Aldaabal va decidir estudiar a
+                                l’Institut Clínic per a Extremitats Artificials. La professió a
+                                què s’encaminava amb...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./medhat-daabal.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Purple">
+                    <h2>
+                        <span>Michaele Daoud</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Pintor i artista visual
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/michaele.jpg">
+                        </div>
+                        <div class="mc-description">
+                                El Michaele Daoud no busca la bellesa a les seves pintures. O com a mínim no la bellesa entesa com a harmonies de colors, perspectives o paisatges agradables. De fet, ell mateix...
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./michaele-daoud.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Ahmad Ismael</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Pintor
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/ismael.jpg">
+                        </div>
+                        <div class="mc-description">
+                                L’Ahmad no es considera un artista. Quan era petit li agradava calcar els còmics que es comprava, i també solia fer petites escultures de fang que es trencaven dies després perquè ningú li havia ensenyat a fer-ne.
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./ahmad-ismael.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Green">
+                    <h2>
+                        <span>Anwar Al-Atrash</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Pintor
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/atrash.jpg">
+                        </div>
+                        <div class="mc-description">
+                                “No esperis que et rebin amb una catifa vermella” és una frase que l’Anwar Al Atrash, nascut a Damasc el 1979, ha sentit moltes vegades. Abans d’arribar a Alemanya, on encara viu, l’havia llegit a internet.
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./anwar-al-atrash.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Blue-Grey">
+                    <h2>
+                        <span>Athrodeel</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Grup de música
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/athrodeel.jpg">
+                        </div>
+                        <div class="mc-description">
+                                L’idioma siríac és un antic dialecte de l’arameu que va aparèixer al segle I d.C. a la ciutat d’Edessa, situada a la frontera entre Turquia i Síria.
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./athrodeel.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Deep-Orange">
+                    <h2>
+                        <span>Bassam Dawood</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Hakawati
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/bassam.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Vesteix amb una <em>jalabia</em> -una túnica tradicional- i porta un tarbuix o fes al cap i un bastó a la mà.
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./bassam-dawood.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Red">
+                    <h2>
+                        <span>Maya Rabou</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Pintora
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/maya.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Per la Maya Rabou, pintar és una manera de reivindicar-se com a persona i com a dona. En certa manera, és com una teràpia, perquè li permet expressar el seu interior i parlar de tot el que ha patit, per desfer-se “de tots els sentiments negatius”.
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./maya-rabou.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="material-card Purple">
+                    <h2>
+                        <span>Bilal Malik Al-Shami</span>
+                        <strong>
+                                <i class="fas fa-pencil-alt"></i>
+                                Dibuixant
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="assets/img/home/bilal.jpg">
+                        </div>
+                        <div class="mc-description">
+                                Cada dia agafava carbó i colors i buscava el millor racó entre les ruïnes de la ciutat de Daraya, al sud-oest de Síria. Expulsava la pols de la paret escollida i la netejava per convertir-la en el seu llenç.
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="linkflex">
+
+                            <a href="./bilal-malek-shami.html">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+           
+        </div>
+    </section>
+    <footer class="footer">
+            L'art de sobreviure &copy;2019, All Rights Reserved
+    </footer>
+
+    <script src="assets/js/home/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/home/main.js"></script>
+</body>
+</html>

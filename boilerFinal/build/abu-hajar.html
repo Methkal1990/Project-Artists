@@ -92,17 +92,25 @@
           <source src="assets/mp3/abu-hajar.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
-    <!-- navbar -->
-    <nav class="navbar-box">
+   <!-- navbar -->
+   
+   <nav class="navbar-box">
       <div class="navbar">
         <a class="logo" href="#">L'art de sobreviure</a>
-        <div class="menu-icon-lines">
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
           <div class="icon-line"></div>
           <div class="icon-line"></div>
           <div class="icon-line"></div>
         </div>
       </div>
     </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
+
     <!-- hero section -->
     <section class="hero-section-box hero-section-box-4">
       <div class="hero-section-content">
@@ -253,7 +261,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                           </p>
                           <br>
                           <p>
-                            El Mohammad explica que abans de la revolució no hi havia cap partit legal a Síria, ni tan sols els aliats del règim, perquè no existien lleis que regulessin les formacions polítiques. “Establir partits era il·legal en si mateix, però n’hi havia vuit, majoritàriament nacionalistes socialistes, que estaven protegits per l’Estat”, comenta. L’artista es va afiliar el 2005 en una formació que s’havia escindit d’un dels principals partits comunistes cinc anys abans. Comptava amb un diari amb què donaven a conèixer pensaments marxistes al moviment d’esquerres sirià, i demanaven democràcia i més canvis econòmics i polítics al país.
+                            El Mohammad explica que abans de la revolució no hi havia cap partit legal a Síria, ni tan sols els aliats del règim, perquè no existien lleis que regulessin les formacions polítiques. “Establir partits era il·legal en si mateix, però n’hi havia vuit, majoritàriament nacionalistes socialistes, que estaven protegits per l’Estat”, comenta. L’artista es va afiliar el 2005 a una formació que s’havia escindit d’un dels principals partits comunistes cinc anys abans. Comptava amb un diari amb què donaven a conèixer pensaments marxistes al moviment d’esquerres sirià, i demanaven democràcia i més canvis econòmics i polítics al país.
                           </p>
                           <br>
                           <p>
@@ -318,9 +326,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 
     <!-- scroll mation right -->
     <div
-  id="scrollmation-background-57125"
-  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
-  data-scrollmation-container=".section-scrollmation-57125"
+  id="scrollmation-background-5712"
+  class="section section-scrollmation scrollmation-background section-scrollmation-5712 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-5712"
   data-scrollmation="background"
   data-viewport-height
   data-viewport-height-property="min-height"
@@ -331,7 +339,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     data-viewport-height-scale="0.66"
   ></div>
   <style>
-    .section-scrollmation-57125 .tiny-scrollmation {
+    .section-scrollmation-5712 .tiny-scrollmation {
       background-image: url(assets/img/abu-hajar/Foto5.jpg);
       background-position: top left;
     }

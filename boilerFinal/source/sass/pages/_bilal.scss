@@ -1,0 +1,13 @@
+.hero-section-box-15 {
+    background: linear-gradient(40deg, #1d4757e0, #22309bbb),
+        url(../img/Bilal-Malek-Al-Shami/Foto1.jpg) top left/100%;
+
+}
+
+@media screen and (max-width:600px){
+    .hero-section-box-15 {
+        background: linear-gradient(40deg, #1d4757e0, #22309bbb),
+            url(../img/Bilal-Malek-Al-Shami/Foto1.jpg) top center/cover;
+    
+    }
+}

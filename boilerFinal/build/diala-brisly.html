@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/css/lightbox.min.css">
     <link rel="stylesheet" href="assets/css/animate.css/animate.css" />
     <link rel="stylesheet" href="assets/js/animate-on-scroll/aos.css" />
+   
     <link rel="stylesheet" href="assets/css/main.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
@@ -57,19 +58,50 @@
         });
       });
     </script>
+  <style>
+  .gallery-4 .item:nth-child(2) {
+    grid-row: 1 / 4;
+}
+
+.gallery-4 .item:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+.gallery-17 .item:nth-child(15) {
+ 
+    grid-column: 3/4;
+    grid-row: 8/10;
+
+}
+@media screen and (max-width:500px){
+  .gallery-4 .item:nth-child(2),
+  .gallery-4 .item:nth-child(4),
+  .gallery-17 .item:nth-child(15){
+    grid-column: initial;
+        grid-row: initial;
+  }
+}
+  </style>
   </head>
+
   <body>
     <!-- navbar -->
     <nav class="navbar-box">
       <div class="navbar">
-        <a class="logo" href="#">L'art de sobreviure</a>
-        <div class="menu-icon-lines">
-          <div class="icon-line"></div>
-          <div class="icon-line"></div>
-          <div class="icon-line"></div>
+        <a class="logo uiMod" href="#">L'art de sobreviure</a>
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
+          <div class="icon-line uiModBack"></div>
+          <div class="icon-line uiModBack"></div>
+          <div class="icon-line uiModBack"></div>
         </div>
       </div>
     </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
     <!-- hero section -->
     <section class="hero-section-box hero-section-box-3">
       <div class="hero-section-content">
@@ -158,9 +190,9 @@
     </div>
 
     <div
-                  id="scrollmation-background-57137"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
-                  data-scrollmation-container=".section-scrollmation-57137"
+                  id="scrollmation-background-5713"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-5713 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-5713"
                   data-scrollmation="background"
                   data-viewport-height
                   data-viewport-height-property="min-height"
@@ -171,7 +203,7 @@
                     data-viewport-height-scale="0.66"
                   ></div>
                   <style>
-                    .section-scrollmation-57137 .tiny-scrollmation {
+                    .section-scrollmation-5713 .tiny-scrollmation {
                       background-image: url(assets/img/Diala-Brisly/Foto3.jpg);
                       background-position: top right;
                     }
@@ -271,9 +303,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 
 <div
-  id="scrollmation-background-57125"
-  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
-  data-scrollmation-container=".section-scrollmation-57125"
+  id="scrollmation-background-5712"
+  class="section section-scrollmation scrollmation-background section-scrollmation-5712 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-5712"
   data-scrollmation="background"
   data-viewport-height
   data-viewport-height-property="min-height"
@@ -284,7 +316,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     data-viewport-height-scale="0.66"
   ></div>
   <style>
-    .section-scrollmation-57125 .tiny-scrollmation {
+    .section-scrollmation-5712 .tiny-scrollmation {
       background-image: url(assets/img/Diala-Brisly/Foto5.jpg);
       background-position: top left;
     }
@@ -376,9 +408,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 
 <div
-  id="scrollmation-background-57125"
-  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
-  data-scrollmation-container=".section-scrollmation-57125"
+  id="scrollmation-background-571"
+  class="section section-scrollmation scrollmation-background section-scrollmation-571 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-571"
   data-scrollmation="background"
   data-viewport-height
   data-viewport-height-property="min-height"
@@ -389,7 +421,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     data-viewport-height-scale="0.66"
   ></div>
   <style>
-    .section-scrollmation-57125 .tiny-scrollmation {
+    .section-scrollmation-571 .tiny-scrollmation {
       background-image: url(assets/img/Diala-Brisly/Foto8.jpg);
       background-position: top left;
     }
@@ -437,9 +469,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 
 <div
-                  id="scrollmation-background-57137"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
-                  data-scrollmation-container=".section-scrollmation-57137"
+                  id="scrollmation-background-57"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-57 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-57"
                   data-scrollmation="background"
                   data-viewport-height
                   data-viewport-height-property="min-height"
@@ -450,7 +482,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                     data-viewport-height-scale="0.66"
                   ></div>
                   <style>
-                    .section-scrollmation-57137 .tiny-scrollmation {
+                    .section-scrollmation-57 .tiny-scrollmation {
                       background-image: url(assets/img/Diala-Brisly/Foto9.jpg);
                       background-position: top right;
                     }
@@ -631,10 +663,10 @@ Tanmateix, no es pot dedicar a l’art tant com voldria, i això la fa estar for
         <!-- content is here -->
         A quilòmetres de distància, la Diala continua implicant-se tant com pot a millorar la vida de les persones que estan patint, de manera directa o indirecta, les conseqüències de la guerra que fa més de vuit anys que castiga el seu país. La seva inspiració, els seus herois, són aquells que, des de dins de Síria, continuen intentant fer el país més habitable amb l’art, malgrat les adversitats, les prohibicions i la devastació.
       </p>
-      <br>
-      <br>
-      <br>
-      <br>
+      
+      
+      
+      
     </div>
   </div>
 </div>
@@ -675,7 +707,7 @@ Tanmateix, no es pot dedicar a l’art tant com voldria, i això la fa estar for
   <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/Foto12.jpg)">
     <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/Foto12.jpg"></a>
   </div>
-  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery21.jpg)">
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery22.jpg)">
     <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Diala-Brisly/gallery22.jpg"></a>
   </div>
   <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Diala-Brisly/gallery23.jpg)">

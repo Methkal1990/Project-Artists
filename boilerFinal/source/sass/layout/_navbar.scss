@@ -1,3 +1,8 @@
+.navbar-box{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 .navbar {
     position: absolute;
     width: 100%;
@@ -35,4 +40,42 @@
     font-size: 1.5rem;
     display: block;
     margin: 8rem 0;
+}
+
+
+// side nav
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    background-color: #33b5e5;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: .5s;
+    z-index: 10001;
+}
+.side-nav a{
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: .3s;/*for the menu to open smoothly*/
+}
+.side-nav a:hover{
+    color: #f3f3f3;
+    text-decoration: underline;
+}
+.side-nav .btn-close{
+    position: absolute;
+    top: 0;
+    right: 80%;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none !important;
+    
 }

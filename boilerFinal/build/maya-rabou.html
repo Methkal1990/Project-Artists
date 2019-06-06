@@ -57,20 +57,36 @@
         });
       });
     </script>
-
+<style>
+.item:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+.item:nth-child(2) {
+    grid-row: 1 / 4;
+}
+</style>
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar-box">
+   <!-- navbar -->
+   
+   <nav class="navbar-box">
       <div class="navbar">
         <a class="logo" href="#">L'art de sobreviure</a>
-        <div class="menu-icon-lines">
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
           <div class="icon-line"></div>
           <div class="icon-line"></div>
           <div class="icon-line"></div>
         </div>
       </div>
     </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
+
     <!-- hero section -->
     <section class="hero-section-box hero-section-box-10">
       <div class="hero-section-content">
@@ -312,7 +328,7 @@
         <p>
             A Berlín, com ella mateixa diu, ha tornat a néixer. Ha trobat un lloc on poder deixar enrere el dolor i ara pot, amb el seu art, parlar d’ella mateixa i del vessant de Síria que poca gent coneix. Tot i això, igual que el seu país, li queda un llarg camí per recuperar-se, i se sent inestable. Per això, de moment està estudiant alemany per poder tornar a treballar de dissenyadora gràfica i, sobretot, evolucionar artísticament. 
         </p>
-      <br><br><br>
+      <br>
       </div>
     </div>
   </div>
@@ -334,6 +350,18 @@
 </div>
 
 
+<div class="gallery gallery-3">
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Maya-Rabou/Foto3.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Maya-Rabou/Foto3.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Maya-Rabou/Foto2.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Maya-Rabou/Foto2.jpg"></a>
+  </div>
+  <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Maya-Rabou/Foto6.jpg)">
+    <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Maya-Rabou/Foto6.jpg"></a>
+  </div>
+</div>
+<br><br><br><br>
   
      
     <script src="assets/js/shorthand/head.min.js"></script>

@@ -1,0 +1,171 @@
+section#team{
+    .teamTitleBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .teamTitle{
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 400;
+        
+    }
+    .line{
+        height: 2px;
+        width: 4rem;
+        background-color: #10b6f3;
+    }
+    .teamMembers{
+        display: flex;
+        padding: 2rem;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        .member{
+            list-style: none;
+            border-radius: 50%;
+            
+            .memberPhoto{
+                width: 200px;
+                border-radius: 50%;
+
+            }
+        }
+    }
+}
+
+
+.pimg2, .pimg3{
+    position: relative;
+    opacity: 0.70;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*fixed for parallex view*/
+    background-attachment: fixed;
+}
+
+.pimg{
+    height: 100vh;
+    filter: grayscale(1);
+    transition: all .3s ease-in-out;
+}
+
+.pimg:hover{
+    filter: grayscale(0);
+}
+
+.pimg2{
+    background-image: url(../img/introduction/destruccio1.jpg);
+}
+
+.pimg3{
+    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    
+}
+.pimg4{
+    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    
+}
+.pimg5{
+    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    
+}
+.pimg6{
+    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    
+}
+.pimg7{
+    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    
+}
+.sectionIntro{
+     padding: 50px 80px;
+     background-color: #fff;
+     line-height: 1.7;
+     overflow-wrap: break-word;
+     word-wrap: break-word;
+     word-break: break-word;
+ }
+
+ @media (max-width:568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+} 
+
+section.sectionIntro div.text-box{
+    width: 600px;
+    margin: auto;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.75);
+    fill: rgba(0, 0, 0, 0.75);
+    font-weight: 400;
+}
+
+@media only screen and (max-width:701px){
+    section.sectionIntro div.text-box{
+        width: 400px;
+        font-size: 1.8rem;
+       
+        
+    }
+    .sectionIntro{
+        padding: 1rem;
+    }
+
+}
+
+section.sectionIntro h1.intro-head{
+    position: relative;
+    text-align: center;
+    
+    font-size: 3rem;
+    font-weight: 600;
+    
+    padding: .5rem;
+}
+section.sectionIntro .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 3rem;
+}
+section.sectionIntro .head .line{
+    background: #10b6f3;
+    height: 4px;
+    width: 7rem;
+}
+
+.goto{
+    display: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+background: #10b6f3;
+
+z-index: 1000;
+font-size: 1.2rem;
+        padding: 1rem 1rem 1.2rem 1rem;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-iteration-count: 10;
+
+
+    a{
+        
+        
+        color: #fff;
+    }
+
+}
+
+.appear{
+    display: block;
+}
+

@@ -1,0 +1,254 @@
+#slider-container{
+    position: relative;
+    color: #fff;
+
+    .overlay{
+        position: absolute;
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(40deg, #1d475793, #2334b873); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    }
+
+    .creators{
+        position: absolute;
+        z-index: 3;
+        bottom: 1rem;
+        left: 1rem;
+       font-size: 1.3rem;
+    }
+
+    .artistsButton {
+        z-index: 3;
+        font-size: 2rem;
+        position: relative;
+        text-align: center;
+        color: white;
+        display: block;
+        margin: 1.5rem auto;
+        width: 20rem;
+        padding: 1.6rem;
+        border-radius: .4rem;
+        background-color: #26b2e6;
+        overflow: hidden;
+        transition: color 0.3s ease-in-out;
+      }
+    
+      .artistsButton::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #3cefff;
+        transform-origin: center;
+        transform: translate(50%, -50%) scale(0);
+        transition: transform 0.45s ease-in-out;
+      }
+
+      .artistsButton:hover {
+        cursor: pointer;
+        
+      }
+
+      .artistsButton:hover::before {
+        transform: translate(50%, -50%) scale(30);
+      }
+  
+    
+}
+
+.content{
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    top: 40%;
+    left: 12%;
+    width: 30%;
+    padding: 2rem;
+    border: 3px solid #fff;
+}
+
+@media only screen and (max-width:769px){
+    #slider-container{
+
+        .content{
+            padding: .1rem;
+            width: 94%;
+            top: initial;
+            bottom: 4rem;
+            left: 1rem;
+            
+            .headline{
+                font-size: 2rem;
+                text-align: center;
+
+                
+
+            }
+            .subhead{
+                font-size: 1.45rem;
+            }
+        }
+        .artistsButton{
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width:1060px){
+    #slider-container{
+
+      
+            
+            .headline{
+                font-size: 3rem;
+                text-align: center;
+
+                
+
+            }
+            
+
+}
+}
+.content .headline{
+    font-size: 6rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.content .subhead{
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 100;
+}
+.slider{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current{
+    opacity: 1;
+}
+
+.slide .content{
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
+
+}
+
+.slide .content h1{
+    margin-bottom: 10px;
+}
+
+.slide.current .content{
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 3;
+}
+.buttons button#prev{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 3;
+}
+
+.buttons button{
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover{
+    background: #fff;
+    color: #333;
+}
+
+@media (max-width:500px){
+    .slide .content{
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+    .slide.current .content{
+        transform: translateY(-300px);
+    }
+}
+
+/*Background Images*/
+.slide:nth-child(1){
+    background: url(../img/introduction/25.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(2){
+    background: url(../img/introduction/anwar.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(3){
+    background: url(../img/introduction/Daraya13.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(4){
+    background: url(../img/introduction/Foto2-2.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(5){
+    background: url(../img/introduction/Foto2.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(6){
+    background: url(../img/introduction/Foto4-2.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(7){
+    background: url(../img/introduction/Foto8.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(8){
+    background: url(../img/introduction/Foto9-2.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(9){
+    background: url(../img/introduction/Foto9.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(10){
+    background: url(../img/introduction/Foto11.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(11){
+    background: url(../img/introduction/gallery27.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(12){
+    background: url(../img/introduction/ishtar5.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(13){
+    background: url(../img/introduction/Foto4.jpg) no-repeat center center/cover;
+}

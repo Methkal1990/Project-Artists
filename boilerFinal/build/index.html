@@ -1,1326 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Artist 1</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="assets/css/shorthand/common.min.css" />
-    <link rel="stylesheet" href="assets/css/shorthand/story.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>L'art de sobreviure</title>
+    
     <link
-    rel="stylesheet"
-    type="text/css"
-    href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
-  />
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css?family=Pacifico"
-    rel="stylesheet"
-  />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/css/lightbox.min.css">
     <link rel="stylesheet" href="assets/css/animate.css/animate.css" />
+    <link rel="stylesheet" href="assets/js/animate-on-scroll/aos.css" />
+    <link rel="stylesheet" href="assets/css/home/home-page.css">
     <link rel="stylesheet" href="assets/css/main.min.css" />
-    <style>
-      /* #myVideo{
-        position: relative;
-        min-width: 100%;
-        min-height: 100%;
-      } */
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      // smooth scrolling
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              },
+            );
+          } // End if
+        });
+      });
+
       
+     
 
 
-    </style>
+    </script>
   </head>
-  <body>
-        <div class="sections-list">
-                <div id="header-39044" class=" section-header">
-                </div>
-                <nav class="navbar-box">
-                  <div class="navbar">
-                    <a class="logo" href="#">Project Artists</a>
-                    <div class="menu-icon-lines">
-                      <div class="icon-line"></div>
-                      <div class="icon-line"></div>
-                      <div class="icon-line"></div>
-                    </div>
-                  </div>
-                </nav>
-                <section class="hero-section-box hero-section-box-1">
-                    
-                  <div class="hero-section-content">
-                    <h1 class="hero-title animated fadeInDown">Medhat AlDaabal</h1>
-                    <h2 class="hero-art">Dancer</h2>
-                    <p class="hero-quote">"Ballo per dir coses que ningú pugui jutjar"</p>
-                  </div>
-                  
-                  <div class="icon-box animated flash">
-                    <a class="scroll-down-icon" href="#"
-                      ><i class="fa fa-angle-double-down fa-2x"></i
-                    ></a>
-                  </div>
-                </section>
-                <div class="social-media-share">
-                  <div class="nice-line uiModBack"></div>
-                  <a href="#"><i class="fab fa-facebook uiMod"></i></a>
-                  <a href="#"><i class="fab fa-twitter uiMod"></i></a>
-                  <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
-                  <a href="#"><i class="fab fa-instagram uiMod"></i></a>
-                </div>
-                <!-- submenu -->
-                <nav id="subMenuNav" class="submenu animated">
-                  <div class="left">
-                      <div class="icon">
-                        
-                        <i class="fas fa-home"></i>
-                      
-                      </div>
-                  </div>
-                  <div class="middle">
-                      <ul>
-                          <li><a href="#lolita-no-esta" class="sliding-link">Episode 1</a></li>
-                          <li><a href="#lavirtud" class="sliding-link">Episode 2</a></li>
-                          <li><a href="#unbaile" class="sliding-link">Episode 3</a></li>
-                          <li><a href="#cortarcadenas" class="sliding-link">Episode 4</a></li>
-                          <li><a href="#cortarcadenas" class="sliding-link">Episode 5</a></li>
-                          
-                      </ul>
-                  </div>
-          
-          
-                  <div class="right">
-                    <div class="sub-logo">
+<body>
+    <!-- navbar -->
+   
+    <nav class="navbar-box">
+        <div class="navbar">
+          <a class="logo uiMod" href="#">L'art de sobreviure</a>
+          <div class="menu-icon-lines" onclick="openSlideMenu()">
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+          </div>
+        </div>
+      </nav>
+      <div id="side-menu" class="side-nav">
+          <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="#">Home</a>
+          <a href="#">Artistes</a>
+          <a href="#">About</a>
+      </div>
 
-                      <a class="sub-logo-link" href="#"><span>Project</span><br><span>Artists</span></a>
-                    </div>
-                  </div>
-              </nav>
-                <!-- submenu end -->
-                <div
-                  
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106239 has-text viewport-height"
-                >
-                  <div class="text text-over-media-inner center center x-small">
-                    <h2 class="text-inner">
-                      
-                      The BBC has uncovered details of a secret deal that let
-                      hundreds of IS fighters and their families escape from
-                      Raqqa, under the gaze of the US and British-led coalition
-                      and Kurdish-led forces who control the city.<br /><br />A
-                      convoy included some of IS’s most notorious members and –
-                      despite reassurances – dozens of foreign fighters. Some of
-                      those have spread out across Syria, even making it as far as
-                      Turkey.
-                    </h2>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-  
-                      <img
-                        src="assets/img/img2.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                      <!-- <video autoplay muted loop id="myVideo">
-                          <source src="assets/mp4/video.mp4" type="video/mp4">
-                          Your browser does not support HTML5 video.
-                        </video> -->
-                    </picture>
-                  </div>
-                </div>
-                
-                <div
-                  id="text-86582"
-                  class="section section-text inner-column-centered "
-                >
-                  <div class="main-column">
-                    <div class="block text-block">
-                      <p>
-                        Lorry driver Abu Fawzi thought it was going to be just
-                        another job.
-                      </p>
-                      <p>
-                        He drives an 18-wheeler across some of the most dangerous
-                        territory in northern Syria. Bombed-out bridges, deep
-                        desert sand, even government forces and so-called Islamic
-                        State fighters don’t stand in the way of a delivery.
-                      </p>
-                      <p>
-                        But this time, his load was to be human cargo. The Syrian
-                        Democratic Forces (SDF), an alliance of Kurdish and Arab
-                        fighters opposed to IS, wanted him to lead a convoy that
-                        would take hundreds of families displaced by fighting from
-                        the town of Tabqa on the Euphrates river to a camp further
-                        north.
-                      </p>
-                      <p>
-                        The job would take six hours, maximum – or at least that's
-                        what he was told.
-                      </p>
-                      <p>
-                        But when he and his fellow drivers assembled their convoy
-                        early on 12 October, they realised they had been lied to.
-                      </p>
-                     
-                        
-                      <p>
-                        Instead, it would take three days of hard driving,
-                        carrying a deadly cargo - hundreds of IS fighters, their
-                        families and tonnes of weapons and ammunition.
-                      </p>
-                    </div>
-                    <div class="block media-block media-block-image">
-                      <div class="inline-media">
-                        <div class="inline-image">
-                          <img class="image"
-                            src="assets/img/img3.jpg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block text-block">
-                      <p>
-                        Abu Fawzi and dozens of other drivers were promised
-                        thousands of dollars for the task but it had to remain
-                        secret.
-                      </p>
-                      <p>
-                        The deal to let IS fighters escape from Raqqa – de facto
-                        capital of their self-declared caliphate – had been
-                        arranged by local officials. It came after four months of
-                        fighting that left the city obliterated and almost devoid
-                        of people. It would spare lives and bring fighting to an
-                        end. The lives of the Arab, Kurdish and other fighters
-                        opposing IS would be spared.
-                      </p>
-                      <p>
-                        But it also enabled many hundreds of IS fighters to escape
-                        from the city. At the time, neither the US and British-led
-                        coalition, nor the SDF, which it backs, wanted to admit
-                        their part.
-                      </p>
-                      <p>
-                        Has the pact, which stood as Raqqa’s dirty secret,
-                        unleashed a threat to the outside world - one that has
-                        enabled militants to spread far and wide across Syria and
-                        beyond?
-                      </p>
-                      <p>
-                        Great pains were taken to hide it from the world. But the
-                        BBC has spoken to dozens of people who were either on the
-                        convoy, or observed it, and to the men who negotiated the
-                        deal.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                </div>
-                
-                <div
-                  
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
-                >
-                  <div class="text text-over-media-inner left center large">
-                    <h2 class="text-inner">
-                      Out of the city
-                    </h2>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-  
-                      <img
-                        src="assets/img/img4.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div
-                  id="scrollmation-background-57125"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
-                  data-scrollmation-container=".section-scrollmation-57125"
-                  data-scrollmation="background"
-                  data-viewport-height
-                  data-viewport-height-property="min-height"
-                >
-                  <div
-                    class="tiny-scrollmation"
-                    data-viewport-height
-                    data-viewport-height-scale="0.66"
-                  ></div>
-                  <style>
-                    .section-scrollmation-57125 .tiny-scrollmation {
-                      background-image: url(assets/img/img5.jpg);
-                      background-position: top left;
-                    }
-                  </style>
-  
-                  <div class="two-column-grid">
-                    <div
-                      class="column column-right main-column scrollmation-text"
-                    >
-                      <div class="block text-block">
-                        <p>
-                          In a greasy yard in Tabqa, underneath a date palm, three
-                          boys are busy at work rebuilding a lorry engine. They
-                          are covered in motor oil. Their hair, black and oily,
-                          stands on end.
-                        </p>
-                        <p>
-                          Near them is a group of drivers. Abu Fawzi is at the
-                          centre, conspicuous in his bright red jacket. It matches
-                          the colour of his beloved 18-wheeler. He’s clearly the
-                          leader, quick to offer tea and cigarettes. At first he
-                          says he doesn’t want to speak but soon changes his mind.
-                        </p>
-                        <p>
-                          He and the rest of the drivers are angry. It’s weeks
-                          since they risked their lives for a journey that ruined
-                          engines and broke axles but still they haven’t been
-                          paid. It was a journey to hell and back, he says.
-                        </p>
-                      </div>
-                      <div class="block media-block media-block-image">
-                        <div class="inline-media">
-                          <div class="inline-image">
-                            <img class="image"
-                              src="assets/img/img6.jpg"
-                           
-                            />
-                          </div>
-  
-                          <p class="media-block-caption caption">
-                            One of the drivers maps out the route of the convoy
-                          </p>
-                        </div>
-                      </div>
-                      <div class="block text-block">
-                        <p>
-                          “We were scared from the moment we entered Raqqa,” he
-                          says. “We were supposed to go in with the SDF, but we
-                          went alone. As soon as we entered, we saw IS fighters
-                          with their weapons and suicide belts on. They
-                          booby-trapped our trucks. If something were to go wrong
-                          in the deal, they would bomb the entire convoy. Even
-                          their children and women had suicide belts on.”
-                        </p>
-                        <p>
-                          The Kurdish-led SDF cleared Raqqa of media. Islamic
-                          State’s escape from its base would not be televised.
-                        </p>
-                        <p>
-                          Publicly, the SDF said that only a few dozen fighters
-                          had been able to leave, all of them locals.
-                        </p>
-                        <p>But one lorry driver tells us that isn't true.</p>
-                      </div>
-                      <figure class="block quote-block">
-                        <blockquote>
-                          <p>
-                            We took out around 4,000 people including women and
-                            children - our vehicle and their vehicles combined.
-                            When we entered Raqqa, we thought there were 200
-                            people to collect. In my vehicle alone, I took 112
-                            people.”
-                          </p>
-                        </blockquote>
-                      </figure>
-                      <div class="block text-block">
-                        <p>
-                          Another driver says the convoy was six to seven
-                          kilometres long. It included almost 50 trucks, 13 buses
-                          and more than 100 of the Islamic State group’s own
-                          vehicles. IS fighters, their faces covered, sat
-                          defiantly on top of some of the vehicles.
-                        </p>
-                        <p>
-                          Footage secretly filmed and passed to us shows lorries
-                          towing trailers crammed with armed men. Despite an
-                          agreement to take only personal weapons, IS fighters
-                          took everything they could carry. Ten trucks were loaded
-                          with weapons and ammunition.
-                        </p>
-                      </div>
-  
-                      <div class="block text-block">
-                        <p>
-                          The drivers point to a white truck being worked on in
-                          the corner of the yard. “Its axle was broken because of
-                          the weight of the ammo,” says Abu Fawzi.
-                        </p>
-                        <p>
-                          This wasn’t so much an evacuation - it was the exodus of
-                          so-called Islamic State.
-                        </p>
-                        <p>
-                          The SDF didn’t want the retreat from Raqqa to look like
-                          an escape to victory. No flags or banners would be
-                          allowed to be flown from the convoy as it left the city,
-                          the deal stipulated.
-                        </p>
-                        <p>
-                          It was also understood that no foreigners would be
-                          allowed to leave Raqqa alive.
-                        </p>
-                        <p>
-                          Back in May, US Defence Secretary James Mattis described
-                          the fight against IS as a war of “annihilation”.“Our
-                          intention is that the foreign fighters do not survive
-                          the fight to return home to north Africa, to Europe, to
-                          America, to Asia, to Africa. We are not going to allow
-                          them to do so,” he said on US television.
-                        </p>
-                        <p>
-                          But foreign fighters – those not from Syria and Iraq -
-                          were also able to join the convoy, according to the
-                          drivers. One explains:
-                        </p>
-                      </div>
-                      <figure class="block quote-block">
-                        <blockquote>
-                          <p>
-                            There was a huge number of foreigners. France, Turkey,
-                            Azerbaijan, Pakistan, Yemen, Saudi, China, Tunisia,
-                            Egypt...”
-                          </p>
-                        </blockquote>
-                      </figure>
-                      <div class="block text-block">
-                        <p>
-                          Other drivers chipped in with the names of different
-                          nationalities.
-                        </p>
-                        <p>
-                          In light of the BBC investigation, the coalition now
-                          admits the part it played in the deal. Some 250 IS
-                          fighters were allowed to leave Raqqa, with 3,500 of
-                          their family members.
-                        </p>
-                        <p>
-                          “We didn’t want anyone to leave,” says Col Ryan Dillon,
-                          spokesman for Operation Inherent Resolve, the Western
-                          coalition against IS.
-                        </p>
-                        <p>
-                          “But this goes to the heart of our strategy, ‘by, with
-                          and through’ local leaders on the ground. It comes down
-                          to Syrians – they are the ones fighting and dying, they
-                          get to make the decisions regarding operations,” he
-                          says.
-                        </p>
-                        <p>
-                          While a Western officer was present for the
-                          negotiations, they didn’t take an “active part” in the
-                          discussions. Col Dillon maintains, though, that only
-                          four foreign fighters left and they are now in SDF
-                          custody.
-                        </p>
-                      </div>
-                      <div class="block media-block media-block-image">
-                        <div class="inline-media">
-                          <div class="inline-image">
-                            <img class="image"
-                              src="assets/img/img6.jpg"
-                           
-                            />
-                          </div>
-  
-                          <p class="media-block-caption caption">
-                            IS family members prepare to leave
-                          </p>
-                        </div>
-                      </div>
-                      <div class="block text-block">
-                        <p>
-                          As it left the city, the convoy would pass through the
-                          well-irrigated cotton and wheat fields north of Raqqa.
-                          Small villages gave way to desert. The convoy left the
-                          main road and took to tracks across the desert. The
-                          trucks found it hard going, but it was much harder for
-                          the men behind the wheel.
-                        </p>
-                        <p>
-                          A friend of Abu Fawzi's rolls up the sleeve of his
-                          tunic. Underneath, there are burns on his skin. “Look
-                          what they did here,” he says.
-                        </p>
-                        <p>
-                          According to Abu Fawzi, there were three or four
-                          foreigners with each driver. They would beat him and
-                          call him names, such as “infidel”, or “pig”.
-                        </p>
-                        <p>
-                          They might have been helping the fighters escape, but
-                          the Arab drivers were abused the entire route, they say.
-                          And threatened.
-                        </p>
-                        <p>
-                          “They said, 'Let us know when you rebuild Raqqa - we
-                          will come back,’” says Abu Fawzi. “They were defiant and
-                          didn’t care. They accused us of kicking them out of
-                          Raqqa.”
-                        </p>
-                        <p>
-                          A female foreign fighter threatened him with her AK-47.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <div class="scrollmation-slides-wrapper">
-                    <div
-                      class="scrollmation-slides scrollmation viewport-height"
-                      data-scrollmation-slides
-                    >
-                      <aside class="scrollmation-background-container">
-                        <img
-                          src="assets/img/img4.jpg"
-                          data-scrollmation-slide
-                          data-tablet-img="assets/img/img5.jpg"
-                          data-object-fit="cover"
-                        />
-                      </aside>
-  
-                      <aside class="scrollmation-background-container">
-                        <img
-                          src="assets/img/img6.jpg"
-                          data-scrollmation-slide
-                          data-tablet-img="assets/img/img6.jpg"
-                         
-                        />
-                      </aside>
-                    </div>
-                  </div>
-                </div>
-  
-          
-                <div
-                  id="text-over-media-106295"
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106295  viewport-height"
-                >
-                  <div class="text text-over-media-inner center center normal">
-                    <div class="text-inner"></div>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-                      <img
-                        src="assets/img/img1.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div
-                  
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106256 has-text viewport-height"
-                >
-                  <div class="text text-over-media-inner right center large">
-                    <h2 class="text-inner">
-                      Into the desert
-                    </h2>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-  
-                      <img
-                        src="assets/img/img2.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-  
-               
-                <div
-                  id="text-86585"
-                  class="section section-text inner-column-centered "
-                >
-                  <div class="main-column">
-                    <div class="block text-block">
-                      <p>Shopkeeper Mahmoud doesn’t get intimidated by much.</p>
-                      <p>
-                        It was about four in the afternoon when an SDF convoy
-                        drove through his town, Shanine, and everyone was told to
-                        go indoors.
-                      </p>
-                      <p>
-                        “We were here and an SDF vehicle stopped by to say there
-                        was a truce agreement between them and IS,” he says. “They
-                        wanted us to clear the area.”
-                      </p>
-                      <p>
-                        He is no fan of IS, but he couldn’t miss a business
-                        opportunity - even if some of the 4,000 surprise customers
-                        driving through his village were armed to the teeth.
-                      </p>
-                    </div>
-                    <div class="block media-block media-block-image">
-                      <div class="inline-media">
-                        <div class="inline-image">
-                          <img class="image"
-sizes="(max-width: 1400px) 100vw, 1400px"
-srcset="
-assets/img/img4_r3vwl8_c_scale,w_200.jpg 200w,
-assets/img/img4_r3vwl8_c_scale,w_356.jpg 356w,
-assets/img/img4_r3vwl8_c_scale,w_477.jpg 477w,
-assets/img/img4_r3vwl8_c_scale,w_583.jpg 583w,
-assets/img/img4_r3vwl8_c_scale,w_681.jpg 681w,
-assets/img/img4_r3vwl8_c_scale,w_762.jpg 762w,
-assets/img/img4_r3vwl8_c_scale,w_830.jpg 830w,
-assets/img/img4_r3vwl8_c_scale,w_900.jpg 900w,
-assets/img/img4_r3vwl8_c_scale,w_970.jpg 970w,
-assets/img/img4_r3vwl8_c_scale,w_1029.jpg 1029w,
-assets/img/img4_r3vwl8_c_scale,w_1089.jpg 1089w,
-assets/img/img4_r3vwl8_c_scale,w_1144.jpg 1144w,
-assets/img/img4_r3vwl8_c_scale,w_1195.jpg 1195w,
-assets/img/img4_r3vwl8_c_scale,w_1242.jpg 1242w,
-assets/img/img4_r3vwl8_c_scale,w_1291.jpg 1291w,
-assets/img/img4_r3vwl8_c_scale,w_1338.jpg 1338w,
-assets/img/img4_r3vwl8_c_scale,w_1385.jpg 1385w,
-assets/img/img4_r3vwl8_c_scale,w_1398.jpg 1398w,
-assets/img/img4_r3vwl8_c_scale,w_1400.jpg 1400w"
-src="assets/img/img4_r3vwl8_c_scale,w_1400.jpg"
-alt="">
-                        </div>
-  
-                        <p class="media-block-caption caption">
-                          Mahmoud's shop
-                        </p>
-                      </div>
-                    </div>
-                    <div class="block text-block">
-                      <p>
-                        A small bridge in the village created a bottleneck so the
-                        IS fighters got out and went shopping. After months of
-                        fighting and taking cover in bunkers, they were pale and
-                        hungry. They filed into his shop and, he says, they
-                        cleared his shelves.
-                      </p>
-                      <p>
-                        “A one-eyed Tunisian fighter told me to fear God,” he
-                        says. “In a very calm voice, he asked why I had shaved. He
-                        said they would come back and enforce Sharia once again. I
-                        told him we have no problem with Sharia laws. We're all
-                        Muslims.”
-                      </p>
-                      <p>
-                        Instant noodles, biscuits and snacks - they bought
-                        everything they could get their hands on.
-                      </p>
-                      <p>
-                        They left their weapons outside the shop. The only trouble
-                        he had was when three of the fighters spied some
-                        cigarettes – contraband in their eyes – and tore up the
-                        boxes.
-                      </p>
-                    </div>
-                    <div class="block media-block media-block-image">
-                      <div class="inline-media">
-                        <div class="inline-image">
-                          <img class="image"
-                            src="assets/img/img5.jpg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block text-block">
-                      <p>
-                        “They didn't appropriate anything, nothing at all,” he
-                        says.
-                      </p>
-                      <p>
-                        “Only three of them went rogue. Other IS fighters even
-                        chastised them.”
-                      </p>
-                      <p>He says IS paid for what they took.</p>
-                      <p>
-                        “They hoovered up the shop. I got overwhelmed by their
-                        numbers. Many asked me for prices, but I couldn't answer
-                        them because I was busy serving other people. So they left
-                        money for me on my desk without me asking.”
-                      </p>
-                      <p>
-                        Despite the abuse they suffered, the lorry drivers agreed
-                        - when it came to money, IS settled its bills.
-                      </p>
-                    </div>
-                    <figure class="block quote-block">
-                      <blockquote>
-                        <p>
-                          IS may have been homicidal psychopaths, but they're
-                          always correct with the money.”
-                        </p>
-                      </blockquote>
-                    </figure>
-                    <div class="block text-block">
-                      <p>Says Abu Fawzi with a smile.</p>
-                      <p>
-                        North of the village, it’s a different landscape. A lonely
-                        tractor ploughs a field, sending a plume of dust and sand
-                        into the air that can be seen for miles. There are fewer
-                        villages, and it’s here that the convoy sought to
-                        disappear.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="text-over-media-106271"
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106271  viewport-height"
-                >
-                  <div class="text text-over-media-inner center center normal">
-                    <div class="text-inner"></div>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-                      <img
-                        src="assets/img/img6.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div
-                  id="scrollmation-background-57126"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57126 inner-column-left"
-                  data-scrollmation-container=".section-scrollmation-57126"
-                  data-scrollmation="background"
-                  data-viewport-height
-                  data-viewport-height-property="min-height"
-                >
-                  <div
-                    class="tiny-scrollmation"
-                    data-viewport-height
-                    data-viewport-height-scale="0.66"
-                  ></div>
-                  <style>
-                    .section-scrollmation-57126 .tiny-scrollmation {
-                      background-image: url(assets/img/img2.jpg);
-                      background-position: top right;
-                    }
-                  </style>
-  
-                  <div class="two-column-grid">
-                    <div class="column column-left main-column scrollmation-text">
-                      <div class="block text-block">
-                        <p>
-                          In Muhanad’s tiny village, people fled as the convoy
-                          approached, fearing for their homes - and their lives.
-                        </p>
-                        <p>
-                          But suddenly, the vehicles turned right, leaving the
-                          main road for a desert track.
-                        </p>
-                        <p>
-                          “Two Humvees were leading the convoy ahead,” says
-                          Muhanad. “They were organising it and wouldn't let
-                          anyone pass them.”
-                        </p>
-                        <p>
-                          As the convoy disappeared into the haze of the desert,
-                          Muhanad felt no immediate relief. Almost everyone we
-                          spoke to says IS threatened to return, its fighters
-                          running a finger across their throats as they passed by.
-                        </p>
-                        <p>
-                          “We've been living in terror for the past four or five
-                          years,” says Muhanad.
-                        </p>
-                      </div>
-                      <figure class="block quote-block">
-                        <blockquote>
-                          <p>
-                            It will take us a while to rid ourselves of that
-                            psychological fear. We feel that they may be coming
-                            back for us, or will send sleeper agents. We’re still
-                            not sure that they've gone for good.”
-                          </p>
-                        </blockquote>
-                      </figure>
-                      <div class="block text-block">
-                        <p>
-                          Along the route, many people we spoke to said they heard
-                          coalition aircraft, sometimes drones, following the
-                          convoy.
-                        </p>
-                        <p>
-                          From the cab of his truck, Abu Fawzi watched as a
-                          coalition warplane flew overhead, dropping illumination
-                          flares, which lit up the convoy and the road ahead.
-                        </p>
-                      </div>
-                      <figure class="block quote-block">
-                        <blockquote>
-                          <p>
-                            When the last of the convoy were about to cross, a US
-                            jet flew very low and deployed flares to light up the
-                            area. IS fighters shat their pants.”
-                          </p>
-                        </blockquote>
-                      </figure>
-                      <div class="block text-block">
-                        <p>
-                          The coalition now confirms that while it did not have
-                          its personnel on the ground, it monitored the convoy
-                          from the air.
-                        </p>
-                        <p>
-                          Past the last SDF checkpoint, inside IS territory - a
-                          village between Markada and Al-Souwar - Abu Fawzi
-                          reached his destination. His lorry was full of
-                          ammunition and IS fighters wanted it hidden.
-                        </p>
-                        <p>
-                          When he finally made it back to safety, he was asked by
-                          the SDF where he’d dumped the goods.
-                        </p>
-                        <p>
-                          “We showed them the location on the map and he marked it
-                          so uncle Trump can bomb it later,” he says.
-                        </p>
-                        <p>
-                          Raqqa’s freedom was bought with blood, sacrifice and
-                          compromise. The deal freed its trapped civilians and
-                          ended the fight for the city. No SDF forces would have
-                          to die storming the last IS hideout.
-                        </p>
-                        <p>
-                          But IS didn’t stay put for long. Freed from Raqqa, where
-                          they were surrounded, some of the group's most-wanted
-                          members have now spread far and wide across Syria and
-                          beyond.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <div class="scrollmation-slides-wrapper">
-                    <div
-                      class="scrollmation-slides scrollmation viewport-height"
-                      data-scrollmation-slides
-                    >
-                      <aside class="scrollmation-background-container">
-                        <img
-                          src="assets/img/img6.jpg"
-                          data-scrollmation-slide
-                          data-autoscale-anchor="right"
-                         
-                        />
-                      </aside>
-                    </div>
-                  </div>
-                </div>
-                <div
-                 
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106288 has-text viewport-height"
-                >
-                  <div class="text text-over-media-inner center bottom large">
-                    <h2 class="text-inner">
-                      The Smugglers
-                    </h2>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
+
+<!-- slider section-->
+
+
+
+<section id="slider-container">
+  <div class="overlay"></div>
+    <div class="content">
+      <h1 class="headline">L’art de sobreviure</h1>
+      <p class="subhead">Utilitzada com a eina política o d'evasió, la cultura també ha patit les conseqüències de la revolució, la guerra i l'exili que han transformat la vida dels artistes sirians, censurats durant dècades pel règim dels Assad</p>
+      <a href="./artistes.html" class="artistsButton">Coneix els artistes</a>
+    </div>
+    <div class="creators">
+        <span>Autors: Clàudia Ferràndiz, Nil Montilla i Abel Vázquez </span>
+      </div>
+    <div class="slider">
+        <div class="slide current">
+           
+        </div>
+        <div class="slide">
+            
+        </div>
+        <div class="slide">
+            
+        </div>
+        <div class="slide">
+            
+        </div>
+        <div class="slide">
+           
+        </div>
+        <div class="slide">
          
-  
-                      <img
-                        src="assets/img/img2.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div
-                  id="scrollmation-background-57137"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
-                  data-scrollmation-container=".section-scrollmation-57137"
-                  data-scrollmation="background"
-                  data-viewport-height
-                  data-viewport-height-property="min-height"
-                >
-                  <div
-                    class="tiny-scrollmation"
-                    data-viewport-height
-                    data-viewport-height-scale="0.66"
-                  ></div>
-                  <style>
-                    .section-scrollmation-57137 .tiny-scrollmation {
-                      background-image: url(assets/img/img2.jpg);
-                      background-position: top right;
-                    }
-                  </style>
-  
-                  <div class="two-column-grid">
-                    <div class="column column-left main-column scrollmation-text">
-                      <div class="block text-block">
-                        <p>
-                          The men who cut fences, climb walls and run through the
-                          tunnels out of Syria are reporting a big increase in
-                          people fleeing. The collapse of the caliphate is good
-                          for business.
-                        </p>
-                        <p>
-                          “In the past couple of weeks, we’ve had lots of families
-                          leaving Raqqa and wanting to leave for Turkey. This week
-                          alone, I personally oversaw the smuggling of 20
-                          families,” says Imad, a smuggler on the Turkish-Syrian
-                          border.
-                        </p>
-                        <p>“Most were foreign but there were Syrians as well.”</p>
-                        <p>
-                          He now charges $600 (£460) per person and a minimum of
-                          $1,500 for a family.
-                        </p>
-                        <p>
-                          In this business, clients don’t take kindly to
-                          inquiries. But Imad says he’s had “French, Europeans,
-                          Chechens, Uzbek”.
-                        </p>
-                        <p>
-                          “Some were talking in French, others in English, others
-                          in some foreign language,” he says.
-                        </p>
-                        <p>
-                          Walid, another smuggler on a different stretch of the
-                          Turkish border, tells the same story.
-                        </p>
-                        <p>
-                          “We had an influx of families over the past few weeks,”
-                          he says. “There were some large families crossing. Our
-                          job is to smuggle them through. We've had a lot of
-                          foreign families using our services.”
-                        </p>
-                        <p>
-                          As Turkey has increased border security, the work has
-                          become more difficult.
-                        </p>
-                      </div>
-                      <figure class="block quote-block">
-                        <blockquote>
-                          <p>
-                            In some areas we’re using ladders, in others we cross
-                            through a river, in other areas we're using a steep
-                            mountainous trail. It’s a miserable situation.”
-                          </p>
-                        </blockquote>
-                      </figure>
-                      <div class="block text-block">
-                        <p>
-                          However, Walid says it’s a different situation for
-                          senior IS figures.
-                        </p>
-                        <p>
-                          “Those highly placed foreigners have their own networks
-                          of smugglers. It’s usually the same people who organised
-                          their access to Syria. They co-ordinate with one
-                          another.”
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <div class="scrollmation-slides-wrapper">
-                    <div
-                      class="scrollmation-slides scrollmation viewport-height"
-                      data-scrollmation-slides
-                    >
-                      <aside class="scrollmation-background-container">
-                        <img
-                          src="assets/img/img4.jpg"
-                         
-                          data-scrollmation-slide
-                          
-                          data-autoscale-anchor="right"
-                        
-                        />
-                      </aside>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="text-over-media-106281"
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106281  viewport-height"
-                >
-                  <div class="text text-over-media-inner right center large">
-                    <div class="text-inner"></div>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-                      <img
-                        src="assets/img/img6.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div
-                  id="scrollmation-background-57132"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57132 inner-column-left"
-                  data-scrollmation-container=".section-scrollmation-57132"
-                  data-scrollmation="background"
-                  data-viewport-height
-                  data-viewport-height-property="min-height"
-                >
-                  <div
-                    class="tiny-scrollmation"
-                    data-viewport-height
-                    data-viewport-height-scale="0.66"
-                  ></div>
-                  <style>
-                    .section-scrollmation-57132 .tiny-scrollmation {
-                      background-image: url(assets/img/img1.jpg);
-                      background-position: top right;
-                    }
-                  </style>
-  
-                  <div class="two-column-grid">
-                    <div class="column column-left main-column scrollmation-text">
-                      <div class="block text-block">
-                        <p>
-                          Smuggling didn’t work out for everyone. Abu Musab
-                          Huthaifa was one of Raqqa’s most notorious figures. The
-                          IS intelligence chief was on the convoy out of the city
-                          on 12 October.
-                        </p>
-                        <p>
-                          But now he is behind bars, and his story reflects the
-                          final days of the crumbling caliphate.
-                        </p>
-                        <p>
-                          Islamic State never negotiates. Uncompromising,
-                          murderous - this is an enemy that plays by a different
-                          set of rules.
-                        </p>
-                        <p>At least that’s how the myth goes.</p>
-                      </div>
-                      <div class="block media-block media-block-image">
-                        <div class="inline-media">
-                          <div class="inline-image">
-                            <img class="image"
-                              src="assets/img/img2.jpg"
-                            />
-                          </div>
-                          <p class="media-block-caption caption">
-                            Abu Mus’ab
-                          </p>
-                        </div>
-                      </div>
-                      <div class="block text-block">
-                        <p>
-                          But in Raqqa, it behaved no differently from any other
-                          losing side. Cornered, exhausted and fearful for their
-                          families, IS fighters were bombed to the negotiating
-                          table on 10 October.
-                        </p>
-                        <p>
-                          “Air strikes put pressure on us for almost 10 hours.
-                          They killed about 500 or 600 people, fighters and
-                          families,” says Abu Musab Huthaifa.
-                        </p>
-                        <p>
-                          Footage of the coalition air strike that hit one
-                          neighbourhood of Raqqa on 11 October shows a human
-                          catastrophe behind enemy lines. Amid the screams of the
-                          women and children, there is chaos among the IS
-                          fighters. The bombs appear especially powerful,
-                          especially effective. Activists claim that a building
-                          housing 35 women and children was destroyed. It was
-                          enough to break their resistance.
-                        </p>
-                      </div>
-                      <div class="block text-block">
-                        <p>
-                          “After 10 hours, negotiations kicked off again. Those
-                          who initially rejected the truce changed their minds.
-                          And thus we left Raqqa,” says Abu Musab.
-                        </p>
-                        <p>
-                          There had been three previous attempts to negotiate a
-                          peace deal. A team of four, including local Raqqa
-                          officials, now led the talks. One brave soul would cross
-                          the front lines on his motorbike relaying messages.
-                        </p>
-                        <p>
-                          “We were only to leave with our personal weapons and
-                          leave all heavy weapons behind. But we didn't have heavy
-                          weapons anyway,” Abu Musab says.
-                        </p>
-                        <p>
-                          Now in jail on the Turkish-Syrian border, he has
-                          revealed details of what happened to the convoy when it
-                          made it safely to IS territory.
-                        </p>
-                        <p>
-                          He says the convoy went to the countryside of eastern
-                          Syria, not far from the border with Iraq.
-                        </p>
-                        <p>Thousands escaped, he says.</p>
-                        <p>
-                          Abu Musab’s own attempted escape serves as a warning to
-                          the West of the threat from those freed from Raqqa.
-                        </p>
-                        <p>
-                          How could one of the most notorious of IS chiefs escape
-                          through enemy territory and almost evade capture?
-                        </p>
-                        <p>
-                          “I remained with a group which had set its mind on
-                          making its way to Turkey,” Abu Musab says.
-                        </p>
-                        <p>
-                          Islamic State members were wanted by everyone else
-                          outside the group’s shrinking area of control; that
-                          meant this small gathering had to pass through swathes
-                          of hostile territory.
-                        </p>
-                        <p>
-                          “We hired a smuggler to navigate us out of
-                          SDF-controlled areas,” Abu Musab says.
-                        </p>
-                        <p>
-                          At first it went well. But smugglers are an unreliable
-                          lot. “He abandoned us midway. We were left to fend for
-                          ourselves in the midst of SDF areas. From then on, we
-                          disbanded and it was every man for himself,” says Abu
-                          Musab.
-                        </p>
-                        <p>
-                          He might have made it to safety if only he’d paid the
-                          right person or maybe taken a different route.
-                        </p>
-                        <p>
-                          The other path is to Idlib, to the west of Raqqa.
-                          Countless IS fighters and their families have found a
-                          haven there. Foreigners, too, also make it out -
-                          including Britons, other Europeans and Central Asians.
-                          The costs range from $4,000 (£3,000) per fighter to
-                          $20,000 for a large family.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <div class="scrollmation-slides-wrapper">
-                    <div
-                      class="scrollmation-slides scrollmation viewport-height"
-                      data-scrollmation-slides
-                    >
-                      <aside class="scrollmation-background-container">
-                        <img
-                          src="assets/img/img3.jpg"
-                          width="1920"
-                          height="1080"
-                        />
-                      </aside>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106324 has-text viewport-height"
-                >
-                  <div class="text text-over-media-inner left center large">
-                    <h2 class="text-inner">
-                      French fighter
-                    </h2>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-  
-  
-                      <img
-                        src="assets/img/img5.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-                <div
-                  id="text-86599"
-                  class="section section-text inner-column-centered "
-                >
-                  <div class="main-column">
-                    <div class="block text-block">
-                      <p>
-                        Abu Basir al-Faransy, a young Frenchman, left before the
-                        going got really tough in Raqqa. He’s now in Idlib, where
-                        he says he wants to stay.
-                      </p>
-                      <p>
-                        The fighting in Raqqa was intense, even back then, he
-                        says.
-                      </p>
-                      <p>
-                        “We were front-line fighters, waging war almost constantly
-                        [against the Kurds], living a hard life. We didn't know
-                        Raqqa was about to be besieged.”
-                      </p>
-                      <p>
-                        Disillusioned, weary of the constant fighting and fearing
-                        for his life, Abu Basir decided to leave for the safety of
-                        Idlib. He now lives in the city.
-                      </p>
-                      <p>
-                        He was part of an almost exclusively French group within
-                        IS, and before he left some of his fellow fighters were
-                        given a new mission.
-                      </p>
-                    </div>
-                    <figure class="block quote-block">
-                      <blockquote>
-                        <p>
-                          There are some French brothers from our group who left
-                          for France to carry out attacks in what would be called
-                          a ‘day of reckoning.’”
-                        </p>
-                      </blockquote>
-                    </figure>
-                    <div class="block text-block">
-                      <p>
-                        Much is hidden beneath the rubble of Raqqa and the lies
-                        around this deal might easily have stayed buried there
-                        too.
-                      </p>
-                      <p>
-                        The numbers leaving were much higher than local tribal
-                        elders admitted. At first the coalition refused to admit
-                        the extent of the deal.
-                      </p>
-                      <p>
-                        The Kurdish-led Syrian Democratic Forces, somewhat
-                        improbably, continue to maintain that no deal was done.
-                      </p>
-                      <p>
-                        And this may not even have been about freeing civilian
-                        hostages. As far as the coalition is concerned, there was
-                        no transfer of hostages from IS to coalition or SDF hands.
-                      </p>
-                      <p>
-                        And despite coalition denials, dozens of foreign fighters,
-                        according to eyewitnesses, joined the exodus.
-                      </p>
-                      <p>
-                        The deal to free IS was about maintaining good relations
-                        between the Kurds leading the fight and the Arab
-                        communities who surround them.
-                      </p>
-                      <p>
-                        It was also about minimising casualties. IS was well dug
-                        in at the city’s hospital and stadium. Any effort to
-                        dislodge it head-on would have been bloody and prolonged.
-                      </p>
-                      <p>
-                        The war against IS has a twin purpose: first to destroy
-                        the so-called caliphate by retaking territory and second,
-                        to prevent terror attacks in the world beyond Syria and
-                        Iraq.
-                      </p>
-                      <p>
-                        Raqqa was effectively IS’s capital but it was also a cage
-                        - fighters were trapped there.
-                      </p>
-                      <p>The deal to save Raqqa may have been worth it.</p>
-                      <p>
-                        But it has also meant battle-hardened militants have
-                        spread across Syria and further afield – and many of them
-                        aren’t done fighting yet.
-                      </p>
-                      <p>
-                        <em
-                          ><strong
-                            >All names of the people featured in the report have
-                            been changed.</strong
-                          ></em
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="text-over-media-106321"
-                  class="section section-text-over-media section-text-over-image section-text-over-media-106321  viewport-height"
-                >
-                  <div class="text text-over-media-inner center center normal">
-                    <div class="text-inner"></div>
-                  </div>
-  
-                  <div class="background-overlay"></div>
-  
-                  <div class="section-background section-background-fixed">
-                    <picture
-                      class="section-background-image text-over-media-background-image"
-                    >
-                      <img
-                        src="assets/img/img2.jpg"
-                        data-object-fit="cover"
-                        data-autoscale-content-ratio="1.77777777778"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </article>
-    <script src="assets/js/shorthand/head.min.js"></script>
-    <script src="assets/js/shorthand/common.min.js"></script>
-    <script src="assets/js/shorthand/story.min.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.4.0.min.js"
-    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/js/isInViewPort/isInViewport.min.js"></script>
-  <script src="assets/js/simple-parallax/simpleParallax.js"></script>
-  <script src="assets/js/main.js"></script>
-  </body>
+        </div>
+        <div class="slide">
+         
+        </div>
+        <div class="slide">
+         
+        </div>
+        <div class="slide">
+         
+        </div>
+        <div class="slide">
+         
+        </div>
+        <div class="slide">
+         
+        </div>
+        <div class="slide">
+         
+        </div>
+        <div class="slide">
+         
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev"><i class="fas fa-arrow-left"></i></button>
+        <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+</section>
+<div class="goto animated shake">
+  <a href="./artistes.html">Els Artistes</a>
+</div>
+
+<!-- 
+ <section id="team">
+  <div class="teamTitleBox">
+
+    <h1 class="teamTitle">Per</h1>
+    <div class="line"></div>
+  </div>
+  <ul class="teamMembers">
+      <li class="member"><img src="assets/img/team/test.png" alt="" class="memberPhoto"></li>
+      <li class="member"><img src="assets/img/team/test.png" alt="" class="memberPhoto"></li>
+      <li class="member"><img src="assets/img/team/test.png" alt="" class="memberPhoto"></li>
+  </ul>
+</section>  -->
+
+
+  <section class="sectionIntro">
+      <div class="text-box">
+
+        <p>Les imatges que deixa una guerra sempre són horripilants: edificis ensorrats, crits d’auxili, l’amenaça de les bombes, cossos sense vida, hospitals saturats. En definitiva, desesperació, ruïnes i mort. Aquesta és la realitat quotidiana de molts sirians, o ho era fins que van aconseguir abandonar el país. Cap d’ells es podia imaginar un escenari tan devastador quan el 2011 els carrers de tota Síria es van omplir de manifestants reclamant democràcia. En altres països, com Tunísia, aquestes protestes havien acabat amb la dictadura. A Síria hi havia la mateixa esperança i el mateix desig, però el moviment revolucionari va acabar conduint cap a una guerra civil que ja fa vuit anys que castiga el país.
+          </p>
+      </div>
+  </section>
+  <div class="pimg pimg2">
+      
+  </div>
+  <section class="sectionIntro">
+      <div class="text-box">
+
+        <p>
+            La violència pot contestar-se amb violència, però això només eternitza el conflicte i alimenta aquesta roda de devastació, sang i mort. Davant de la força amb què el règim de Baixar Al-Assad va reprimir el moviment revolucionari, diversos sirians van escollir una altra mena de resposta, l’art, i van estendre el missatge de la revolta arreu del país. D’altres, van trobar en la cultura una motivació per despertar-se cada dia i fer front a la realitat que sacsejava Síria, fos des de l’exili o des de la seva terra natal. 
+        </p>
+        <br>
+        <p>
+            En qualsevol cas, l’art va florir per denunciar situacions injustes, per fer el dolor més suportable, o bé per crear un espai a l’interior de cadascú on no pogués arribar el so de les bombes, la ràbia i la por. En definitiva, un art de l’esperança, que demostra que més enllà de l’horror podem crear nous camins: un art per sobreviure. 
+        </p>
+        <br>
+      </div>
+  </section>
+  <div class="pimg pimg3">
+      
+  </div>
+  <section class="sectionIntro">
+    <div class="head">
+
+      <h1 class="intro-head">Un passat de censura</h1>
+      <div class="line"></div>
+    </div>
+      <div class="text-box">
+
+     <p>
+        Abans que esclatés la revolució, Síria havia viscut 40 anys de dictadura, primer sota Hafez Al-Assad, i després amb el seu fill Baixar. Un règim que prohibia parlar públicament sobre temes relacionats amb la política, la religió i el sexe perquè considerava que podien desestabilitzar l’equilibri del partit Baath, la formació oficial. Aquestes restriccions es traslladaven a l’escena artística nacional, en què qualsevol activitat cultural havia de ser autoritzada pel govern, segons relata l’artista Maymanah Farhat a la revista Afkar/ideas, publicada per l’Institut Europeu del Mediterrani. 
+     </p>
+     <br>
+     <p>
+        El contingut de les obres passava diversos filtres abans de veure la llum. Molts artistes s’autocensuraven per tal de superar-los a la primera. D’altres intentaven desafiar les regles i n’acabaven pagant el preu, sent detinguts o interrogats. Acostumada a aquestes restriccions, la societat siriana tampoc acceptava “idees rebels relacionades amb l’art”, assegura el comissari artístic Humam Al-Salim. 
+     </p>
+     <br>
+      </div>
+  </section>
+  <div class="pimg pimg2">
+      
+  </div>
+  <section class="sectionIntro">
+      <div class="text-box">
+
+        <p>
+            El règim, doncs, confinava la cultura a l’àmbit privat, impedint que jugués algun paper destacable en la vida pública, segons explica l’intel·lectual i crític sirià Yassin al-Haj Saleh a l’obra-compilació Syria Speaks (Malu Halasa, Zaher Omareen, Nawara Mahfoud, 2014). Durant dècades, el també politòleg considera que els grans influents en la societat siriana han estat el poder polític i militar. 
+        </p>
+        <br>
+        <p>
+            El panorama artístic a Síria abans de la revolució també estava marcat per un fort academicisme que condemnava totes aquelles expressions artístiques dissidents que busquessin qualsevol tipus de renovació. L’art que fomentava el règim i que s’ensenyava a les universitats era tradicional i realista, més aviat clàssic, i no deixava espai per a la creativitat ni la llibertat.
+
+        </p>
+        <br>
+        <p>
+            El 2011, molts artistes van trobar en la revolució l’oportunitat d’alliberar-se de les restriccions del règim i experimentar un art sense límits. La cultura es va convertir en una eina per exigir democràcia en les multitudinàries manifestacions en forma de pancartes, grafitis, cançons, llenços o vídeos. Fins i tot gent sense experiència artística va començar a descobrir-se amb aquest esclat de llibertat. 
+        </p>
+        <br>
+      </div>
+  </section>
+  <div class="pimg pimg2">
+      
+  </div>
+  <section class="sectionIntro">
+    <div class="head">
+
+      <h1 class="intro-head">L’exili, una nova mirada</h1>
+      <div class="line"></div>
+    </div>
+      <div class="text-box">
+
+        <p>
+            Entre 2011 i 2015, gairebé tots els artistes es van traslladar a viure al Líban. Com explica Humam Al Salim, comissari d’exposicions sirià, l’escena artística es va reconstruir en aquest país, i es va centrar sobretot en mostres sobre el conflicte sirià, que van gaudir d’una acollida entusiasta entre el públic libanès. 
+        </p>
+        <br>
+        <p>
+            Amb tot, el Líban es va acabar cansant d’aquest tipus d’art. Com relata l’artista Maymanah Farhat a “En el tiempo del cinismo y el duelo” (revista Afkar/ideas), la situació interna del país va empitjorar, i els artistes sirians, a falta d’un mercat interessat en les seves obres, es van obligar a buscar un altre lloc on començar de nou. Al principi, molts van optar per assentar-se a Istanbul o a Dubai, però la majoria va acabar venint a Europa, sigui com a sol·licitants d’asil polític o amb un visat.
+        </p>
+      </div>
+  </section>
+  <div class="pimg pimg2">
+      
+  </div>
+
+  <section class="sectionIntro">
+      
+        <div class="text-box">
+          <p>
+              Actualment, Alemanya és el país europeu que més artistes sirians ha acollit després del Líban. Aquesta tendència es va consolidar l’estiu del 2015, quan l’Oficina Federal per les Migracions i els Refugiats (BAMF) va anunciar que suspendria les expulsions de persones indocumentades als seus països d’origen. A la pràctica, l’Estat alemany es va comprometre a concedir asil polític i permís de residència a tots els exiliats sirians.
+          </p>
+          <br>
+          <p>
+              És per això que a grans ciutats com Berlín trobem assentada una comunitat siriana molt forta. Els artistes, per la seva banda, han trobat ONGs que els ofereixen suport per organitzar exposicions artístiques o altres activitats. També col·laboren amb institucions governamentals, escoles d’art i altres organitzacions. 
+          </p>
+          <br>
+          <p>
+              L’arribada a Europa ha obert les seves ments a les noves formes de l’art contemporani, com les instal·lacions, les performances, l’art conceptual, l’experimentació amb diversos estils… Totes aquestes opcions no existien oficialment a Síria -estaven reduïdes a manifestacions individuals- i conèixer-les va eixamplar els seus horitzons artístics. De fet, molts asseguren que qualsevol artista sirià hauria de sortir del seu país per explorar amb llibertat l’escena artística internacional i trobar la seva pròpia veu, lluny de la mirada del règim.
+          </p>
+        </div>
+    </section>
+    <div class="pimg pimg2">
+        
+    </div>
+  <section class="sectionIntro">
+      
+        <div class="text-box">
+          <p>
+              Aquesta distància permet a alguns artistes utilitzar la seva obra per enfrontar-se amb els traumes de la guerra. En aquest sentit, Arantxa Vilar, coordinadora del Màster d’Art-Teràpia a l’Institut Superior d’Estudis Psicològics (Barcelona), explica que l’art pot ser una eina molt positiva per guarir l’esperit: “Davant un esdeveniment traumàtic, puc utilitzar el meu joc creador per crear alguna cosa on abans no hi havia res, construint una altra realitat que m’ajudi a viure d’una forma millor”. 
+          </p>
+          <br>
+          <p>
+              Per ella, aquesta nova realitat que forma l’art es troba més enllà de les fronteres del llenguatge verbal, i permet expressar les nostres emocions d’una forma més sincera, “arribant allà on les paraules no poden”.
+          </p>
+          <br>
+          <p>
+              Per aquest mateix motiu, l’impuls artístic pot ser un gran aliat per superar el bloqueig emocional. Nabil Sayed, psiquiatra d’origen sirià establert a Almeria, comenta que l’art pot ajudar a fomentar “capacitats resilients”, és a dir, mecanismes psicològics per adaptar-se a situacions adverses i conviure amb un dolor que, tot i no estar ja en guerra, continua perseguint a molts artistes. 
+          </p>
+        </div>
+    </section>
+    <div class="pimg pimg2">
+        
+    </div>
+  <section class="sectionIntro">
+    <div class="head">
+
+      <h1 class="intro-head">Adaptació artística: pèrdua d’identitat o porta a la innovació?</h1>
+      <div class="line"></div>
+    </div>
+        <div class="text-box">
+          <p>
+              La integració a Occident sempre és un repte. Molts artistes, per exemple, es pregunten si és legítim modificar el seu estil original per incloure les propostes de l’art contemporani occidental. Implica això que estan perdent les seves arrels? O és positiu girar l’esquena a tota aquesta herència perquè més que arrels eren cadenes?
+          </p>
+          <br>
+          <p>
+              En aquest sentit, destaca el projecte de Rashida Triki, una artista de la Universitat de Tunis que ha creat el terme “modernitat identificadora”: la seva producció artística vol assumir les formes convencionals de la tradició artística aràbiga -la puresa de les formes, la geometria, la importància del decorativisme, la presència de la cal·ligrafia i l’autonomia del color-, però alhora vol beure dels nous estils occidentals, establint un diàleg entre els seus orígens i l’art contemporani occidental. 
+          </p>
+        </div>
+    </section>
+    <div class="pimg pimg2">
+        
+    </div>
+  <section class="sectionIntro">
+   
+        <div class="text-box">
+          <p>
+              D’altra banda, molts artistes sirians senten que el públic occidental només accepta el seu art perquè està relacionat amb la guerra siriana o perquè donen suport a la revolució. En aquest sentit, algunes organitzacions i galeries d’art han adoptat termes com “art de refugiats” per promocionar les seves obres. Per molts artistes, això vol dir que les galeries occidentals exposen les seves no per la qualitat artística, sinó perquè volen donar suport a la integració dels refugiats a Europa. 
+          </p>
+          <br>
+          <p>
+              Aquest fenomen no només passa amb l’art que prové de Síria. Com han assenyalat diferents estudiosos, en els darrers anys ha crescut l’interès de la societat occidental cap a les manifestacions artístiques de tot l’Orient Mitjà, especialment cap a països com Turquia, Iraq o el Líban. Aquest interès, però, s’enfoca sobretot cap a l’art relacionat amb el terrorisme islàmic, la guerra o la denúncia d’un règim dictatorial, que són, de fet, els temes que preocupen a Occident sobre l’Orient Mitjà. A vegades, si un artista àrab se surt d’aquestes temàtiques o presenta realitats diferents que no coincideixen amb la visió occidental, perd l’interès de les galeries.
+          </p>
+          <br>
+          <p>
+              La guerra de Síria i l’exili d’una part important de la població han afectat la manera en què els artistes produeixen el seu art, de la mateixa manera que han influït en la seva forma de viure. Molts d’ells han hagut d’aprendre a nedar a contracorrent, a esquivar els obstacles, a adaptar-se a situacions noves i estranyes. A alguns els hem pogut donar veu en aquest reportatge. Perquè ells són la veu de la Síria més real, la més allunyada dels estereotips. Cadascun d’ells explica una història diferent i amb mitjans diversos, una història de com s’han enfrontat al conflicte i a la pèrdua. Tots aquests artistes són experts en l’art de sobreviure.
+          </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+          <script src="assets/js/animate-on-scroll/aos.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/js/lightbox-plus-jquery.min.js"></script>
+          <script>
+            AOS.init({
+              duration: 2000,
+            });
+          </script>
+      <script src="assets/js/home/main.js"></script>
+          <script src="assets/js/main.js"></script>
+</body>
 </html>

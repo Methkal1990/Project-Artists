@@ -60,17 +60,25 @@
    
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar-box">
+   <!-- navbar -->
+   
+   <nav class="navbar-box">
       <div class="navbar">
         <a class="logo" href="#">L'art de sobreviure</a>
-        <div class="menu-icon-lines">
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
           <div class="icon-line"></div>
           <div class="icon-line"></div>
           <div class="icon-line"></div>
         </div>
       </div>
     </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
+
     <!-- hero section -->
     <section class="hero-section-box hero-section-box-5">
       <div class="hero-section-content">

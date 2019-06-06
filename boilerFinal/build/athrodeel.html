@@ -94,16 +94,25 @@
             </audio>
 
 
-            <nav class="navbar-box">
-                    <div class="navbar">
-                      <a class="logo" href="#">L'art de sobreviure</a>
-                      <div class="menu-icon-lines">
-                        <div class="icon-line"></div>
-                        <div class="icon-line"></div>
-                        <div class="icon-line"></div>
-                      </div>
-                    </div>
-                  </nav>
+            <!-- navbar -->
+   
+    <nav class="navbar-box">
+        <div class="navbar">
+          <a class="logo" href="#">L'art de sobreviure</a>
+          <div class="menu-icon-lines" onclick="openSlideMenu()">
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+          </div>
+        </div>
+      </nav>
+      <div id="side-menu" class="side-nav">
+          <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="#">Home</a>
+          <a href="#">Artistes</a>
+          <a href="#">About</a>
+      </div>
+
                   <!-- hero section -->
                   <section class="hero-section-box hero-section-box-12">
                     <div class="hero-section-content">
@@ -660,6 +669,10 @@ class="section section-text-over-media section-text-over-image section-text-over
         Ara, Athrodeel està preparant un nou projecte, <em>Records d’Andalusia</em>, tres grans concerts en companyia de músics flamencs que realitzaran aquest estiu a Síria, al Gran Teatre de Damasc. La seva intenció, diu l’Ahmad, és “agafar la pau d’aquí i portar-la allà”.
     </p>
     <br>
+    <div class="videoWrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9tAQP1czjn8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
     <p>
         Aquesta no serà la primera vegada que tornen a Síria després de marxar a viure a Barcelona. L’Aseel, per exemple, ha anat ja quatre vegades a passar les vacances d’estiu. “Hi ha guerra al país, però als mitjans no els interessa ensenyar que hi ha ciutats tranquil·les”, denuncia. En aquest sentit, ella creu que la situació està millorant a poc a poc, i que la joventut siriana “és capaç d’adaptar-se a qualsevol situació, perillosa o no”.
     </p>
@@ -694,6 +707,12 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 </div>
 </div>
+
+
+
+
+
+
 
     <script src="assets/js/shorthand/head.min.js"></script>
     <script src="assets/js/shorthand/common.min.js"></script>

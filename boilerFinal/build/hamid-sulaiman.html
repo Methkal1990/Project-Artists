@@ -57,19 +57,44 @@
         });
       });
     </script>
+    <style>
+    .gallery-11 .item:nth-child(11){
+      
+    grid-column: 2/4;
+
+    }
+    .gallery-11 .item:nth-child(6) {
+    grid-row: 5/8;
+}
+    @media screen and (max-width:500px){
+      .gallery-11 .item:nth-child(6),
+  .gallery-11 .item:nth-child(11){
+    grid-column: initial;
+        grid-row: initial;
+  }
+}
+    </style>
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar-box">
+   <!-- navbar -->
+   
+   <nav class="navbar-box">
       <div class="navbar">
         <a class="logo" href="#">L'art de sobreviure</a>
-        <div class="menu-icon-lines">
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
           <div class="icon-line"></div>
           <div class="icon-line"></div>
           <div class="icon-line"></div>
         </div>
       </div>
     </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
+
     <!-- hero section -->
     <section class="hero-section-box hero-section-box-6">
       <div class="hero-section-content">
@@ -507,6 +532,7 @@
                 Però això no el fa deixar de ser optimista. “Si vas a l’Alemanya del 1944, ells tampoc veurien esperança”, apunta, somrient. El Hamid considera fermament que tota lluita per aconseguir drets humans i democràcia és llarga: “Ho veuré? Seré viu? Crec que sí… Cap guerra dura per sempre”.
               </p>
               <br>
+              <br><br>
             </div>
           </div>
         </div>

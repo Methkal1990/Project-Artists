@@ -57,19 +57,48 @@
         });
       });
     </script>
+    <style>
+    .gallery-20 .item:nth-child(18){
+      
+    grid-column: 3/4;
+    grid-row: 9/11;
+
+    }
+
+    .gallery-20 .item:nth-child(13) {
+    grid-row: 9/12;
+}
+
+@media screen and (max-width:500px){
+  .gallery-20 .item:nth-child(18),
+  
+  .gallery-20 .item:nth-child(13){
+    grid-column: initial;
+        grid-row: initial;
+  }
+}
+    </style>
   </head>
 <body>
     <!-- navbar -->
+   
     <nav class="navbar-box">
-            <div class="navbar">
-              <a class="logo" href="#">L'art de sobreviure</a>
-              <div class="menu-icon-lines">
-                <div class="icon-line"></div>
-                <div class="icon-line"></div>
-                <div class="icon-line"></div>
-              </div>
-            </div>
-          </nav>
+        <div class="navbar">
+          <a class="logo" href="#">L'art de sobreviure</a>
+          <div class="menu-icon-lines" onclick="openSlideMenu()">
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+          </div>
+        </div>
+      </nav>
+      <div id="side-menu" class="side-nav">
+          <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="#">Home</a>
+          <a href="#">Artistes</a>
+          <a href="#">About</a>
+      </div>
+
           <!-- hero section -->
           <section class="hero-section-box hero-section-box-11">
             <div class="hero-section-content">
@@ -455,6 +484,7 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 </div>
 <!-- gallery -->
+<br><br><br>
 <div class="gallery gallery-20">
         <div class="item" data-lightbox="mygallery" data-title="" style="background-image:url(assets/img/Ahmad-Ismael/Foto3.jpg)">
           <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Ahmad-Ismael/Foto3.jpg"></a>

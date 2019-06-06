@@ -9,6 +9,9 @@
     top: 0;
     left: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .navbar .menu-icon-lines {
     display: flex;
@@ -24,10 +27,11 @@
     background: #fff;
 }
 .navbar .navbar-nav{
-    float: left;
+    /* float: left; */
 }
+
 .navbar a{
-    float: right;
+    /* float: right; */
     display: block;
     color: #fff;
     text-align: center;
@@ -40,11 +44,12 @@
     list-style: none;
 
 }
+/*
 .navbar a:hover{
     background-color: #157ca2;
-    /* color: #33b5e5; */
+    color: #33b5e5;
     border-radius: 5px;
-}
+}*/
 /*override the hover background effect from the previous class*/
 #toggle:hover{
     background-color: #33b5e5;
@@ -77,7 +82,8 @@
 .side-nav .btn-close{
     position: absolute;
     top: 0;
-    right: 22px;
+    
+    right: 80%;
     font-size: 36px;
     margin-left: 50px;
     text-decoration: none !important;

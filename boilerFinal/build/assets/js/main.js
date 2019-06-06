@@ -1,4 +1,13 @@
-
+//menu slide effect
+function openSlideMenu(e){
+        
+  document.getElementById('side-menu').style.width='300px';
+  document.getElementById('main').style.marginLeft='300px';
+}
+function closeSlideMenu(){
+  document.getElementById('side-menu').style.width='0';
+  document.getElementById('main').style.marginLeft='0';
+}
 // background audio control
 var getaudio = $("#player")[0];
 /* Get the audio from the player (using the player's ID), the [0] is necessary */
@@ -69,6 +78,7 @@ function initiateNavigation() {
   let uiModNodeList = document.querySelectorAll(".uiMod");
   let uiModeBackList = document.querySelectorAll(".uiModBack");
   const subMenu = document.getElementById("subMenuNav");
+  
 
   let uiModArray = Array.from(uiModNodeList);
   let uiModeBackArray = Array.from(uiModeBackList);
@@ -77,24 +87,30 @@ function initiateNavigation() {
     document.body.scrollTop > 1100 ||
     document.documentElement.scrollTop > 1100
   ) {
+    $(".goto").addClass("appear");
     subMenu.style.display = "block";
     $("#subMenuNav").addClass("flipInX");
     for (let i = 0; i < uiModArray.length; i++) {
-      uiModArray[i].style.color = "#333";
+      uiModArray[i].style.color = "#10b6f3";
+      // uiModArray[i].classList.add("shadow");
     }
     for (let i = 0; i < uiModeBackArray.length; i++) {
-      uiModeBackArray[i].style.backgroundColor = "#333";
+      uiModeBackArray[i].style.backgroundColor = "#10b6f3";
+      // uiModeBackArray[i].classList.add("shadow");
     }
   } else if (
     document.body.scrollTop < 1100 ||
     document.documentElement.scrollTop < 1100
   ) {
     subMenu.style.display = "none";
+    $(".goto").removeClass("appear");
     for (let i = 0; i < uiModArray.length; i++) {
       uiModArray[i].style.color = "#fff";
+      // uiModArray[i].removeClass("shadow");
     }
     for (let i = 0; i < uiModeBackArray.length; i++) {
       uiModeBackArray[i].style.backgroundColor = "#fff";
+      // uiModeBackArray[i].removeClass("shadow");
     }
   }
 }

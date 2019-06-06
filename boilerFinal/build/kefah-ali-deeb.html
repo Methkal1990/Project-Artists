@@ -73,20 +73,35 @@
     padding: 5rem 2rem;
   }
 }
+.item:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+.item:nth-child(2) {
+    grid-row: 1 / 4;
+}
 </style>
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar-box">
+   <!-- navbar -->
+   
+   <nav class="navbar-box">
       <div class="navbar">
         <a class="logo" href="#">L'art de sobreviure</a>
-        <div class="menu-icon-lines">
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
           <div class="icon-line"></div>
           <div class="icon-line"></div>
           <div class="icon-line"></div>
         </div>
       </div>
     </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Artistes</a>
+        <a href="#">About</a>
+    </div>
+
     <!-- hero section -->
     <section class="hero-section-box hero-section-box-8">
       <div class="hero-section-content">
@@ -435,7 +450,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <a class="image-dist" data-lightbox="mygallery" data-title="" href="assets/img/Kefah-Ali-Deeb/Foto10.jpg"></a>
   </div>
 </div>
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
     <script src="assets/js/shorthand/head.min.js"></script>
     <script src="assets/js/shorthand/common.min.js"></script>
