@@ -1,13 +1,13 @@
 .hero-section-box-6 {
     background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-        url(../img/Hamid-Sulaiman/Foto1.jpg) top right/cover;
+        url(../img/Hamid-Sulaiman/Foto1.jpg?nf_resize=fit&w=1500&h=1000) top right/cover;
 
 }
 
 @media screen and (max-width:600px){
     .hero-section-box-5 {
         background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-            url(../img/Hamid-Sulaiman/Foto1.jpg) top center/cover;
+            url(../img/Hamid-Sulaiman/Foto1.jpg?nf_resize=fit&w=700&h=700) top center/cover;
     
     }
 }

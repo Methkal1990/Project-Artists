@@ -1,13 +1,13 @@
 .hero-section-box-10 {
     background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-    url(../img/Maya-Rabou/Foto1.jpg) top center/cover;
+    url(../img/Maya-Rabou/Foto1.jpg?nf_resize=fit&w=1500&h=1000) top center/cover;
 
 }
 
 @media screen and (max-width:600px){
     .hero-section-box-10 {
         background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-            url(../img/Maya-Rabou/Foto1.jpg) top right/cover;
+            url(../img/Maya-Rabou/Foto1.jpg?nf_resize=fit&w=700&h=700) top right/cover;
     
     }
 }

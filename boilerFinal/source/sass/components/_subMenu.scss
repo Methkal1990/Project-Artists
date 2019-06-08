@@ -3,9 +3,9 @@ nav.submenu {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #157ca2;
+    background: #10b6f3;
     height: 65px;
-    z-index: 1000;
+    z-index: 100000;
     top: auto;
     color: #fff;
     
@@ -14,12 +14,24 @@ nav.submenu .left {
     position: absolute;
     top: 17px;
     left: 17px;
+
+
 }
 nav.submenu .left .icon {
+    position: relative;
     width: 30px;
     height: 30px;
     float: left;
     padding-right: 20px;
+    .goup{
+        display: block;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 100000;
+    }
 }
 
 nav.submenu .left .icon i {

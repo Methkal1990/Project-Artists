@@ -1,13 +1,13 @@
 .hero-section-box-14 {
     background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-        url(../img/bassam-dawood/Foto1.jpg) top left/100%;
+        url(../img/bassam-dawood/Foto1.jpg?nf_resize=fit&w=1500&h=1000) top left/cover;
 
 }
 
 @media screen and (max-width:600px){
     .hero-section-box-14 {
         background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-            url(../img/bassam-dawood/Foto1.jpg) top center/cover;
+            url(../img/bassam-dawood/Foto1.jpg?nf_resize=fit&w=700&h=700) top center/cover;
     
     }
 }

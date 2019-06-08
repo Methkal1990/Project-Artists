@@ -2,15 +2,17 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    
 }
 .navbar {
     position: absolute;
     width: 100%;
-    top: 2rem;
-    right: 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     z-index: 1000;
+    align-items: center;
+   
 }
 
 .navbar .logo {
@@ -24,9 +26,11 @@
 .navbar .menu-icon-lines {
     display: flex;
     width: 3rem;
+    height: 35px;
     justify-content: space-between;
-    padding: 2.5px;
+    padding: 1px 1px;
     cursor: pointer;
+    
 }
 
 .navbar .icon-line {
@@ -78,4 +82,18 @@
     margin-left: 50px;
     text-decoration: none !important;
     
+}
+
+#start{
+    position: relative;
+    .page-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #333;
+        z-index: 1000;
+        opacity: 0.6;
+        
+        display: none;
+    }
 }

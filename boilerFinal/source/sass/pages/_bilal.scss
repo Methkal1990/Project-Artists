@@ -1,13 +1,13 @@
 .hero-section-box-15 {
     background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-        url(../img/Bilal-Malek-Al-Shami/Foto1.jpg) top left/100%;
+        url(../img/Bilal-Malek-Al-Shami/Foto1.jpg?nf_resize=fit&w=1500&h=1000) center center/cover;
 
 }
 
 @media screen and (max-width:600px){
     .hero-section-box-15 {
         background: linear-gradient(40deg, #1d4757e0, #22309bbb),
-            url(../img/Bilal-Malek-Al-Shami/Foto1.jpg) top center/cover;
+            url(../img/Bilal-Malek-Al-Shami/Foto1.jpg?nf_resize=fit&w=700&h=700) top center/cover;
     
     }
 }

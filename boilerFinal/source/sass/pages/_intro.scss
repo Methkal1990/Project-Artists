@@ -36,48 +36,94 @@ section#team{
 }
 
 
-.pimg2, .pimg3{
+
+.pimg{
     position: relative;
     opacity: 0.70;
-    background-position:center;
+    background-position:center/center;
     background-size: cover;
     background-repeat: no-repeat;
     /*fixed for parallex view*/
     background-attachment: fixed;
-}
-
-.pimg{
     height: 100vh;
-    filter: grayscale(1);
-    transition: all .3s ease-in-out;
+   
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s filter ease-in-out;
+-webkit-transition: .5s -webkit-filter ease-in-out;
+-moz-transition: .5s -moz-filter ease-in-out;
+-ms-transition: .5s -ms-filter ease-in-out;
+-o-transition: .5s -o-filter ease-in-out;
+
+    .captionText{
+        position: absolute;
+        bottom: 1rem;
+        color: #fff;
+        font-weight: 600;
+        left: 1rem;
+        font-size: 1.3rem;
+        z-index: 3;
+        
+    }
+
+    .bottomOverlay{
+        position: absolute;
+        bottom: 0;
+        height: 7%;
+        background-color: rgba(51, 51, 51, 0.432);
+        z-index: 2;
+        width: 100%;
+       
+     
+    }
 }
 
 .pimg:hover{
-    filter: grayscale(0);
+    filter: blur(0);
+    -webkit-filter: blur(0);
 }
 
 .pimg2{
-    background-image: url(../img/introduction/destruccio1.jpg);
+    background-image: url(../img/introduction/destruccio1.jpg?nf_resize=fit&w=1500&h=1000);
+    
 }
 
 .pimg3{
-    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    background-image: url(../img/introduction/Esperança.jpg?nf_resize=fit&w=1500&h=1000);
+    background-position:center;
     
 }
 .pimg4{
-    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    background-image: url(../img/introduction/diala2.jpg?nf_resize=fit&w=1500&h=1000);
+    background-position:center;
     
 }
 .pimg5{
-    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    background-image: url(../img/introduction/Diala.jpg?nf_resize=fit&w=1500&h=1000);
+    background-position:center;
     
 }
 .pimg6{
-    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    background-image: url(../img/introduction/Khaled.jpg?nf_resize=fit&w=1500&h=1000);
+    background-position:center;
     
 }
 .pimg7{
-    background-image: url(../img/Michaele-Daoud/Foto1.jpg);
+    background-image: url(../img/introduction/Arrels.jpg?nf_resize=fit&w=1500&h=1000);
+    background-position: center center;
+
+}
+.pimg8{
+    background-image: url(../img/introduction/Foto5.png?nf_resize=fit&w=1500&h=1000);
+    background-position:right;
+    
+}
+.pimg9{
+    background-image: url(../img/introduction/Foto3.1.jpg?nf_resize=fit&w=1500&h=1000);
+    background-position:center;
     
 }
 .sectionIntro{
@@ -116,6 +162,18 @@ section.sectionIntro div.text-box{
     }
 
 }
+@media only screen and (max-width:500px){
+    section.sectionIntro div.text-box{
+        width: 350px;
+        font-size: 1.8rem;
+       
+        
+    }
+    .sectionIntro{
+        padding: 2rem 1.1rem;
+    }
+
+}
 
 section.sectionIntro h1.intro-head{
     position: relative;
@@ -148,10 +206,10 @@ section.sectionIntro .head .line{
     -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
 background: #10b6f3;
-
+border-radius: 10px;
 z-index: 1000;
-font-size: 1.2rem;
-        padding: 1rem 1rem 1.2rem 1rem;
+font-size: 1.4rem;
+        padding: 1.5rem 1.7rem 1.5rem 1.5rem;
         animation-duration: 5s;
         animation-delay: 5s;
         animation-iteration-count: 10;

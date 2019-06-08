@@ -2,6 +2,22 @@
     position: relative;
     color: #fff;
 
+    .scrolldownIcon{
+        position: absolute;
+        bottom: .5rem;
+        background: none;
+        z-index: 10;
+        left: 50%;
+        a{
+            color: #fff;
+
+            i{
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
     .overlay{
         position: absolute;
         width: 100%; /* Full width (cover the whole page) */
@@ -22,45 +38,7 @@
        font-size: 1.3rem;
     }
 
-    .artistsButton {
-        z-index: 3;
-        font-size: 2rem;
-        position: relative;
-        text-align: center;
-        color: white;
-        display: block;
-        margin: 1.5rem auto;
-        width: 20rem;
-        padding: 1.6rem;
-        border-radius: .4rem;
-        background-color: #26b2e6;
-        overflow: hidden;
-        transition: color 0.3s ease-in-out;
-      }
     
-      .artistsButton::before {
-        content: '';
-        z-index: -1;
-        position: absolute;
-        top: 100%;
-        right: 100%;
-        width: 1em;
-        height: 1em;
-        border-radius: 50%;
-        background-color: #3cefff;
-        transform-origin: center;
-        transform: translate(50%, -50%) scale(0);
-        transition: transform 0.45s ease-in-out;
-      }
-
-      .artistsButton:hover {
-        cursor: pointer;
-        
-      }
-
-      .artistsButton:hover::before {
-        transform: translate(50%, -50%) scale(30);
-      }
   
     
 }
@@ -213,42 +191,83 @@
 }
 
 /*Background Images*/
-.slide:nth-child(1){
-    background: url(../img/introduction/25.jpg) no-repeat center center/cover;
+.slide:nth-child(12){
+    background: url(../img/introduction/25.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(2){
-    background: url(../img/introduction/anwar.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/anwar.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(3){
-    background: url(../img/introduction/Daraya13.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/Daraya13.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
-.slide:nth-child(4){
-    background: url(../img/introduction/Foto2-2.jpg) no-repeat center center/cover;
+.slide:nth-child(1){
+    background: url(../img/introduction/Foto2-2.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(5){
-    background: url(../img/introduction/Foto2.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/Foto2.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(6){
-    background: url(../img/introduction/Foto4-2.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/Foto4-2.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(7){
-    background: url(../img/introduction/Foto8.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/Foto8.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
+
 .slide:nth-child(8){
-    background: url(../img/introduction/Foto9-2.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/Foto9.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(9){
-    background: url(../img/introduction/Foto9.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/Foto11.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(10){
-    background: url(../img/introduction/Foto11.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/gallery27.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
 .slide:nth-child(11){
-    background: url(../img/introduction/gallery27.jpg) no-repeat center center/cover;
+    background: url(../img/introduction/ishtar5.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
-.slide:nth-child(12){
-    background: url(../img/introduction/ishtar5.jpg) no-repeat center center/cover;
+.slide:nth-child(4){
+    background: url(../img/introduction/Foto4.jpg?nf_resize=fit&w=1500&h=1000) no-repeat center center/cover;
 }
-.slide:nth-child(13){
-    background: url(../img/introduction/Foto4.jpg) no-repeat center center/cover;
+
+
+#artistsButtonBox{
+    .artistsButton {
+        z-index: 3;
+        font-size: 2rem;
+        position: relative;
+        text-align: center;
+        color: white;
+        display: block;
+        margin: 1.5rem auto;
+        width: 20rem;
+        padding: 1.6rem;
+        border-radius: .4rem;
+        background-color: #26b2e6;
+        overflow: hidden;
+        transition: color 0.3s ease-in-out;
+      }
+    
+      .artistsButton::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #3cefff;
+        transform-origin: center;
+        transform: translate(50%, -50%) scale(0);
+        transition: transform 0.45s ease-in-out;
+      }
+
+      .artistsButton:hover {
+        cursor: pointer;
+        
+      }
+
+      .artistsButton:hover::before {
+        transform: translate(50%, -50%) scale(30);
+      }
 }

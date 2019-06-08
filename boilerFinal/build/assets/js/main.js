@@ -2,11 +2,14 @@
 function openSlideMenu(e){
         
   document.getElementById('side-menu').style.width='300px';
-  document.getElementById('main').style.marginLeft='300px';
+  // document.getElementById('main').style.marginLeft='300px';
+  
+  document.getElementById("overlay-page").style.display="block";
 }
 function closeSlideMenu(){
   document.getElementById('side-menu').style.width='0';
-  document.getElementById('main').style.marginLeft='0';
+  document.getElementById("overlay-page").style.display="none";
+  // document.getElementById('main').style.marginLeft='0';
 }
 // background audio control
 var getaudio = $("#player")[0];
@@ -78,10 +81,28 @@ function initiateNavigation() {
   let uiModNodeList = document.querySelectorAll(".uiMod");
   let uiModeBackList = document.querySelectorAll(".uiModBack");
   const subMenu = document.getElementById("subMenuNav");
+  const navbar = document.getElementById("navbarElement");
+  
+  
+
+  
   
 
   let uiModArray = Array.from(uiModNodeList);
   let uiModeBackArray = Array.from(uiModeBackList);
+
+  if ( document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100) {
+    navbar.style.backgroundColor = "#10b6f3";
+    navbar.style.opacity = "0.9";
+    
+  }
+  else if ( document.body.scrollTop < 10 ||
+    document.documentElement.scrollTop < 10) {
+    navbar.style.backgroundColor = "initial";
+    navbar.style.opacity = "1";
+    
+  }
 
   if (
     document.body.scrollTop > 1100 ||
@@ -113,23 +134,18 @@ function initiateNavigation() {
       // uiModeBackArray[i].removeClass("shadow");
     }
   }
-}
-//parallax example
-var image = document.getElementsByClassName("image");
-new simpleParallax(image, {
-  delay: 0.8,
-  transition: "cubic-bezier(0,0,0,1)",
-});
 
-// zoom in out script
-const map = document.querySelector(".zoom-map-box");
-const zoomInFunc = () => {
-  document.querySelector(".image-out").style.zIndex = "-1";
-  document.querySelector(".image-zoom").style.zIndex = "0";
-};
-const zoomOutFunc = () => {
-  document.querySelector(".image-zoom").style.zIndex = "-1";
-  document.querySelector(".image-out").style.zIndex = "0";
-};
+
+  // progress bar 
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+
+  
+}
+
+
+
 
 

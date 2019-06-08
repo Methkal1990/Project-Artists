@@ -62,7 +62,7 @@ if(auto){
 };
 // material cards events
 $(function() {
-    $('.material-card > .mc-btn-action').click(function () {
+    $('.material-card > .childCard').hover(function () {
         var card = $(this).parent('.material-card');
         var icon = $(this).children('i');
         icon.addClass('fa-spin-fast');
@@ -76,7 +76,7 @@ $(function() {
                     .removeClass('fa-spin-fast')
                     .addClass('fa-bars');
 
-            }, 800);
+            }, 3000);
         } else {
             card.addClass('mc-active');
 
@@ -86,7 +86,7 @@ $(function() {
                     .removeClass('fa-spin-fast')
                     .addClass('fa-arrow-left');
 
-            }, 800);
+            }, 3000);
         }
     });
 });

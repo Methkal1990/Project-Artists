@@ -56,29 +56,42 @@
         });
       });
     </script>
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cfa8ed34351e9001264fb02&product=inline-share-buttons' async='async'></script>
   </head>
-  <body>
-    <!-- navbar -->
-    <nav class="navbar-box">
-      <div class="navbar">
-        <a class="logo" href="#">Project Artists</a>
-        <div class="menu-icon-lines">
-          <div class="icon-line"></div>
-          <div class="icon-line"></div>
-          <div class="icon-line"></div>
-        </div>
-      </div>
-    </nav>
+  <body id="start">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div> 
+<div class="page-overlay" id="overlay-page"></div>
+<!-- navbar -->
+<nav class="navbar-box">
+  <div class="navbar" id="navbarElement">
+    <a class="logo" href="#">L'art de sobreviure</a>
+    <div class="menu-icon-lines" onclick="openSlideMenu()">
+      <div class="icon-line"></div>
+      <div class="icon-line"></div>
+      <div class="icon-line"></div>
+    </div>
+  </div>
+</nav>
+<div id="side-menu" class="side-nav">
+    <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Artistes</a>
+    <a href="#">About</a>
+</div>
+
+
     <!-- hero section -->
-    <section class="hero-section-box hero-section-box-1">
+    <section class="hero-section-box hero-section-box-16">
       <div class="hero-section-content">
-        <h1 class="hero-title animated fadeInDown">Nemat Khaled</h1>
-        <h2 class="hero-art">Escriptora</h2>
+        <h1 class="hero-title animated fadeInDown">NEMAT KHALED</h1>
+        <h2 class="hero-art">Escriptora i periodista</h2>
         <p class="hero-quote">“A Síria, em protegia a mi mateixa abans d’escriure qualsevol cosa”</p>
       </div>
 
       <div class="icon-box animated flash">
-        <a class="scroll-down-icon" href="#"
+        <a class="scroll-down-icon" href="#first"
           ><i class="fa fa-angle-double-down fa-2x"></i
         ></a>
       </div>
@@ -100,21 +113,23 @@
       </div>
       <div class="middle">
         <ul>
-          <li><a href="#first" class="sliding-link">Episode 1</a></li>
-          <li><a href="#second" class="sliding-link">Episode 2</a></li>
-          <li><a href="#third" class="sliding-link">Episode 3</a></li>
-          <li><a href="#fourth" class="sliding-link">Episode 4</a></li>
+            <li><a href="#first" class="sliding-link"><span class="episode-name">Yumma</span><span class="eps-num">1</span></a></li>
+              <li><a href="#second" class="sliding-link"><span class="episode-name">Censura i llibertat</span><span class="eps-num">2</span></a></li>
+                <li><a href="#third" class="sliding-link"><span class="episode-name">Confort</span><span class="eps-num">3</span></a></li>
+        
         </ul>
       </div>
 
       <div class="right">
-        <div class="sub-logo">
-          <a class="sub-logo-link" href="#"
-            ><span>Project</span><br /><span>Artists</span></a
+          <div class="sub-logo">
+            <a class="sub-logo-link" href="#"
+            ><span>L'art de</span><br /><span>sobreviure</span></a
           >
+          </div>
         </div>
-      </div>
     </nav>
+
+
 <!-- episode 1 -->
 <!-- change the id to what suits the title of the section -->
 <div
@@ -130,7 +145,7 @@
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1500"
-        ></span
+        >Yumma</span
       >
     </div>
   </div>
@@ -141,7 +156,7 @@
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/img6.jpg"
+        src="assets/img/nemat/foto2.jpg"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -149,39 +164,130 @@
   </div>
 </div>
 
-    <!-- normal text block -->
-    <div id="text-86582" class="section section-text inner-column-centered ">
-      <div class="main-column">
-        <div class="block text-block">
+<div
+                  id="scrollmation-background-5713"
+                  class="section section-scrollmation scrollmation-background section-scrollmation-5713 inner-column-left"
+                  data-scrollmation-container=".section-scrollmation-5713"
+                  data-scrollmation="background"
+                  data-viewport-height
+                  data-viewport-height-property="min-height"
+                >
+                  <div
+                    class="tiny-scrollmation"
+                    data-viewport-height
+                    data-viewport-height-scale="0.66"
+                  ></div>
+                  <style>
+                    .section-scrollmation-5713 .tiny-scrollmation {
+                      background-image: url(assets/img/nemat/Foto3.jpg);
+                      background-position: top right;
+                    }
+                  </style>
+  
+                  <div class="two-column-grid">
+                    <div class="column column-right main-column scrollmation-text">
+                      <div class="block text-block">
           <p>
             <!-- content is here -->
-            “El Houssam, l’Amer, el Samer, la Dina, l’Ahmad… Tots ells són els meus fills”, afirma, amb orgull, la Nemat Khaled. L’escriptora i periodista siriana, de 62 anys, és coneguda a Berlín com a <em>Yumma</em> -'mare' en àrab-. Encara que viu a la capital alemanya sola i no té fills, el sobrenom fa referència a la seva hospitalitat: sempre dona la benvinguda i escalfor als sirians que acaben d’arribar a la ciutat o que ja hi resideixen. Les portes de la llar de la Nemat són obertes per al qui necessiti un plat calent o un llit on passar-hi la nit, i nosaltres comprovem de primera mà aquesta personalitat acollidora que la caracteritza quan insisteix que ens quedem a dinar amb ella, després de l’entrevista.
+            “El Houssam, l’Amer, el Samer, la Dina, l’Ahmad… Tots ells són els meus fills”, afirma, amb orgull, la Nemat Khaled. L’escriptora i periodista siriana, de 62 anys, és coneguda a Berlín com a <em>Yumma</em> -'mare' en àrab-. Encara que viu a la capital alemanya sola i no té fills, <strong>el sobrenom fa referència a la seva hospitalitat</strong>: sempre dona la benvinguda i escalfor als sirians que acaben d’arribar a la ciutat o que ja hi resideixen. Les portes de la llar de la Nemat són obertes per al qui necessiti un plat calent o un llit on passar-hi la nit, i nosaltres comprovem de primera mà aquesta personalitat acollidora que la caracteritza quan insisteix que ens quedem a dinar amb ella, després de l’entrevista.
           </p>
           <br>
           <p>
-            “Tinc molts fills, entre 40 i 50”, assegura la Nemat satisfeta. L’anar i venir de la gent la fa molt feliç, però reconeix que “la majoria de l’estona” se sent “sola”. “A vegades penso en el passat -comenta, absorta en els seus pensaments-. Sovint m’agradaria acabar amb els meus records, oblidar-los, però mai me’n surto”. 
+            “Tinc molts fills, entre 40 i 50”, assegura la Nemat satisfeta. L’anar i venir de la gent la fa molt feliç, però reconeix que “la majoria de l’estona” se sent “sola”. “A vegades penso en el passat -comenta, absorta en els seus pensaments-. <strong>Sovint m’agradaria acabar amb els meus records</strong>, oblidar-los, però mai me’n surto”. 
           </p>
           <br>
           <p>
-            Nascuda al camp de Yarmouk, a vuit quilòmetres del centre de Damasc, la Nemat ha estat refugiada tota la vida: primer palestina, i ara també siriana. Els seus antecessors vivien al poble de Maghar, actualment al nord d’Israel, però van ser-ne expulsats el 1948, quan l’exèrcit israelià va ocupar el territori. Aleshores, els pares de la Nemat, que eren joves, van desplaçar-se a Síria, a la ciutat de Quneitra, que es troba a la vall dels Alts del Golan. Però el 1967 va esclatar la tercera guerra àrab-israeliana, coneguda com la guerra dels Sis Dies, i Síria va perdre el control dels Alts del Golan. Així, la família de la Nemat va haver de fugir de nou, aquesta vegada cap a Yarmouk, on s’hi podrien quedar durant més de mig segle ininterrompudament. 
+            Nascuda al camp de Yarmouk, a vuit quilòmetres del centre de Damasc, la Nemat ha estat <strong>refugiada tota la vida</strong>: primer palestina, i ara també siriana. Els seus antecessors vivien al poble de Maghar, actualment al nord d’Israel, però van ser-ne expulsats el 1948, quan l’exèrcit israelià va ocupar el territori. Aleshores, els pares de la Nemat, que eren joves, van desplaçar-se a Síria, a la ciutat de Quneitra, que es troba a la vall dels Alts del Golan. Però el 1967 va esclatar la tercera guerra àrab-israeliana, coneguda com la guerra dels Sis Dies, i Síria va perdre el control dels Alts del Golan. Així, la família de la Nemat va haver de fugir de nou, aquesta vegada cap a Yarmouk, on s’hi podrien quedar durant més de mig segle ininterrompudament. 
+          </p>
+          <br>
+          <div class="block media-block media-block-image">
+              <div class="inline-media">
+                <div class="inline-image">
+                  <img class="image" src="assets/img/nemat/Foto4.jpg" />
+                </div>
+              </div>
+            </div>
+          <br>
+          <p>
+            A Síria, els palestins no obtenen un passaport sirià, ni tan sols si neixen dins el país com la Nemat, sinó que un <strong>document per viatjar</strong>. El règim sirià considera en la seva Llei de Retorn, del 1967, que si els palestins tinguessin drets com a plens sirians mai tornarien al seu país.
           </p>
           <br>
           <p>
-            A Síria, els palestins no obtenen un passaport sirià, ni tan sols si neixen dins el país com la Nemat, sinó que un document per viatjar. El règim sirià considera en la seva Llei de Retorn, del 1967, que si els palestins tinguessin drets com a plens sirians mai tornarien al seu país.
+            Malgrat que al senyal de trànsit que coronava l’entrada de Yarmouk s’hi llegia <em>Mukhayam al-Yarmouk</em> (‘camp de Yarmouk’ en àrab), el barri guardava poques similituds amb els camps replets de tendes o barracons que solen acollir refugiats. De fet, Yarmouk no va arribar a ser <strong>mai reconegut oficialment com un camp</strong>.           
           </p>
           <br>
-          <p>
-            Malgrat que al senyal de trànsit que coronava l’entrada de Yarmouk s’hi llegia <em>Mukhayam al-Yarmouk</em> (‘camp de Yarmouk’ en àrab), el barri guardava poques similituds amb els camps replets de tendes o barracons que solen acollir refugiats. De fet, Yarmouk no va arribar a ser mai reconegut oficialment com un camp.           
-          </p>
-          <br>
-          <p>
-            Segons l’Agència de l’ONU per als Refugiats de Palestina al Pròxim Orient, Yarmouk va començar a albergar refugiats palestins a partir del 1957. Amb els anys, els palestins se’l van fer seu i el van transformar en un barri acollidor, amb blocs de pisos, hospitals, escoles i carrers estrets que conduïen d’un racó a un altre. Quan va començar la guerra civil, Yarmouk s’havia convertit en la llar d’unes 160.000 persones.            
-          </p>
-          <br>
+
         </div>
       </div>
     </div>
-    <!-- episode 2 -->
+
+    <div class="scrollmation-slides-wrapper">
+      <div
+        class="scrollmation-slides scrollmation viewport-height"
+        data-scrollmation-slides
+      >
+        <aside class="scrollmation-background-container">
+          <img
+            src="assets/img/nemat/Foto3.jpg"
+           
+            data-scrollmation-slide
+            
+            data-autoscale-anchor="right"
+          
+          />
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div id="text-86582" class="section section-text inner-column-centered ">
+      <div class="main-column">
+        <div class="block text-block">
+          <p>
+            Segons l’Agència de l’ONU per als Refugiats de Palestina al Pròxim Orient, Yarmouk va començar a albergar refugiats palestins a partir del 1957. Amb els anys, els palestins se’l van fer seu i el van transformar en un barri acollidor, amb blocs de pisos, hospitals, escoles i carrers estrets que conduïen d’un racó a un altre. Quan va començar la guerra civil, <strong>Yarmouk s’havia convertit en la llar d’unes 160.000 persones</strong>.            
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 80%;margin:0 auto;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0; display: flex;justify-content: center;align-items: center;"><iframe frameborder="0" width="1200px" height="675px" style="position: absolute; top: 0; left: 0; width: 100%; height: 80%;" src="https://view.genial.ly/5ce8faea84510d0f36e976cb" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+   <div id="text-86582" class="section section-text inner-column-centered ">
+      <div class="main-column">
+        <div class="block text-block">
+            <p>
+                          
+                            Tot i que la Nemat accepta que li agrada “estar en un lloc” en què se senti “lliure” i “no controlada”, al camp de refugiats palestins de Damasc hi guarda tota una vida: “Tots els meus records són a Yarmouk: la meva família, els meus amics, la gent que estimo… Me’n conec tots els carrers”. O, almenys, els coneixia. Després de la guerra, ja no n’està tan convençuda: “Ara em perdria si hi tornés perquè <strong>està completament destruït”</strong>, reconeix.
+                          </p>
+                          <br>
+                          <p>
+                            Una de les novel·les més conegudes de la Nemat, <strong><em>Laylat Al-Henna</em> (‘Nit de Henna’)</strong>, parla precisament de les condicions de vida a Yarmouk. Tot i que la temàtica central és l’amor, el lector coneix a través dels ulls de la Nadia l’alt índex d’atur juvenil, el crim i l’abús de drogues que marquen el dia a dia en aquesta zona. El relat estableix un paral·lelisme entre la jove Nadia, que viu a Yarmouk, i la seva tieta-àvia, que va viure als Alts del Golan abans que fossin ocupats. “El més important és que en els dos períodes la parella sempre trenca, els somnis s’esmicolen -comenta l’escriptora-. Passi el que passi, ella sempre està deprimida”.  
+                          </p>
+                          <br>
+                          <div class="block media-block media-block-image">
+                              <div class="inline-media">
+                                <div class="inline-image">
+                                  <img class="image" src="assets/img/nemat/henna.JPG" />
+                                </div>
+                            
+                              
+                              </div>
+                            </div>
+                          <br>
+                          <p>
+                            La Nemat va créixer envoltada de les <strong>històries que el seu pare i els seus avis li explicaven sobre Palestina</strong>. Això, segons assenyala, va ser el detonant que la va inspirar a escriure històries i novel·les. La seva família sempre li va donar suport perquè es dediqués a aquest món, sobretot el seu marit, que l’animava a escriure i a aprendre més. “El meu marit va morir el 1983, quan encara era jove”, explica l’escriptora. “Estic enamorada d’ell -afegeix, amb un somriure-. Era una persona molt oberta de ment”. Tot i que la Nemat fa dècades que és vídua, no ha volgut tenir cap altre home a la seva vida des que va perdre el marit.  
+                          </p>
+                          <br>
+                          <p>
+                            La passió per l’escriptura que sent la Nemat es veia reflectida a la seva llar a Yarmouk. <strong>“Tenia una gran biblioteca, amb entre 15.000 i 16.000 llibres”</strong>, assegura. Però el que era el seu espai preferit de casa ara és només un conjunt de parets esfondrades. “Vaig veure un vídeo de casa meva -recorda-. Està destruïda: no hi ha parets, no hi ha biblioteca… Sempre havia volgut trobar les restes de la meva biblioteca”. De fet, actualment el camp de Yarmouk no és més que trossos de maons, pedres i ruïnes, el record d’allò que un dia va ser llar d’acollida per a tants palestins que buscaven refugi a Síria.  
+                          </p>
+                          <br>
+                          <p>
+                            A Alemanya, <strong>la col·lecció de llibres de la Nemat és molt més modesta</strong> que la biblioteca que tenia a Síria. “En tinc uns 20 o 25, només”, explica. Tot i això, sempre que viatja a un altre país per fer-hi una conferència ho aprofita per tafanejar i fullejar tots els llibres amb què es topa. 
+                          </p>
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+    <!-- episode 3 -->
     <!-- change the id to what suits the title of the section -->
 <div
 id="second"
@@ -196,7 +302,7 @@ class="section section-text-over-media section-text-over-image section-text-over
       data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="1500"
-      >Més història de Yarmouk durant la guerra civil</span
+      >Censura i llibertat</span
     >
   </div>
 </div>
@@ -207,7 +313,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   <picture class="section-background-image text-over-media-background-image">
     <!-- change the image -->
     <img
-      src="assets/img/img6.jpg"
+      src="assets/img/nemat/Foto7.jpeg"
       data-object-fit="cover"
       data-autoscale-content-ratio="1.77777777778"
     />
@@ -215,75 +321,109 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 </div>
 
-    <!-- scroll mation left -->
-    <div
-                  id="scrollmation-background-57137"
-                  class="section section-scrollmation scrollmation-background section-scrollmation-57137 inner-column-left"
-                  data-scrollmation-container=".section-scrollmation-57137"
-                  data-scrollmation="background"
-                  data-viewport-height
-                  data-viewport-height-property="min-height"
-                >
-                  <div
-                    class="tiny-scrollmation"
-                    data-viewport-height
-                    data-viewport-height-scale="0.66"
-                  ></div>
-                  <style>
-                    .section-scrollmation-57137 .tiny-scrollmation {
-                      background-image: url(assets/img/img5.jpg);
-                      background-position: top right;
-                    }
-                  </style>
-  
-                  <div class="two-column-grid">
-                    <div class="column column-left main-column scrollmation-text">
-                      <div class="block text-block">
-                          <p>
-                            <!-- content with p tags here -->
-                            Tot i que la Nemat accepta que li agrada “estar en un lloc” en què se senti “lliure” i “no controlada”, al camp de refugiats palestins de Damasc hi guarda tota una vida: “Tots els meus records són a Yarmouk: la meva família, els meus amics, la gent que estimo… Me’n conec tots els carrers”. O, almenys, els coneixia. Després de la guerra, ja no n’està tan convençuda: “Ara em perdria si hi tornés perquè està completament destruït”, reconeix.
-                          </p>
-                          <br>
-                          <p>
-                            Una de les novel·les més conegudes de la Nemat, <em>Laylat Al-Henna</em> (‘Nit de Henna’), parla precisament de les condicions de vida a Yarmouk. Tot i que la temàtica central és l’amor, el lector coneix a través dels ulls de la Nadia l’alt índex d’atur juvenil, el crim i l’abús de drogues que marquen el dia a dia en aquesta zona. El relat estableix un paral·lelisme entre la jove Nadia, que viu a Yarmouk, i la seva tieta-àvia, que va viure als Alts del Golan abans que fossin ocupats. “El més important és que en els dos períodes la parella sempre trenca, els somnis s’esmicolen -comenta l’escriptora-. Passi el que passi, ella sempre està deprimida”.  
-                          </p>
-                          <br>
-                          <p>
-                            La Nemat va créixer envoltada de les històries que el seu pare i els seus avis li explicaven sobre Palestina. Això, segons assenyala, va ser el detonant que la va inspirar a escriure històries i novel·les. La seva família sempre li va donar suport perquè es dediqués a aquest món, sobretot el seu marit, que l’animava a escriure i a aprendre més. “El meu marit va morir el 1983, quan encara era jove”, explica l’escriptora. “Estic enamorada d’ell -afegeix, amb un somriure-. Era una persona molt oberta de ment”. Tot i que la Nemat fa dècades que és vídua, no ha volgut tenir cap altre home a la seva vida des que va perdre el marit.  
-                          </p>
-                          <br>
-                          <p>
-                            La passió per l’escriptura que sent la Nemat es veia reflectida a la seva llar a Yarmouk. “Tenia una gran biblioteca, amb entre 15.000 i 16.000 llibres”, assegura. Però el que era el seu espai preferit de casa ara és només un conjunt de parets esfondrades. “Vaig veure un vídeo de casa meva -recorda-. Està destruïda: no hi ha parets, no hi ha biblioteca… Sempre havia volgut trobar les restes de la meva biblioteca”. De fet, actualment el camp de Yarmouk no és més que trossos de maons, pedres i ruïnes, el record d’allò que un dia va ser llar d’acollida per a tants palestins que buscaven refugi a Síria.  
-                          </p>
-                          <br>
-                          <p>
-                            A Alemanya, la col·lecció de llibres de la Nemat és molt més modesta que la biblioteca que tenia a Síria. “En tinc uns 20 o 25, només”, explica. Tot i això, sempre que viatja a un altre país per fer-hi una conferència ho aprofita per tafanejar i fullejar tots els llibres amb què es topa. 
-                          </p>
-                          <br>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <div class="scrollmation-slides-wrapper">
-                    <div
-                      class="scrollmation-slides scrollmation viewport-height"
-                      data-scrollmation-slides
-                    >
-                      <aside class="scrollmation-background-container">
-                        <img
-                          src="assets/img/img5.jpg"
-                         
-                          data-scrollmation-slide
-                          
-                          data-autoscale-anchor="right"
-                        
-                        />
-                      </aside>
-                    </div>
-                  </div>
+<div
+  id="scrollmation-background-5712"
+  class="section section-scrollmation scrollmation-background section-scrollmation-5712 inner-column-right"
+  data-scrollmation-container=".section-scrollmation-5712"
+  data-scrollmation="background"
+  data-viewport-height
+  data-viewport-height-property="min-height"
+>
+  <div
+    class="tiny-scrollmation"
+    data-viewport-height
+    data-viewport-height-scale="0.66"
+  ></div>
+  <style>
+    .section-scrollmation-5712 .tiny-scrollmation {
+      background-image: url(assets/img/nemat/nena1.jpeg);
+      background-position: top left;
+    }
+  </style>
+
+  <div class="two-column-grid">
+    <div class="column column-left main-column scrollmation-text">
+      <div class="block text-block">
+          <p>
+            <!-- content is here -->
+            Les dones són l’eix principal en què s’ha centrat la Nemat. “Escric sobre com els homes i les dones es poden completar l’un a l’altre com a parella”, explica. <strong>Té dues col·leccions d’històries: <em>Wahshat Al-Jasad</em> ('La solitud del cos') i <em>Al-Nisa'</em> ('Dones')</strong>. El més important, assegura, és que està “en contra del gènere, però dona suport a la parella”. Tot i això, l’escriptora també menciona altres temes com “el sexe i la religió, i a vegades l’economia”.
+          </p>
+          <br>
+          <div class="block media-block media-block-image">
+              <div class="inline-media">
+                <div class="inline-image">
+                  <img class="image" src="assets/img/nemat/llibre2.JPG" />
                 </div>
-    <!-- episode 3 -->
-    <!-- change the id to what suits the title of the section -->
+            
+             
+              </div>
+            </div>
+            
+          <br>
+          <p>
+            Palestina també és un tema que ha estat cabdal en les seves obres. Tot i sentir la identitat palestina ben arrelada des de petita, l’escriptora amb prou feines coneixia com era aquest país o allò que quedava d’ell. De fet, <strong>la primera vegada que va trepitjar sòl palestí va ser el 2009</strong>, i això va significar un gir en la seva escriptura. “M’imaginava les històries del meu pare i el meu avi, la nació de la qual havien format part -recorda-. Somiava que aquesta nació era com la primavera, amb moltes flors, molt d’amor, moltes passions”. 
+          </p>
+          <br>
+          <p>
+            Però aquests ideals es van veure esmicolats un cop va conèixer de primera mà <strong>la Palestina del segle XXI</strong>. “Hi havia molts militars, dones pobres als carrers venent verdures, gent malalta”, explica, encara trasbalsada. Des d’aleshores, ja no ha pogut tornar a escriure sobre Palestina perquè el xoc amb la realitat va fer que perdés l’energia i el coratge que li permetien parlar d’aquesta nació. “No és com em pensava”, lamenta.  
+          </p>
+          <br>
+          <p>
+            Quan la Nemat escrivia a Síria, havia d’anar amb peus de plom. “No podia escriure res sobre el règim d’Assad perquè em matarien -assegura, amb una rialla sarcàstica-. <strong>Hi ha molts límits en la política, la religió i el sexe”</strong>. Però ella ja s’hi havia acostumat i seguia sempre la mateixa rutina: l’escriptora recorda que “primer ho escrivia tot” i “era lliure”, però quan volia editar el llibre, “ho revisava tot de nou” i “ho tornava a redactar”. “Em protegia a mi mateixa abans d’escriure qualsevol cosa”, afirma.
+          </p>
+          <br>
+          <p>
+            Malgrat els filtres que s’autoimposava, 22 pàgines van ser censurades d’una de les seves novel·les més conegudes, <strong><em>Al-Badad</em> ('Esvaïment')</strong>. La periodista creu que això es deu que, encara que el llibre parla dels palestins al Líban, també ho relaciona amb “el moviment revolucionari i la resistència, i les prohibicions religioses”, que són un “tabú”.  
+          </p>
+          <br>
+          <div class="block media-block media-block-image">
+              <div class="inline-media">
+                <div class="inline-image">
+                  <img class="image" src="assets/img/nemat/Foto9.jpg" />
+                </div>
+            
+            
+              </div>
+            </div>
+            
+          <br>
+          <p>
+            Amb l’inici de la revolució, la Nemat va atisbar un bri d’esperança: <strong>ara podria escriure amb més llibertat</strong>. Va publicar petites històries i textos en un diari. “Majoritàriament recollia opinions per entendre la revolució, l’exèrcit… Una mena de recerca per explicar a la gent què era diferent”, recorda. La periodista va escriure sobre “la vida i la mort sota tortura a Síria”. També va donar a conèixer com les vides de les persones es convertien en adhesius: quan algú moria en el marc de la revolució o la guerra, s’enganxaven pòsters a les parets anunciant-ho i explicant-ho. Vides que s’havien vist reduïdes a simples papers.
+          </p>
+          <br>
+          <p>
+            El periodisme, durant la revolució i els primers anys de la guerra que la Nemat va passar a Síria, estava <strong>molt contaminat</strong>. “Els periodistes-activistes pertanyen a un bàndol, sigui el del règim o el de l’oposició, i això implica que no escriuen 100% el que passa”, explica.
+          </p>
+          <br>
+          <p>
+            La Nemat també va escriure <strong><em>La pluja de la mort</em></strong>, on parla sobre “crear una essència dels cossos morts de la gent a causa de la guerra i la sang dels torturats”, d’intentar fer-ne quelcom que aturi “la guerra, la tortura i la mort”.
+          </p>
+          <br>
+          <p>
+            Però aquests relats van generar molts problemes a la periodista. Quan començava a temptejar la llibertat d’expressió, va rebre <strong>“amenaces de presó” per part dels serveis d’intel·ligència sirians</strong>, la <em>mukhabarat</em>, que la van acabar forçant a deixar Síria. Així, a finals del 2015 la Nemat va viatjar sola cap a Istanbul, on hi va passar entre 9 i 10 mesos. Després va desplaçar-se cap a Grècia, trepitjant l’illa de Samos i tot seguit Atenes, i va anar travessant el continent europeu fins a arribar finalment a Alemanya.
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="scrollmation-slides-wrapper">
+      <div
+        class="scrollmation-slides scrollmation viewport-height"
+        data-scrollmation-slides
+      >
+        <aside class="scrollmation-background-container">
+          <img
+            src="assets/img/nemat/nena1.jpeg"
+            data-scrollmation-slide
+            data-tablet-img="assets/img/nemat/nena1.jpeg"
+            data-object-fit="cover"
+          />
+        </aside>
+      </div>
+    </div>
+  </div>
+  
+    
 <div
 id="third"
 class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
@@ -297,7 +437,7 @@ class="section section-text-over-media section-text-over-image section-text-over
       data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="1500"
-      >Escriure, un mitjà</span
+      >Confort</span
     >
   </div>
 </div>
@@ -308,7 +448,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   <picture class="section-background-image text-over-media-background-image">
     <!-- change the image -->
     <img
-      src="assets/img/img6.jpg"
+      src="assets/img/nemat/nemat1.jpg"
       data-object-fit="cover"
       data-autoscale-content-ratio="1.77777777778"
     />
@@ -316,173 +456,70 @@ class="section section-text-over-media section-text-over-image section-text-over
 </div>
 </div>
 
-    <!-- normal text block -->
-    <div id="text-86582" class="section section-text inner-column-centered ">
-      <div class="main-column">
-        <div class="block text-block">
-          <p>
-            <!-- content is here -->
-            Les dones són l’eix principal en què s’ha centrat la Nemat. “Escric sobre com els homes i les dones es poden completar l’un a l’altre com a parella”, explica. Té dues col·leccions d’històries: <em>Wahshat Al-Jasad</em> ('La solitud del cos') i <em>Al-Nisa'</em> ('Dones'). El més important, assegura, és que està “en contra del gènere, però dona suport a la parella”. Tot i això, l’escriptora també menciona altres temes com “el sexe i la religió, i a vegades l’economia”.
-          </p>
-          <br>
-          <p>
-            Palestina també és un tema que ha estat cabdal en les seves obres. Tot i sentir la identitat palestina ben arrelada des de petita, l’escriptora amb prou feines coneixia com era aquest país o allò que quedava d’ell. De fet, la primera vegada que va trepitjar sòl palestí va ser el 2009, i això va significar un gir en la seva escriptura. “M’imaginava les històries del meu pare i el meu avi, la nació de la qual n’havien format part -recorda-. Somiava que aquesta nació era com la primavera, amb moltes flors, molt d’amor, moltes passions”. 
-          </p>
-          <br>
-          <p>
-            Però aquests ideals es van veure esmicolats un cop va conèixer de primera mà la Palestina del segle XXI. “Hi havia molts militars, dones pobres als carrers venent verdures, gent malalta”, explica, encara trasbalsada. Des d’aleshores, ja no ha pogut tornar a escriure sobre Palestina perquè el xoc amb la realitat va fer que perdés l’energia i el coratge que li permetien parlar d’aquesta nació. “No és com em pensava”, lamenta.  
-          </p>
-          <br>
-          <p>
-            Quan la Nemat escrivia a Síria, havia d’anar amb peus de plom. “No podia escriure res sobre el règim d’Assad perquè em matarien -assegura, amb una rialla sarcàstica-. Hi ha molts límits en la política, la religió i el sexe”. Però ella ja s’hi havia acostumat i seguia sempre la mateixa rutina: l’escriptora recorda que “primer ho escrivia tot” i “era lliure”, però quan volia editar el llibre, “ho revisava tot de nou” i “ho tornava a redactar”. “Em protegia a mi mateixa abans d’escriure qualsevol cosa”, afirma.
-          </p>
-          <br>
-          <p>
-            Malgrat els filtres que s’autoimposava, 22 pàgines van ser censurades d’una de les seves novel·les més conegudes, <em>Al-Badad</em> ('Esvaïment'). La periodista creu que això es deu que, encara que el llibre parla dels palestins al Líban, també ho relaciona amb “el moviment revolucionari i la resistència, i les prohibicions religioses”, que són un “tabú”.  
-          </p>
-          <br>
-          <p>
-            Amb l’inici de la revolució, la Nemat va atisbar un bri d’esperança: ara podria escriure amb més llibertat. Va publicar petites històries i textos en un diari. “Majoritàriament recollia opinions per entendre la revolució, l’exèrcit… Una mena de recerca per explicar a la gent què era diferent”, recorda. La periodista va escriure sobre “la vida i la mort sota tortura a Síria”. També va donar a conèixer com les vides de les persones es convertien en adhesius: quan algú moria en el marc de la revolució o la guerra, s’enganxaven pòsters a les parets anunciant-ho i explicant-ho. Vides que s’havien reduïdes a simples papers.
-          </p>
-          <br>
-          <p>
-            El periodisme, durant la revolució i els primers anys de la guerra que la Nemat va passar a Síria, estava molt contaminat. “Els periodistes-activistes pertanyen a un bàndol, sigui el del règim o el de l’oposició, i això implica que no escriuen 100% el que passa”, explica.
-          </p>
-          <br>
-          <p>
-            La Nemat també va escriure <em>La pluja de la mort</em>, on parla sobre “crear una essència dels cossos morts de la gent a causa de la guerra i la sang dels torturats”, d’intentar fer-ne quelcom que aturi “la guerra, la tortura i la mort”.
-          </p>
-          <br>
-          <p>
-            Però aquests relats van generar molts problemes a la periodista. Quan començava a temptejar la llibertat d’expressió, va rebre “amenaces de presó” per part dels serveis d’intel·ligència sirians, la <em>mukhabarat</em>, que la van acabar forçant a deixar Síria. Així, a finals del 2015 la Nemat va viatjar sola cap a Istanbul, on hi va passar entre 9 i 10 mesos. Després va desplaçar-se cap a Grècia, trepitjant l’illa de Samos i tot seguit Atenes, i va anar travessant el continent europeu fins a arribar finalment a Alemanya.
-          </p>
-          <br>
-        </div>
-      </div>
-    </div>
-    <!-- episode 4 -->
-    <!-- change the id to what suits the title of the section -->
-<div
-id="fourth"
-class="section section-text-over-media section-text-over-image section-text-over-media-106241 has-text viewport-height"
->
-<div class="text text-over-media-inner left center large">
-  <div class="featured-episode-box">
-    <!-- you can change the content and number to what suits you -->
-    <span class="episode-number">04</span>
-    <span
-      class="episode-title"
-      data-aos="fade-down"
-      data-aos-easing="linear"
-      data-aos-duration="1500"
-      >Berlín</span
-    >
-  </div>
-</div>
+  
 
-<div class="background-overlay"></div>
-
-<div class="section-background section-background-fixed">
-  <picture class="section-background-image text-over-media-background-image">
-    <!-- change the image -->
-    <img
-      src="assets/img/img6.jpg"
-      data-object-fit="cover"
-      data-autoscale-content-ratio="1.77777777778"
-    />
-  </picture>
-</div>
-</div>
-
-    <!-- scroll mation right -->
-    <div
-  id="scrollmation-background-57125"
-  class="section section-scrollmation scrollmation-background section-scrollmation-57125 inner-column-right"
-  data-scrollmation-container=".section-scrollmation-57125"
-  data-scrollmation="background"
-  data-viewport-height
-  data-viewport-height-property="min-height"
->
-  <div
-    class="tiny-scrollmation"
-    data-viewport-height
-    data-viewport-height-scale="0.66"
-  ></div>
-  <style>
-    .section-scrollmation-57125 .tiny-scrollmation {
-      background-image: url(assets/img/img5.jpg);
-      background-position: top left;
-    }
-  </style>
-
-  <div class="two-column-grid">
-    <div class="column column-right main-column scrollmation-text">
+<div id="text-86582" class="section section-text inner-column-centered ">
+    <div class="main-column">
       <div class="block text-block">
         <p>
             <!-- content with p here -->
-            La Nemat ara està treballant en un monodrama sobre el color blanc. Segons l’escriptora, “molta gent vesteix el color blanc, però no estan nets, són dolents, són diabòlics”. La periodista creu que els cristians, quan resen, o els musulmans, quan pelegrinen a La Meca, utilitzen roba blanca com a senyal de puresa, tot i que pot ser que no siguin bones persones. En la cultura àrab, quan un home mor, l’emboliquen amb un vestit blanc, el <em>kafan</em>, perquè “es trobi amb Déu amb el cor blanc i net”. Però la Nemat apunta que “el color blanc no existeix com a color primari, perquè sorgeix amb la barreja de la llum dels colors primaris -vermell, groc i cian-.  
+            La Nemat ara està treballant en un <strong>monodrama sobre el color blanc</strong>. Segons l’escriptora, “molta gent vesteix el color blanc, però no estan nets, són dolents, són diabòlics”. La periodista creu que els cristians, quan resen, o els musulmans, quan pelegrinen a La Meca, utilitzen roba blanca com a senyal de puresa, tot i que pot ser que no siguin bones persones. En la cultura àrab, quan un home mor, l’emboliquen amb un vestit blanc, el <em>kafan</em>, perquè “es trobi amb Déu amb el cor blanc i net”. Però la Nemat apunta que “el color blanc no existeix com a color primari, perquè sorgeix amb la barreja de la llum dels colors primaris -vermell, groc i cian-.  
         </p>
         <br>
         <p>
-          L’escriptora ha apostat pel monodrama perquè creu que amb aquesta disciplina teatral “t’enfrontes a tu mateix amb un mirall”. “Parles amb tu, i a la vegada amb l’altra gent”, considera. A més, li permet “endinsar-se” en si mateixa i expressar-se profundament. “La gent entra en contacte directe amb tu”, assegura.
+          L’escriptora ha apostat pel monodrama perquè creu que amb aquesta disciplina teatral <strong>“t’enfrontes a tu mateix amb un mirall”</strong>. “Parles amb tu, i a la vegada amb l’altra gent”, considera. A més, li permet “endinsar-se” en si mateixa i expressar-se profundament. “La gent entra en contacte directe amb tu”, assegura.
+        </p>
+        <br>
+                          <div class="block media-block media-block-image">
+                              <div class="inline-media">
+                                <div class="inline-image">
+                                  <img class="image" src="assets/img/nemat/nemat2.jpg" />
+                                </div>
+                            
+                              
+                              </div>
+                            </div>
+        <br>
+        <p>
+          A més, la periodista està escrivint la seva primera novel·la a Berlín, en què combina <strong>l’experiència d’una persona alemanya i la d’una del camp de Yarmouk</strong>. “Parlaré sobre Berlín després de la Segona Guerra Mundial, i de Yarmouk durant la guerra”, comenta.
         </p>
         <br>
         <p>
-          A més, la periodista està escrivint la seva primera novel·la a Berlín, en què combina l’experiència d’una persona alemanya i la d’una del camp de Yarmouk. “Parlaré sobre Berlín després de la Segona Guerra Mundial, i de Yarmouk durant la guerra”, comenta.
+          Encara que la Nemat sempre havia estat darrere les càmeres, a Berlín per primera vegada <strong>ha participat com a actriu en una pel·lícula, <em>Últim autobús</em></strong>, en què improvisa. “Parla sobre fugir de la guerra”, explica. Ella interpreta el paper d’una dona que ha perdut els fills durant el conflicte bèl·lic i que ara només té una petita ovella. Amb l’animal, intenta abandonar el país i el passat. “Sento que aquesta dona soc jo -considera-. Potser no tinc aquesta petita ovella, però estic aquí sola només amb els meus records”.  
         </p>
         <br>
         <p>
-          Encara que la Nemat sempre havia estat darrere les càmeres, a Berlín per primera vegada ha participat com a actriu en una pel·lícula, <em>Últim autobús</em>, en què improvisa. “Parla sobre fugir de la guerra”, explica. Ella interpreta el paper d’una dona que ha perdut els fills durant el conflicte bèl·lic i que ara només té una petita ovella. Amb l’animal, intenta abandonar el país i el passat. “Sento que aquesta dona soc jo -considera-. Potser no tinc aquesta petita ovella, però estic aquí sola només amb els meus records”.  
-        </p>
-        <br>
-        <p>
-          Llegir i escriure ho és tot per la Nemat. És l’única manera amb què es pot expressar i és l’únic racó on sempre hi troba confort: “Quan estic trista, escriure em canvia completament, em relaxa”. L’escriptura és el seu mitjà per lluitar contra la soledat que sent a la capital alemanya, per sobreviure. La <em>Yumma</em> somriu i repeteix que ens quedem a dinar.
+          Llegir i escriure ho és tot per la Nemat. És l’única manera amb què es pot expressar i és <strong>l’únic racó on sempre hi troba confort</strong>: “Quan estic trista, escriure em canvia completament, em relaxa”. L’escriptura és el seu mitjà per lluitar contra la soledat que sent a la capital alemanya, per sobreviure. La <em>Yumma</em> somriu i repeteix que ens quedem a dinar.
         </p>
         <br>
       </div>
     </div>
   </div>
-  <div class="scrollmation-slides-wrapper">
-    <div
-      class="scrollmation-slides scrollmation viewport-height"
-      data-scrollmation-slides
-    >
-      <aside class="scrollmation-background-container">
-        <img
-          src="assets/img/img4.jpg"
-          data-scrollmation-slide
-          data-tablet-img="assets/img/img5.jpg"
-          data-object-fit="cover"
-        />
-      </aside>
-
-    </div>
-  </div>
-</div>
-
-<div
-      id="text-over-media-106281"
-      class="section section-text-over-media section-text-over-image section-text-over-media-106281  viewport-height"
-    >
-      <div class="text text-over-media-inner right center large">
-        <div class="text-inner"></div>
+ 
+    <div class="shareWrapper">
+        <p class="shareText">compartir: </p>
+        <div class="sharethis-inline-share-buttons"></div>
       </div>
+    <footer class="footer">
+        <h1 class="footer-title">L'art de sobreviure</h1>
+        <ul class="pagesLinks">
+            <li class="link"><a href="./index.html">Home</a></li>
+            <li class="link"><a href="./artistes.html">Artistes</a></li>
+            <li class="link"><a href="./about.html">Qui som ?</a></li>
+            <li class="link"><a href="./contact.html">Contact</a></li>
+        </ul>
+        <p class="rights">Copyright © 2019      L'art de sobreviure.
+                Tots els drets reservats.</p>
+                <div class="media">
 
-      <div class="background-overlay"></div>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+</footer>
 
-      <div class="section-background section-background-fixed">
-        <picture
-          class="section-background-image text-over-media-background-image"
-        >
-          <img
-            src="assets/img/img4.jpg"
-            data-object-fit="cover"
-            data-autoscale-content-ratio="1.77777777778"
-          />
-        </picture>
-      </div>
-    </div>
-    
+
     <script src="assets/js/shorthand/head.min.js"></script>
     <script src="assets/js/shorthand/common.min.js"></script>
     <script src="assets/js/shorthand/story.min.js"></script>
