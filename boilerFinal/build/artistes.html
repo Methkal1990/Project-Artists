@@ -18,52 +18,153 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/home/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/home/home-page.css">
-    <link rel="stylesheet" href="assets/css/home/menu.css">
     <link rel="stylesheet" href="assets/css/home/responsive.css">
 </head>
 <style>
 .img-container{
     filter: grayscale(1);
 }
+
+.filler{
+    width: 80%;
+}
+
+
+/* navbar */
+.navbar-box{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 7rem;
+    
+}
+#navbarElement{
+    background-color: #10b6f3 !important;
+    padding: 1rem 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0 !important;
+    }
+    
+
 .navbar .logo {
     font-family: "Pacifico", sans-serif;
     text-decoration: none;
     color: #fff;
+    position: absolute;
+    font-size: 3rem;
+    left: 1rem;
+}
+
+.navbar .menu-icon-lines {
+    display: flex;
+    width: 3rem;
+    height: 35px;
+    justify-content: space-between;
+   position: absolute;
+   right: 1.5rem;
+    cursor: pointer;
+    top: 2rem;
     
-    font-size: 3vmin;
 }
-.filler{
-    width: 80%;
+
+.navbar .icon-line {
+    width: 2.5px;
+    height: 3rem;
+    background: #fff;
 }
+
+.navbar .menu-items a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: block;
+    margin: 8rem 0;
+}
+
+
+
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    background-color: #33b5e5;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: .5s;
+    z-index: 10001;
+}
+.side-nav a{
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: .3s;/*for the menu to open smoothly*/
+}
+.side-nav a:hover{
+    color: #f3f3f3;
+    text-decoration: underline;
+}
+.side-nav .btn-close{
+    position: absolute;
+    top: 0;
+    right: 80%;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none !important;
+}
+
+#start{
+    position: relative;
+
+}
+#start .page-overlay{
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        background: #333;
+        z-index: 1000;
+        opacity: 0.6;
+        
+        display: none;
+    }
+
+    footer.footer p.rights a{
+        font-size: 1.4rem;
+            color: #999;
+    }
+
+    footer.footer p.rights a:hover{
+        text-decoration: none;
+    }
+
 </style>
-<body>
+<body id="start">
+    <div class="page-overlay" id="overlay-page"></div>
     <!-- navbar -->
-    <nav class="navbar">
-                <ul class="navbar-nav">
-                    <!-- <li><a href="#">Home</a></li>
-                    <li><a href="#">Artistes</a></li>
-                    <li><a href="#">About</a></li> -->
-                    <a class="logo" href="#">L'art de sobreviure</a>
-                </ul>
-                <div class="filler"></div>
-        <div class="open-slide">
-            <a href="#!" onclick="openSlideMenu()" id="toggle">
-                    <div class="menu-icon-lines">
-                            <div class="icon-line"></div>
-                            <div class="icon-line"></div>
-                            <div class="icon-line"></div>
-                          </div>
-            </a>
+    <nav class="navbar-box">
+      <div class="navbar" id="navbarElement">
+        <a class="logo" href="#">L'art de sobreviure</a>
+        <div class="menu-icon-lines" onclick="openSlideMenu()">
+          <div class="icon-line"></div>
+          <div class="icon-line"></div>
+          <div class="icon-line"></div>
         </div>
-       
+      </div>
     </nav>
     <div id="side-menu" class="side-nav">
         <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <a href="#">Home</a>
-        <a href="#">Artistes</a>
-        <a href="#">About</a>
+        <a href="./index.html">Cultura i Síria</a>
+        <a href="./artistes.html">Artistes</a>
+        <a href="./about.html">Qui som?</a>
+        <a href="./contact.html">Contacte</a>
     </div>
-    <!-- here there is an issue -->
+    
     <section id="slider-container">
             <div class="buttons" style="display: none">
                     <button id="prev"></button>
@@ -71,7 +172,7 @@
             </div>
     </section>
     <section id="title">
-        <h1>Els artistes</h1>
+        <h1>Artistes</h1>
     </section>
     <!-- cards section -->
     <section id="cards">
@@ -90,7 +191,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="assets/img/home/diala.jpg">
+                                <img class="img-responsive" src="assets/img/home/diala.jpg?nf_resize=fit&w=800&h=800">
                             </div>
                             <div class="mc-description">
                                     “L’art és la meva vida. Si deixés de dibuixar, no sé què faria”
@@ -124,7 +225,7 @@
                                 </h2>
                                 <div class="mc-content">
                                     <div class="img-container">
-                                        <img class="img-responsive" src="assets/img/home/bassam2.jpg">
+                                        <img class="img-responsive" src="assets/img/home/bassam2.jpg?nf_resize=fit&w=800&h=800">
                                     </div>
                                     <div class="mc-description">
                                             “He de recollir aquestes històries perquè en el futur es pugui saber què va passar a Síria realment”
@@ -158,7 +259,7 @@
                                     </h2>
                                     <div class="mc-content">
                                         <div class="img-container">
-                                            <img class="img-responsive" src="assets/img/home/athrodeel.jpg">
+                                            <img class="img-responsive" src="assets/img/home/athrodeel.jpg?nf_resize=fit&w=800&h=800">
                                         </div>
                                         <div class="mc-description">
                                                 “Volem agafar la pau d’aquí i portar-la a Síria”
@@ -192,7 +293,7 @@
                                     </h2>
                                     <div class="mc-content">
                                         <div class="img-container">
-                                            <img class="img-responsive" src="assets/img/home/michaele2.jpg">
+                                            <img class="img-responsive" src="assets/img/home/michaele2.jpg?nf_resize=fit&w=800&h=800">
                                         </div>
                                         <div class="mc-description">
                                                 “Sense dolor no pot haver-hi una nova vida” 
@@ -226,7 +327,7 @@
                                         </h2>
                                         <div class="mc-content">
                                             <div class="img-container">
-                                                <img class="img-responsive" src="assets/img/home/bilal22.jpg">
+                                                <img class="img-responsive" src="assets/img/home/bilal22.jpg?nf_resize=fit&w=800&h=800">
                                             </div>
                                             <div class="mc-description">
                                                     “Utilitzàvem colors i el grafiti per fer la ciutat de Daraya més maca, malgrat la devastació”
@@ -260,7 +361,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="assets/img/home/diana.jpg">
+                                <img class="img-responsive" src="assets/img/home/diana.jpg?nf_resize=fit&w=800&h=800">
                             </div>
                             <div class="mc-description">
                                     “La revolució va despertar l’ésser humà que hi havia dins meu”
@@ -294,7 +395,7 @@
                             </h2>
                             <div class="mc-content">
                                 <div class="img-container">
-                                    <img class="img-responsive" src="assets/img/home/abu-hajar.jpg">
+                                    <img class="img-responsive" src="assets/img/home/abu-hajar.jpg?nf_resize=fit&w=800&h=800">
                                 </div>
                                 <div class="mc-description">
                                         “L’art és per provocar i desafiar les normes”
@@ -328,7 +429,7 @@
                             </h2>
                             <div class="mc-content">
                                 <div class="img-container">
-                                    <img class="img-responsive" src="assets/img/home/nemat.jpg">
+                                    <img class="img-responsive" src="assets/img/home/nemat.jpg?nf_resize=fit&w=800&h=800">
                                 </div>
                                 <div class="mc-description">
                                         “A Síria, em protegia a mi mateixa abans d’escriure qualsevol cosa”
@@ -362,7 +463,7 @@
                                 </h2>
                                 <div class="mc-content">
                                     <div class="img-container">
-                                        <img class="img-responsive" src="assets/img/home/hamid.jpg">
+                                        <img class="img-responsive" src="assets/img/home/hamid.jpg?nf_resize=fit&w=800&h=800">
                                     </div>
                                     <div class="mc-description">
                                             “L’art, per mi, és una catarsi. M’ho va donar literalment tot”
@@ -396,7 +497,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="assets/img/home/kefah.jpg">
+                                <img class="img-responsive" src="assets/img/home/kefah.jpg?nf_resize=fit&w=800&h=800">
                             </div>
                             <div class="mc-description">
                                     “L’únic que vull dir amb el meu art és que sóc una persona lliure”
@@ -430,7 +531,7 @@
                             </h2>
                             <div class="mc-content">
                                 <div class="img-container">
-                                    <img class="img-responsive" src="assets/img/home/medhat.jpg">
+                                    <img class="img-responsive" src="assets/img/home/medhat.jpg?nf_resize=fit&w=800&h=800">
                                 </div>
                                 <div class="mc-description">
                                         “Ballo per dir coses que ningú pugui jutjar”
@@ -464,7 +565,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="assets/img/home/khaled.jpg">
+                                <img class="img-responsive" src="assets/img/home/khaled.jpg?nf_resize=fit&w=800&h=800">
                             </div>
                             <div class="mc-description">
                                     “La cultura siriana m’ha fet qui soc, però és una cultura que ja no em representa”
@@ -498,7 +599,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="assets/img/home/anwar2.jpg">
+                                <img class="img-responsive" src="assets/img/home/anwar2.jpg?nf_resize=fit&w=800&h=800">
                             </div>
                             <div class="mc-description">
                                     “Amb les meves obres vull que les persones canviïn els seus pensaments negatius”
@@ -532,7 +633,7 @@
                         </h2>
                         <div class="mc-content">
                             <div class="img-container">
-                                <img class="img-responsive" src="assets/img/home/maya.jpg">
+                                <img class="img-responsive" src="assets/img/home/maya.jpg?nf_resize=fit&w=800&h=800">
                             </div>
                             <div class="mc-description">
                                     “Soc en una revolució”
@@ -566,7 +667,7 @@
                                 </h2>
                                 <div class="mc-content">
                                     <div class="img-container">
-                                        <img class="img-responsive" src="assets/img/home/ismael.jpg">
+                                        <img class="img-responsive" src="assets/img/home/ismael.jpg?nf_resize=fit&w=800&h=800">
                                     </div>
                                     <div class="mc-description">
                                             “Dibuixar em permet concentrar-me en el meu futur i no tant en el passat”
@@ -594,21 +695,15 @@
             <ul class="pagesLinks">
                 <li class="link"><a href="./index.html">Home</a></li>
                 <li class="link"><a href="./artistes.html">Artistes</a></li>
-                <li class="link"><a href="./about.html">Qui som ?</a></li>
+                <li class="link"><a href="./about.html">Qui som?</a></li>
                 <li class="link"><a href="./contact.html">Contact</a></li>
             </ul>
-            <p class="rights">Copyright © 2019      L'art de sobreviure.
-                    Tots els drets reservats.</p>
-                    <div class="media">
-
-                        <a href="#"><i class="fab fa-facebook uiMod"></i></a>
-                        <a href="#"><i class="fab fa-twitter uiMod"></i></a>
-                        <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
-                        <a href="#"><i class="fab fa-instagram uiMod"></i></a>
-                    </div>
+            <br>
+                  <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
     </footer>
 
     <script src="assets/js/home/jquery-1.11.3.min.js"></script>
+ 
     <script src="assets/js/home/main.js"></script>
 </body>
 </html>

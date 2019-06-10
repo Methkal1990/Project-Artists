@@ -85,15 +85,15 @@
 <div class="page-overlay" id="overlay-page"></div>
 <!-- navbar -->
 <nav class="navbar-box">
-  <div class="navbar" id="navbarElement">
-    <a class="logo" href="#">L'art de sobreviure</a>
-    <div class="menu-icon-lines" onclick="openSlideMenu()">
-      <div class="icon-line"></div>
-      <div class="icon-line"></div>
-      <div class="icon-line"></div>
+    <div class="navbar" id="navbarElement">
+      <a class="logo uiMod" href="#">L'art de sobreviure</a>
+      <div class="menu-icon-lines" onclick="openSlideMenu()">
+        <div class="icon-line uiModBack"></div>
+        <div class="icon-line uiModBack"></div>
+        <div class="icon-line uiModBack"></div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 <div id="side-menu" class="side-nav">
     <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
     <a href="./index.html">Cultura i Síria</a>
@@ -128,7 +128,7 @@
     <nav id="subMenuNav" class="submenu animated">
       <div class="left">
         <div class="icon">
-          <i class="fas fa-home"></i>
+            <a href="#start" class="goup"><i class="fas fa-home"></i></a> 
         </div>
       </div>
       <div class="middle">
@@ -173,7 +173,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   <picture class="section-background-image text-over-media-background-image">
     <!-- change the image -->
     <img
-      src="assets/img/Michaele-Daoud/Foto2.jpg"
+      src="assets/img/Michaele-Daoud/Foto2.jpg?nf_resize=fit&w=1500&h=1000"
       data-object-fit="cover"
       data-autoscale-content-ratio="1.77777777778"
     />
@@ -197,7 +197,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                   ></div>
                   <style>
                     .section-scrollmation-5713 .tiny-scrollmation {
-                      background-image: url(assets/img/Michaele-Daoud/Foto4.jpg);
+                      background-image: url(assets/img/Michaele-Daoud/Foto4.jpg?nf_resize=fit&w=1500&h=1000);
                       background-position: top right;
                     }
                   </style>
@@ -221,10 +221,14 @@ class="section section-text-over-media section-text-over-image section-text-over
                           <div class="block media-block media-block-image">
                             <div class="inline-media">
                               <div class="inline-image">
-                                <img class="image" src="assets/img/Michaele-Daoud/Foto3.jpg" />
+                                <img class="image" src="assets/img/Michaele-Daoud/Foto3.jpg?nf_resize=fit&w=800&h=800" />
                               </div>
                             </div>
                           </div>
+                          <p class="media-block-caption caption">
+                            <!-- caption here if you want, if not remove this p tag -->
+                            <strong><em>I Am Not This Hair</em> ('No soc aquests cabells') // Cedida per Michaele Daoud</strong>
+                          <br>
                           <br>
                           <p>
                             “Era un moment en què em sentia molt diferent de la meva família i de la meva cultura”, recorda. Créixer a Síria mentre descobria la seva identitat queer va ser molt difícil, ja que <strong>qualsevol referència pública a l’homosexualitat o al sexe en general estava mal vista socialment</strong>. De fet, l’article 520 del Codi Penal sirià prohibeix explícitament “les relacions carnals contra l’ordre de la natura”, i preveu condemnes de fins a tres anys de presó.
@@ -249,7 +253,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                     >
                       <aside class="scrollmation-background-container">
                         <img
-                          src="assets/img/Michaele-Daoud/Foto4.jpg"
+                          src="assets/img/Michaele-Daoud/Foto4.jpg?nf_resize=fit&w=1500&h=1000"
                          
                           data-scrollmation-slide
                           
@@ -286,7 +290,7 @@ class="section section-text-over-media section-text-over-image section-text-over
       <div class="block text-block"> -->
           <div class="mation-wrapper">
               <div class="mation-image">
-                <img src="assets/img/Michaele-Daoud/Foto5.jpg" alt="">
+                <img src="assets/img/Michaele-Daoud/Foto5.jpg?nf_resize=fit&w=1500&h=1000" alt="">
               </div>
               <div class="mation-text block text-block">
         <p>
@@ -361,7 +365,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/Michaele-Daoud/Foto6.jpg"
+        src="assets/img/Michaele-Daoud/Foto6.jpg?nf_resize=fit&w=1500&h=1000"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -383,11 +387,15 @@ class="section section-text-over-media section-text-over-image section-text-over
       <div class="block media-block media-block-image">
           <div class="inline-media">
             <div class="inline-image">
-              <img class="image" src="assets/img/Michaele-Daoud/Foto7.jpg" />
+              <img class="image" src="assets/img/Michaele-Daoud/Foto7.jpg?nf_resize=fit&w=800&h=800" />
             </div>
           </div>
         </div>
-        
+        <p class="media-block-caption caption">
+          <!-- caption here if you want, if not remove this p tag -->
+          <strong>"L’art és una experiència meva, però també és una experiència dels altres” // Cedida per Michaele Daoud</strong>
+        <br> 
+      <br>
       <br>
       <p>
         <!-- content is here -->
@@ -404,19 +412,19 @@ class="section section-text-over-media section-text-over-image section-text-over
       <br>
       <!-- gallery -->
 <div class="gallery gallery-4">
-    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar1.jpg)">
+    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar1.jpg?nf_resize=fit&w=512&h=512)">
       <a class="image-dist" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/ishtar1.jpg"></a>
     </div>
-    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar2.jpg)">
+    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar2.jpg?nf_resize=fit&w=512&h=512)">
       <a class="image-dist" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/ishtar2.jpg"></a>
     </div>
-    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar3.jpg)">
+    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar3.jpg?nf_resize=fit&w=512&h=512)">
       <a class="image-dist" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/ishtar3.jpg"></a>
     </div>
-    <div class="item" style="background-image:url(assets/img/Michaele-Daoud/ishtar4.jpg)">
+    <div class="item" style="background-image:url(assets/img/Michaele-Daoud/ishtar4.jpg?nf_resize=fit&w=512&h=512)">
       <a class="image-dist" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/ishtar4.jpg"></a>
     </div>
-    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar5.jpg)">
+    <div class="item" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/ishtar5.jpg?nf_resize=fit&w=512&h=512)">
       <a class="image-dist" data-lightbox="mygallery" data-title="'Ishtar: God in Exile' // Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/ishtar5.jpg"></a>
     </div>
   </div>
@@ -458,7 +466,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/Michaele-Daoud/Foto8.jpg"
+        src="assets/img/Michaele-Daoud/Foto8.jpg?nf_resize=fit&w=1500&h=1000"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -481,7 +489,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   ></div>
   <style>
     .section-scrollmation-57125 .tiny-scrollmation {
-      background-image: url(assets/img/Michaele-Daoud/Foto12.jpg);
+      background-image: url(assets/img/Michaele-Daoud/Foto12.jpg?nf_resize=fit&w=1500&h=1000);
       background-position: top left;
     }
   </style>
@@ -508,27 +516,31 @@ class="section section-text-over-media section-text-over-image section-text-over
         </p>
         <br>
         <p>
-            “A l’Orient Mitjà la comunitat queer està lluitant, però tot i això una persona LGBT ho té difícil per sobreviure”, afirma l’artista. Però davant la por i el secretisme que han de patir les persones LGBT als països àrabs, ell opta fent el camí contrari, perquè pel Michaele el <em>drag</em> és també una <strong>forma de sobreviure</strong>: “És mostrar-se sense vergonya, dir aquest sóc jo, forçar la resta a acceptar el què estan veient”. 
+            “A l’Orient Mitjà la comunitat queer està lluitant, però tot i això una persona LGBT ho té difícil per sobreviure”, afirma l’artista. Però davant la por i el secretisme que han de patir les persones LGBT als països àrabs, ell opta fent el camí contrari, perquè pel Michaele el <em>drag</em> és també una <strong>forma de sobreviure</strong>: “És mostrar-se sense vergonya, dir aquest soc jo, forçar la resta a acceptar el què estan veient”. 
         </p>
         <br>
         <div class="block media-block media-block-image">
           <div class="inline-media">
             <div class="inline-image">
-              <img class="image" style="width: 400px" src="assets/img/Michaele-Daoud/Foto9.jpg" />
+              <img class="image" style="width: 400px" src="assets/img/Michaele-Daoud/Foto9.jpg?nf_resize=fit&w=800&h=800" />
             </div>
           </div>
         </div>
+        <p class="media-block-caption caption">
+          <!-- caption here if you want, if not remove this p tag -->
+          <strong>"El <em>drag</em> és mostrar-se sense vergonya, dir aquest soc jo” // <br> Cedida per Michaele Daoud</strong>
+        <br>
         <br>
         <p>
             Les <em>drag-queen</em> són artistes, generalment homes, que es vesteixen de dona i actuen amb una feminitat exagerada, portant vestuari i maquillatge provocatiu, i <strong>assumint els rols de gènere femenins</strong> amb un objectiu còmic, satíric o com a mer entreteniment. Sovint la figura de la <em>drag-queen</em> està associada a la cultura gai, però poden ser de qualsevol orientació sexual i identitat de gènere. 
         </p>
         <br>
         <p>
-            Adoptar el rol de <em>drag-queen</em> significa <strong>“anar als extrems i ser completament diferent”</strong>, però sobretot vol dir estar orgullós d’aquesta mateixa diferència. En les seves <em>drag perfomances</em>, l’artista diu a tothom que ha de “parar de fer el què està fent” i mirar-lo a ell: “Han de concentrar-se només en allò que estic fent, en com m’estic movent”. 
+            Adoptar el rol de <em>drag-queen</em> significa <strong>“anar als extrems i ser completament diferent”</strong>, però sobretot vol dir estar orgullós d’aquesta mateixa diferència. En les seves <em>drag perfomances</em>, l’artista diu a tothom que ha de “parar de fer el que està fent” i mirar-lo a ell: “Han de concentrar-se només en allò que estic fent, en com m’estic movent”. 
         </p>
         <br>
         <p>
-            El <em>drag</em> també l’ajuda a connectar amb el seu propi gènere: “És una manera d’indagar dins de mi mateix i <strong>una forma d’apoderament</strong>, per mi i també pels altres”, explica. 
+            El <em>drag</em> també l’ajuda a connectar amb el seu mateix gènere: “És una manera d’indagar dins de mi mateix i <strong>una forma d’apoderament</strong>, per mi i també pels altres”, explica. 
         </p>
         <br>
       </div>
@@ -541,9 +553,9 @@ class="section section-text-over-media section-text-over-image section-text-over
     >
       <aside class="scrollmation-background-container">
         <img
-          src="assets/img/Michaele-Daoud/Foto12.jpg"
+          src="assets/img/Michaele-Daoud/Foto12.jpg?nf_resize=fit&w=1500&h=1000"
           data-scrollmation-slide
-          data-tablet-img="assets/img/Michaele-Daoud/Foto12.jpg"
+          data-tablet-img="assets/img/Michaele-Daoud/Foto12.jpg?nf_resize=fit&w=1500&h=1000"
           data-object-fit="cover"
         />
       </aside>
@@ -576,7 +588,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/Michaele-Daoud/Foto10.jpg"
+        src="assets/img/Michaele-Daoud/Foto10.jpg?nf_resize=fit&w=1500&h=1000"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -600,7 +612,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                   ></div>
                   <style>
                     .section-scrollmation-57137 .tiny-scrollmation {
-                      background-image: url(assets/img/Michaele-Daoud/Foto11.jpg);
+                      background-image: url(assets/img/Michaele-Daoud/Foto11.jpg?nf_resize=fit&w=1500&h=1000);
                       background-position: top right;
                     }
                   </style>
@@ -632,7 +644,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                     >
                       <aside class="scrollmation-background-container">
                         <img
-                          src="assets/img/Michaele-Daoud/Foto11.jpg"
+                          src="assets/img/Michaele-Daoud/Foto11.jpg?nf_resize=fit&w=1500&h=1000"
                          
                           data-scrollmation-slide
                           
@@ -645,13 +657,13 @@ class="section section-text-over-media section-text-over-image section-text-over
                 </div>
 <br>
                 <div class="gallery gallery-3">
-                    <div class="item" data-lightbox="mygallery" data-title="Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/Foto3.jpg)">
+                    <div class="item" data-lightbox="mygallery" data-title="Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/Foto3.jpg?nf_resize=fit&w=512&h=512)">
                       <a class="image-dist" data-lightbox="mygallery" data-title="Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/Foto3.jpg"></a>
                     </div>
-                    <div class="item" data-lightbox="mygallery" data-title="'The Lightest Shade of Aflatoon' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/Foto11.jpg)">
+                    <div class="item" data-lightbox="mygallery" data-title="'The Lightest Shade of Aflatoon' // Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/Foto11.jpg?nf_resize=fit&w=512&h=512)">
                       <a class="image-dist" data-lightbox="mygallery" data-title="'The Lightest Shade of Aflatoon' // Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/Foto11.jpg"></a>
                     </div>
-                    <div id="itemfixed3" class="item" data-lightbox="mygallery" data-title="Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/Foto5.jpg)">
+                    <div id="itemfixed3" class="item" data-lightbox="mygallery" data-title="Imatge cedida per Michaele Daoud" style="background-image:url(assets/img/Michaele-Daoud/Foto5.jpg?nf_resize=fit&w=512&h=512)">
                       <a class="image-dist" data-lightbox="mygallery" data-title="Imatge cedida per Michaele Daoud" href="assets/img/Michaele-Daoud/Foto5.jpg"></a>
                     </div>
                   </div>
@@ -665,18 +677,11 @@ class="section section-text-over-media section-text-over-image section-text-over
                       <ul class="pagesLinks">
                         <li class="link"><a href="./index.html">Cultura i Síria</a></li>
                         <li class="link"><a href="./artistes.html">Artistes</a></li>
-                        <li class="link"><a href="./about.html">Qui som ?</a></li>
+                        <li class="link"><a href="./about.html">Qui som?</a></li>
                         <li class="link"><a href="./contact.html">Contacte</a></li>
                     </ul>
-                      <p class="rights">Copyright © 2019      L'art de sobreviure.
-                              Tots els drets reservats.</p>
-                              <div class="media">
-              
-                                  <a href="#"><i class="fab fa-facebook uiMod"></i></a>
-                                  <a href="#"><i class="fab fa-twitter uiMod"></i></a>
-                                  <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
-                                  <a href="#"><i class="fab fa-instagram uiMod"></i></a>
-                              </div>
+                    <br>
+                    <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
               </footer>
 
     <script src="assets/js/shorthand/head.min.js"></script>

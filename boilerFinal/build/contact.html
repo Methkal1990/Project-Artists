@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacte</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|PT+Serif:400,700,400italic,700italic"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+</head>
+<style>
+#navbarElement{
+        background-color: #10b6f3 !important;
+    }
+
+    footer.footer{
+        margin-top: 10rem;
+    }
+
+    .footer ul.pagesLinks {
+      padding-top: 2rem;
+    }
+    @media only screen and (max-width: 500px){
+
+      .footer ul.pagesLinks {
+          width: 95%;
+      }
+    }
+</style>
+<body>
+        <div class="page-overlay" id="overlay-page"></div>
+        <!-- navbar -->
+        <nav class="navbar-box">
+        <div class="navbar" id="navbarElement">
+          <a class="logo" href="#">L'art de sobreviure</a>
+          <div class="menu-icon-lines" onclick="openSlideMenu()">
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+            <div class="icon-line"></div>
+          </div>
+        </div>
+        </nav>
+        <div id="side-menu" class="side-nav">
+          <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="./index.html">Cultura i Síria</a>
+          <a href="./artistes.html">Artistes</a>
+          <a href="./about.html">Qui som?</a>
+          <a href="./contact.html">Contacte</a>
+        </div>
+    <div id="contact-wrapper">
+
+        <section id="contact-a" class="text-center py-3">
+                <div class="container">
+                    <h2 class="section-title">Contacta'ns</h2>
+                    <div class="bottom-line"></div>
+                    <p class="lead">Fes-nos arribar la teva opinió, recomanació, proposta...</p>
+                    <form action="https://formspree.io/artdesobreviure@gmail.com" method="POST" >
+                        <div class="text-fields">
+                            <input type="text" class="text-input name-input" placeholder="Nom" name="Nom">
+                            <input type="text" class="text-input subject-input" placeholder="Assumpte" name="Assumpte">
+                            <input type="email" class="text-input email-input" placeholder="Adreça electrònica" name="Adreça electrònica">
+                            <input type="text" class="text-input phone-input" placeholder="Telèfon" name="Telèfon">
+                            <textarea class="text-input message-input" placeholder="Escriu un missatge" name="Escriu un missatge"></textarea>
+                        </div>
+                        <button type="submit" class="btn-dark btn-background">Envia</button>
+                    </form>
+                </div>
+            </section>
+            <footer class="footer">
+                    <h1 class="footer-title">L'art de sobreviure</h1>
+                    <ul class="pagesLinks">
+                      <li class="link"><a href="./index.html">Cultura i Síria</a></li>
+                      <li class="link"><a href="./artistes.html">Artistes</a></li>
+                      <li class="link"><a href="./about.html">Qui som?</a></li>
+                      <li class="link"><a href="./contact.html">Contacte</a></li>
+                  </ul>
+                  <br>
+                  <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
+            </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

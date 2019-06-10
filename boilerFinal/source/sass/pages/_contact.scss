@@ -1,0 +1,109 @@
+#contact-wrapper{
+    width: 70%;
+    min-height: 100%;
+    margin: auto;
+    padding-top: 10rem;
+
+
+
+
+    #contact-a .text-fields {
+        display: grid;
+        grid-template-areas: 'name email'
+            'subject phone'
+            'message message';
+        grid-gap: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    #contact-a .text-fields .name-input {
+        grid-area: name;
+    }
+    
+    #contact-a .text-fields .subject-input {
+        grid-area: subject;
+    }
+    
+    #contact-a .text-fields .email-input {
+        grid-area: email;
+    }
+    
+    #contact-a .text-fields .phone-input {
+        grid-area: phone;
+    }
+    
+    #contact-a .text-fields .message-input {
+        grid-area: message;
+        height: 100px;
+    }
+    
+    #contact-a .text-fields .text-input {
+        padding: 0.5rem 1rem;
+    }
+    
+    #contact-a button[type='submit'] {
+        width: 50%;
+
+        &:hover{
+            background: #33b5e5;
+        }
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .section-title {
+        color: #333;
+        font-size: 3rem;
+        display: block;
+        padding-bottom: 0.5rem;
+        text-align: center;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+    
+    .bottom-line {
+        height: 3px;
+        width: 3rem;
+        background: #33b5e5;
+        display: block;
+        margin: 0 auto 1rem auto;
+    }
+    
+    .lead {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .btn-dark {
+        display: inline-block;
+      
+        padding: 0.8rem 2rem;
+        transition: all 0.5s;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .btn-background{
+        background: #333;
+    }
+}  
+
+@media only screen and (max-width:500px){
+    #contact-wrapper{
+           
+        #contact-a .text-fields{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 40rem;
+            
+        }
+
+            
+  
+
+    }
+}

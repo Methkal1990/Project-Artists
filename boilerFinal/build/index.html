@@ -64,29 +64,34 @@
     </script>
     <style>
     .footer ul.pagesLinks {
-      padding: 1rem;
+      padding-top: 2rem;
     }
+
     </style>
   </head>
-<body>
-    <!-- navbar -->
-   
-    <nav class="navbar-box">
-        <div class="navbar">
-          <a class="logo uiMod" href="#">L'art de sobreviure</a>
-          <div class="menu-icon-lines" onclick="openSlideMenu()">
-            <div class="icon-line"></div>
-            <div class="icon-line"></div>
-            <div class="icon-line"></div>
-          </div>
-        </div>
-      </nav>
-      <div id="side-menu" class="side-nav">
-          <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-          <a href="#">Home</a>
-          <a href="#">Artistes</a>
-          <a href="#">About</a>
-      </div>
+<body id="start">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div> 
+<div class="page-overlay" id="overlay-page"></div>
+<!-- navbar -->
+<nav class="navbar-box">
+<div class="navbar" id="navbarElement">
+  <a class="logo" href="#">L'art de sobreviure</a>
+  <div class="menu-icon-lines" onclick="openSlideMenu()">
+    <div class="icon-line"></div>
+    <div class="icon-line"></div>
+    <div class="icon-line"></div>
+  </div>
+</div>
+</nav>
+<div id="side-menu" class="side-nav">
+  <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+  <a href="./index.html">Cultura i Síria</a>
+  <a href="./artistes.html">Artistes</a>
+  <a href="./about.html">Qui som?</a>
+  <a href="./contact.html">Contacte</a>
+</div>
 
 
 <!-- slider section-->
@@ -174,7 +179,11 @@
 
   <section class="sectionIntro" id="first">
       <div class="text-box">
-
+        <p style="font-size: 16px">
+          <strong><em>Nota dels autors: Per gaudir d'una millor experiència, recomanem visualitzar el reportatge amb el navegador Chrome i des de l'ordinador.</em></strong>
+          <br>
+          <br>
+        </p>
         <p>Les imatges que deixa una guerra sempre són horripilants: edificis ensorrats, crits d’auxili, l’amenaça de les bombes, cossos sense vida, hospitals saturats. En definitiva, <strong>desesperació, ruïnes i mort</strong>. Aquesta és la realitat quotidiana de molts sirians, o ho era fins que van aconseguir abandonar el país. Cap d’ells es podia imaginar un escenari tan devastador quan el 2011 els carrers de tota Síria es van omplir de manifestants reclamant democràcia. En altres països, com Tunísia, aquestes protestes havien acabat amb la dictadura. A Síria hi havia la mateixa esperança i el mateix desig, però el moviment revolucionari va acabar conduint cap a una <strong>guerra civil que ja fa vuit anys que castiga el país</strong>.
           </p>
       </div>
@@ -209,7 +218,7 @@
       <div class="text-box">
 
      <p>
-        Abans que esclatés la revolució, Síria havia viscut 40 anys de dictadura, primer sota Hafez Al-Assad, i després amb el seu fill Baixar. Un règim que prohibia parlar públicament sobre temes relacionats amb la política, la religió i el sexe perquè considerava que podien desestabilitzar l’equilibri del partit Baath, la formació oficial. Aquestes restriccions es traslladaven a l’escena artística nacional, en què <strong>qualsevol activitat cultural havia de ser autoritzada pel govern</strong>, segons relata l’artista <a href="https://www.iemed.org/observatori/arees-danalisi/arxius-adjunts/afkar/afkar-53/tiempo_cinismo_duelo_Maymanah_Farhat_afkar53.pdf" class="underline" target="_blank">Maymanah Farhat a la revista Afkar/ideas</a>, publicada per l’Institut Europeu de la Mediterrània. 
+        Abans que esclatés la revolució, Síria havia viscut 40 anys de dictadura, primer sota Hafez Al-Assad, i després amb el seu fill Baixar. Un règim que prohibia parlar públicament sobre temes relacionats amb la política, la religió i el sexe perquè considerava que podien desestabilitzar l’equilibri del partit Baath, la formació oficial. Aquestes restriccions es traslladaven a l’escena artística nacional, en què <strong>qualsevol activitat cultural havia de ser autoritzada pel govern</strong>, segons relata l’artista <a href="https://www.iemed.org/observatori/arees-danalisi/arxius-adjunts/afkar/afkar-53/tiempo_cinismo_duelo_Maymanah_Farhat_afkar53.pdf" class="underline" target="_blank">Maymanah Farhat a la revista <em>Afkar/ideas</em></a>, publicada per l’Institut Europeu de la Mediterrània. 
      </p>
      <br>
      <p>
@@ -350,24 +359,17 @@
 
       <a href="./artistes.html" class="artistsButton">Coneix els artistes</a>
     </div>
-<br><br><br><br><br><br>
+<br><br>
     <footer class="footer">
         <h1 class="footer-title">L'art de sobreviure</h1>
         <ul class="pagesLinks">
-            <li class="link"><a href="./index.html">Home</a></li>
+            <li class="link"><a href="./index.html">Cultura i Síria</a></li>
             <li class="link"><a href="./artistes.html">Artistes</a></li>
-            <li class="link"><a href="./about.html">Qui som ?</a></li>
-            <li class="link"><a href="./contact.html">Contact</a></li>
+            <li class="link"><a href="./about.html">Qui som?</a></li>
+            <li class="link"><a href="./contact.html">Contacte</a></li>
         </ul>
-        <p class="rights">Copyright © 2019      L'art de sobreviure.
-                Tots Els Drets Reservats.</p>
-                <div class="media">
-
-                    <a href="#"><i class="fab fa-facebook uiMod"></i></a>
-                    <a href="#"><i class="fab fa-twitter uiMod"></i></a>
-                    <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
-                    <a href="#"><i class="fab fa-instagram uiMod"></i></a>
-                </div>
+        <br>
+        <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
 </footer>
 
 
@@ -392,6 +394,21 @@
 function gotoFix() {
   let gotoInd = document.getElementById("gotoIndicator");
   const screenWidth = window.screen.width;
+  const navbar = document.getElementById("navbarElement");
+
+
+  if ( document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100) {
+    navbar.style.backgroundColor = "#10b6f3";
+    navbar.style.opacity = "0.9";
+    
+  }
+  else if ( document.body.scrollTop < 10 ||
+    document.documentElement.scrollTop < 10) {
+    navbar.style.backgroundColor = "initial";
+    navbar.style.opacity = "1";
+    
+  }
 
   if (screenWidth <= 500) {
     vanishPoint = 9800;
@@ -418,6 +435,12 @@ function gotoFix() {
     gotoInd.style.display="none";
     
   }
+
+    // progress bar 
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
 }
       </script>
 </body>

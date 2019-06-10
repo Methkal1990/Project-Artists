@@ -54,37 +54,91 @@
             );
           } // End if
         });
+        setTimeout(function() {
+    $('#tip').fadeOut('fast');
+}, 20000); // <-- time in milliseconds
       });
     </script>
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cfa8ed34351e9001264fb02&product=inline-share-buttons' async='async'></script>
     <style>
-    #player {
-  height: 0;
-  width: 0
-}
-.speaker{
-  background-image: url(assets/mp3/audio.png);
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-position: 100% 0;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  display: block;
-  position: fixed;
-  bottom: 18px;
-  left: 10px;
-  display: block;
-  z-index: 1000;
-}
-.speakerplay {
-  background-position: 0 0;
-}
+        #player {
+     height: 0;
+     width: 0
+   }
+   .speaker{
+     background-image: url(assets/mp3/audio.png);
+     background-repeat: no-repeat;
+     background-size: 200%;
+     background-position: 100% 0;
+     height: 30px;
+     width: 30px;
+     cursor: pointer;
+     display: inline;
+     position: fixed;
+     bottom: 18px;
+     left: 10px;
+     display: block;
+     z-index: 100000;
+   }
+   .speaker span.tooltip {
+       top: -60px;
+       position: absolute;
+       width: 140px;
+       color: #FFFFFF;
+       background: #000000;
+       height: 45px;
+       line-height: 1.5;
+       
+       border-radius: 6px;
+       font-size: .9rem;
+       padding: .5rem;
+       animation-duration: 3s;
+       animation-iteration-count: infinite;
+   }
+   
+   .speaker span.tooltip:after {
+       content: '';
+       position: absolute;
+       top: 100%;
+       left: 10%;
+       margin-left: -8px;
+       width: 0; height: 0;
+       border-top: 8px solid #000000;
+       border-right: 8px solid transparent;
+       border-left: 8px solid transparent;
+       z-index: 100000;
+   }
+   
+   .speakerplay {
+     background-position: 0 0;
+   }
+   
+   #player{
+     position: fixed;
+   }
+   
+   @media only screen and (max-width:500px){
+     .speaker span.tooltip{
+       width: 90px;
+       font-size: .7rem;
+   
+     }
+   
+     .speaker span.tooltip:after{
+       left: 13%;
+     }
+   }
 
-#player{
-  position: fixed;
-}
-    </style>
+   @media only screen and (max-width: 500px){
+
+     .hero-section-box .hero-section-content .hero-quote {
+         font-size: 1.2rem;
+         padding-left: 6rem;
+         padding-right: 3rem;
+         
+     }
+   }
+       </style>
   </head>
 <body id="start">
 
@@ -100,15 +154,15 @@
         <div class="page-overlay" id="overlay-page"></div>
         <!-- navbar -->
         <nav class="navbar-box">
-          <div class="navbar" id="navbarElement">
-            <a class="logo" href="#">L'art de sobreviure</a>
-            <div class="menu-icon-lines" onclick="openSlideMenu()">
-              <div class="icon-line"></div>
-              <div class="icon-line"></div>
-              <div class="icon-line"></div>
+            <div class="navbar" id="navbarElement">
+              <a class="logo uiMod" href="#">L'art de sobreviure</a>
+              <div class="menu-icon-lines" onclick="openSlideMenu()">
+                <div class="icon-line uiModBack"></div>
+                <div class="icon-line uiModBack"></div>
+                <div class="icon-line uiModBack"></div>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
         <div id="side-menu" class="side-nav">
             <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="./index.html">Cultura i Síria</a>
@@ -164,7 +218,7 @@
       </nav>
   
       <!-- audio background -->
-      <div class="speaker speakerplay"></div>
+      <div class="speaker speakerplay"><span id="tip" class="tooltip animated pulse">This page use background audio click on the icon to turn on or off</span></div>
 
     <!-- episode 1 -->
 
@@ -193,7 +247,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   <picture class="section-background-image text-over-media-background-image">
     <!-- change the image -->
     <img
-      src="assets/img/bassam-dawood/Foto2.jpeg"
+      src="assets/img/bassam-dawood/Foto2.jpeg?nf_resize=fit&w=1500&h=1000"
       data-object-fit="cover"
       data-autoscale-content-ratio="1.77777777778"
     />
@@ -206,15 +260,15 @@ class="section section-text-over-media section-text-over-image section-text-over
           <div class="block text-block">
 
     <p>
-        Vesteix amb una <em>jalabia</em> -una túnica tradicional- i porta un tarbuix o fes al cap i un bastó a la mà. Amb veu greu i entonació melodiosa, el Bassam Dawood explica llegendes i històries d’amor, de cavallers i d’herois mítics. És actor i director de teatre, però sempre que pot es transforma en <em>Hakawati</em> (‘rondallaire’). Per ell, és una qüestió de responsabilitat, perquè aquesta tradició gairebé ha desaparegut a Síria, ja que el darrer <em>Hakawati</em> tradicional va morir fa quatre anys i ningú no ha ocupat el seu lloc. El Bassam lamenta que internet i les xarxes socials en són responsables, perquè capten tot l’interès dels ciutadans. 
+        Vesteix amb una <em>jalabia</em> -una túnica tradicional- i porta un tarbuix o fes al cap i un bastó a la mà. Amb veu greu i entonació melodiosa, el Bassam Dawood explica llegendes i històries d’amor, de cavallers i d’herois mítics. És actor i director de teatre, però sempre que pot es transforma en <em>Hakawati</em> (‘rondallaire’). Per ell, <strong>és una qüestió de responsabilitat, perquè aquesta tradició gairebé ha desaparegut a Síria</strong>, ja que el darrer <em>Hakawati</em> tradicional va morir fa quatre anys i ningú no ha ocupat el seu lloc. El Bassam lamenta que internet i les xarxes socials en són responsables, perquè capten tot l’interès dels ciutadans. 
     </p>
     <br>
     <p>
-        Aquesta tradició centenària, que consisteix a explicar històries de la cultura popular en un lloc públic com un cafè, és present a molts països del món àrab, com el Marroc, Turquia, Síria o el Líban. Té un origen incert, però, segons el Bassam, va néixer al món rural, davant la necessitat d’oci després de les llargues jornades de treball al camp. Aleshores, una persona, que havia de ser un bon orador, s’encarregava d’amenitzar el vespre amb històries i cançons. 
+        Aquesta tradició centenària, que consisteix a <strong>explicar històries de la cultura popular</strong> en un lloc públic com un cafè, és present a molts països del món àrab, com el Marroc, Turquia, Síria o el Líban. Té un origen incert, però, segons el Bassam, va néixer al món rural, davant la necessitat d’oci després de les llargues jornades de treball al camp. Aleshores, una persona, que havia de ser un bon orador, s’encarregava d’amenitzar el vespre amb històries i cançons. 
     </p>
     <br>
     <p>
-        Amb el temps, aquesta persona es dedicaria a anar de granja en granja i finalment arribaria fins a la ciutat, on es va assentar la tradició. Allà, “cada dijous al vespre -perquè el divendres és festiu a Síria i la gent podia quedar-s’hi fins tard-, el <em>Hakawati</em> explicava històries d’una forma poètica i dramàtica, modulant la veu i interactuant amb el públic”. 
+        Amb el temps, aquesta persona es dedicaria a anar de granja en granja i finalment arribaria fins a la ciutat, on es va assentar la tradició. Allà, “cada dijous al vespre -perquè el divendres és festiu a Síria i la gent podia quedar-s’hi fins tard-, el <em>Hakawati</em> <strong>explicava històries d’una forma poètica i dramàtica</strong>, modulant la veu i interactuant amb el públic”. 
     </p>
     <br>
     <!-- video -->
@@ -223,15 +277,15 @@ class="section section-text-over-media section-text-over-image section-text-over
     </div>
     <br>
     <p>
-        Ara, es lamenta aquest actor, la tradició ha quedat en quelcom anecdòtic. Reduïda a una curiositat per als turistes, se n’ha perdut l’essència. Per això, ell treballa des de Berlín, on resideix, per mantenir-la viva. Ho fa, segons diu, tant pels fills dels sirians que han marxat del país i que no coneixen bé la seva cultura com per la resta dels ciutadans. Perquè la del <em>Hakawati</em> és una tradició “que tothom ha de conèixer” i perquè Síria no és només el seu menjar i la guerra. 
+        Ara, es lamenta aquest actor, <strong>la tradició ha quedat en quelcom anecdòtic</strong>. Reduïda a una curiositat per als turistes, se n’ha perdut l’essència. Per això, ell treballa des de Berlín, on resideix, per mantenir-la viva. Ho fa, segons diu, tant pels fills dels sirians que han marxat del país i que no coneixen bé la seva cultura com per la resta dels ciutadans. Perquè la del <em>Hakawati</em> és una tradició “que tothom ha de conèixer” i perquè Síria no és només el seu menjar i la guerra. 
     </p>
     <br>
     <p>
-        Quan va arribar a Berlín, en veure que estava desapareixent, va tornar a la versió tradicional, perquè ell havia començat a fer de <em>Hakawati</em> arran de la revolució. Però ho feia en un format modern: vestit amb roba informal, parlava de les històries oblidades de Síria, de la guerra i de l’exili. A més, utilitzava un llenguatge estàndard, a diferència del format tradicional, en què cal tenir molta cura de la llengua, i en què la musicalitat i la rima tenen molta importància. 
+        Quan va arribar a Berlín, en veure que estava desapareixent, va tornar a la versió tradicional, perquè ell havia començat a fer de <em>Hakawati</em> arran de la revolució. Però ho feia en un format modern: vestit amb roba informal, <strong>parlava de les històries oblidades de Síria, de la guerra i de l’exili</strong>. A més, utilitzava un llenguatge estàndard, a diferència del format tradicional, en què cal tenir molta cura de la llengua, i en què la musicalitat i la rima tenen molta importància. 
     </p>
     <br>
     <p>
-        “Després del 2011 -explica el Bassam- vaig sentir que els mitjans no s’interessaven per les històries humanes, que parlaven de política, però no del que passava a les persones, a Síria. Per això vaig començar a fer de <em>Hakawati</em>. Penso que hi ha moltes històries que s’han de documentar i mantenir, perquè en el futur qui arribi al poder a Síria pot intentar esborrar-les”, argumenta. 
+        “Després del 2011 -explica el Bassam- vaig sentir que els mitjans no s’interessaven per les històries humanes, que parlaven de política, però no del que passava a les persones, a Síria. Per això vaig començar a fer de <em>Hakawati</em>. Penso que <strong>hi ha moltes històries que s’han de documentar i mantenir</strong>, perquè en el futur qui arribi al poder a Síria pot intentar esborrar-les”, argumenta. 
     </p>
     <br>
 </div>
@@ -264,7 +318,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/bassam-dawood/Foto3.jpg"
+        src="assets/img/bassam-dawood/Foto3.jpg?nf_resize=fit&w=1500&h=1000"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -278,11 +332,11 @@ class="section section-text-over-media section-text-over-image section-text-over
           <div class="block text-block">
     <!-- episode 2 -->
     <p>
-        En essència, fer de <em>Hakawati</em> és fer d’actor, però el Bassam Dawood ha treballat al teatre i a la televisió, tant com d’actor com fent de director. A Síria, malgrat la inestabilitat de la professió, ”qualsevol pare prefereix que el seu fill sigui un doctor o un enginyer que un artista”, diu. El narrador es va graduar a l’Institut Superior d’Art Dramàtic de Damasc i va convertir-se en una persona coneguda i respectada. Al seu país, explica, el teatre tenia una gran importància, i any rere any arreu del territori es representaven obres de tota mena, des de clàssics grecs i de la literatura àrab fins a peces modernes. 
+        En essència, <strong>fer de <em>Hakawati</em> és fer d’actor</strong>, però el Bassam Dawood ha treballat al teatre i a la televisió, tant com d’actor com fent de director. A Síria, malgrat la inestabilitat de la professió, ”qualsevol pare prefereix que el seu fill sigui un doctor o un enginyer que un artista”, diu. El narrador es va graduar a l’Institut Superior d’Art Dramàtic de Damasc i va convertir-se en una persona coneguda i respectada. Al seu país, explica, el teatre tenia una gran importància, i any rere any arreu del territori es representaven obres de tota mena, des de clàssics grecs i de la literatura àrab fins a peces modernes. 
     </p>
     <br>
     <p>
-        El Bassam defensa la cultura teatral del seu país, però no deixa de denunciar la difícil situació quant a la llibertat d’expressió. Ell mateix ha experimentat com les obres no podien interpretar sense el vistiplau de les autoritats: primer, calia enviar-los el guió, i després, fer una representació davant d’un agent del Ministeri de Cultura. Només si superava aquests filtres la funció podia prosperar. Tot, per evitar temes que no agraden al règim. “A Síria, és clar, hi ha tres tabús: la política, el sexe i la religió. Però hi ha moltes altres coses de les quals no podem parlar, com dels nens sense sostre que treballen per a les màfies, que tenen relació amb gent important del govern”, assegura l’artista.
+        El Bassam defensa la cultura teatral del seu país, però no deixa de denunciar la difícil situació quant a la llibertat d’expressió. Ell mateix ha experimentat com <strong>les obres no podien interpretar sense el vistiplau de les autoritats</strong>: primer, calia enviar-los el guió, i després, fer una representació davant d’un agent del Ministeri de Cultura. Només si superava aquests filtres la funció podia prosperar. Tot, per evitar temes que no agraden al règim. “A Síria, és clar, hi ha tres tabús: la política, el sexe i la religió. Però hi ha moltes altres coses de les quals no podem parlar, com dels nens sense sostre que treballen per a les màfies, que tenen relació amb gent important del govern”, assegura l’artista.
     </p>
     <!-- video -->
     <br>
@@ -292,11 +346,11 @@ class="section section-text-over-media section-text-over-image section-text-over
     <br>
     <br>
     <p>
-        Tanmateix, aquesta situació de relativa normalitat malgrat la censura del govern va canviar amb la revolució, sobretot amb l’arribada de la guerra, quan es va tornar molt difícil fer teatre. I ja des de l’any 2011, el Bassam es va bolcar a fer activisme polític i a ajudar a tothom qui ho necessitava, tant recol·lectant diners com facilitant-los canviar-se de ciutat quan era necessari. Des de l’ombra, va col·laborar en projectes audiovisuals que pretenien donar veu a la lluita contra el règim, cosa que també feia a les xarxes socials. I ho va fer adoptant un pseudònim, Bassam Dawood, distorsionant la seva veu, i portant una màscara per ocultar la seva cara.
+        Tanmateix, aquesta situació de relativa normalitat malgrat la censura del govern va canviar amb la revolució, sobretot amb l’arribada de la guerra, quan es va tornar molt difícil fer teatre. I ja des de l’any 2011, <strong>el Bassam es va bolcar a fer activisme polític</strong> i a ajudar a tothom qui ho necessitava, tant recol·lectant diners com facilitant-los canviar-se de ciutat quan era necessari. Des de l’ombra, va col·laborar en projectes audiovisuals que pretenien donar veu a la lluita contra el règim, cosa que també feia a les xarxes socials. I ho va fer adoptant un pseudònim, Bassam Dawood, distorsionant la seva veu, i portant una màscara per ocultar la seva cara.
     </p>
     <br>
     <p>
-        A l’octubre de 2012, va crear una emissora de ràdio online, Souriali.net, amb un grup d’amics. La cadena, com moltes pàgines web al país, estava bloquejada i només s’hi podia accedir a través d’una connexió VPN. Però els permetia fer oposició al govern, i el Bassam, responsable de la secció de teatre, l’utilitzava per difondre les seves històries, fent de <em>Hakawati</em> modern. 
+        A l’octubre de 2012, <strong>va crear una emissora de ràdio online</strong>, <em>Souriali.net</em>, amb un grup d’amics. La cadena, com moltes pàgines web al país, estava bloquejada i només s’hi podia accedir a través d’una connexió VPN. Però els permetia fer oposició al govern, i el Bassam, responsable de la secció de teatre, l’utilitzava per difondre les seves històries, fent de <em>Hakawati</em> modern. 
     </p>
 <br>
 </div>
@@ -328,7 +382,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   <picture class="section-background-image text-over-media-background-image">
     <!-- change the image -->
     <img
-      src="assets/img/bassam-dawood/Foto4.jpg"
+      src="assets/img/bassam-dawood/Foto4.jpg?nf_resize=fit&w=1500&h=1000"
       data-object-fit="cover"
       data-autoscale-content-ratio="1.77777777778"
     />
@@ -351,7 +405,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                   ></div>
                   <style>
                     .section-scrollmation-57137 .tiny-scrollmation {
-                      background-image: url(assets/img/bassam-dawood/Foto6.jpg);
+                      background-image: url(assets/img/bassam-dawood/Foto6.jpg?nf_resize=fit&w=700&h=700);
                       background-position: top right;
                     }
                   </style>
@@ -361,32 +415,32 @@ class="section section-text-over-media section-text-over-image section-text-over
                       <div class="block text-block">
 
     <p>
-        Finalment, el Bassam Dawood va abandonar Síria el novembre de 2013, perquè temia per la seva vida i la de la seva dona, que també treballava a la ràdio. Primer van anar al Líban, com molts artistes. Després, gràcies que els van oferir participar en un projecte sobre mitjans de comunicació sirians a Alemanya, van viatjar legalment a Berlín. I quan van acabar el projecte van decidir quedar-s’hi perquè creien que era “el millor per al seu futur”. 
+        Finalment, el Bassam Dawood va abandonar Síria el novembre de 2013, perquè temia per la seva vida i la de la seva dona, que també treballava a la ràdio. Primer van anar al Líban, com molts artistes. Després, gràcies que els van oferir participar en un projecte sobre mitjans de comunicació sirians a Alemanya, van viatjar legalment a Berlín. I quan van acabar el projecte van decidir quedar-s’hi perquè creien que era <strong>“el millor per al seu futur”</strong>. 
     </p>
     <br>
     <p>
-        A Berlín, però, aquest veterà actor no ho ha tingut fàcil. D’una banda, no domina l’alemany, de manera que no pot actuar en aquesta llengua i les seves oportunitats laborals es veuen molt reduïdes. Per això, només ha participat en dues peces teatrals multilingües. De l’altra, en diverses ocasions l’han volgut contractar només pel fet de ser un refugiat, cosa que ell no vol acceptar: “Jo sempre dic: vine a veure el meu art, no a veure un refugiat fent art”, explica. 
+        A Berlín, però, aquest veterà actor no ho ha tingut fàcil. D’una banda, no domina l’alemany, de manera que no pot actuar en aquesta llengua i les seves oportunitats laborals es veuen molt reduïdes. Per això, només ha participat en dues peces teatrals multilingües. De l’altra, en diverses ocasions l’han volgut contractar només pel fet de ser un refugiat, cosa que ell no vol acceptar: <strong>“Jo sempre dic: vine a veure el meu art, no a veure un refugiat fent art”</strong>, explica. 
     </p>
     <br>
     <p>
-        L’emissora de ràdio en què treballava ja no emet, perquè el seu benefactor va exigir que tornessin a Síria per continuar amb el projecte, i ells no ho van acceptar. Ara, sense diners, no pot seguir dotant-la de contingut. Aquesta exigència es pot incloure en la campanya del règim perquè tornin tots els exiliats, amb l’excusa que el país ja és segur.
+        <strong>L’emissora de ràdio en què treballava ja no emet</strong>, perquè el seu benefactor va exigir que tornessin a Síria per continuar amb el projecte, i ells no ho van acceptar. Ara, sense diners, no pot seguir dotant-la de contingut. Aquesta exigència es pot incloure en la campanya del règim perquè tornin tots els exiliats, amb l’excusa que el país ja és segur.
     </p>
     <br>
     <!-- foto 5 -->
     <p>
-        Davant d’aquesta situació, l’activitat principal del Bassam és impartir tallers sobre storytelling o narració, en què els participants han d’explicar quelcom que hagin viscut i ell els ensenya com relatar-ho. És a dir, incideix en el seu passat i els intenta ensenyar a “expressar els seus sentiments i aprendre a seguir endavant”. Segons diu, això funciona com una teràpia tant pels participants com per ell, perquè se sent “útil”. 
+        Davant d’aquesta situació, l’activitat principal del Bassam és <strong>impartir tallers sobre storytelling o narració</strong>, en què els participants han d’explicar quelcom que hagin viscut i ell els ensenya com relatar-ho. És a dir, incideix en el seu passat i els intenta ensenyar a “expressar els seus sentiments i aprendre a seguir endavant”. Segons diu, això funciona com una teràpia tant pels participants com per ell, perquè se sent “útil”. 
     </p>
     <br>
     <p>
-        “A més, l’any passat vam crear una petita organització que es diu <a href="https://nawras.org/about/" class="underline">Nawras</a>, una organització per donar suport a nous artistes, els qui venen com a nouvinguts a Alemanya. En un principi, només ajudàvem a artistes sirians, però vam voler obrir-nos per arribar a persones de totes les nacionalitats, i ajudar-les a continuar amb la carrera artística que tenien abans d’arribar aquí”, comenta. 
+        “L’any passat <strong>vam crear una petita organització que es diu <a href="https://nawras.org/about/" class="underline">Nawras</a></strong>, una plataforma per donar suport a nous artistes, els qui venen com a nouvinguts a Alemanya. En un principi, només ajudàvem a artistes sirians, però vam voler obrir-nos per arribar a persones de totes les nacionalitats, i ajudar-les a continuar amb la carrera artística que tenien abans d’arribar aquí”, comenta l'actor. 
     </p>
     <br>
     <p>
-        Pensant en la seva carrera com a actor, recorda com el va marcar el paper de Creont en una obra moderna que barrejava diferents històries de la literatura grega. “Interpretar aquest personatge va ser molt positiu per mi, va canviar la meva forma d’actuar, perquè ell era violent i boig, i jo no ho sóc”, recorda. Aquest paper el va obligar a sortir de la seva zona de confort. 
+        Pensant en la seva carrera com a actor, recorda com el va marcar el paper de Creont en una obra moderna que barrejava diferents històries de la literatura grega. “Interpretar aquest personatge va ser molt positiu per mi, va canviar la meva forma d’actuar, perquè ell era violent i boig, i jo no ho soc”, recorda. Aquest paper el va obligar a <strong>sortir de la seva zona de confort</strong>. 
     </p>
     <br>
     <p>
-        Allò que no sabia aquest home tranquil i afable és que hauria d’adoptar un pseudònim, passar-se a dir Bassam Dawood, i que acabaria fugint del seu país fins a la capital alemanya. Allà, s’ha convertit gairebé en una institució pels artistes sirians, que recorren a ell per demanar-li consell i ajuda. És, podríem dir, un ambaixador de la cultura de Síria. La veu de les tradicions en perill, com la del <em>Hakawati</em>, i la de tots aquells sirians que es van enfrontar al règim d’Assad i que van patir-ne les conseqüències. Per ells, afirma: “He de recollir aquestes històries perquè no morin, perquè en el futur es pugui saber què va passar a Síria realment”. 
+        Allò que no sabia aquest home tranquil i afable és que hauria d’adoptar un pseudònim, passar-se a dir Bassam Dawood, i que acabaria fugint del seu país fins a la capital alemanya. Allà, <strong>s’ha convertit gairebé en una institució pels artistes sirians</strong>, que recorren a ell per demanar-li consell i ajuda. És, podríem dir, un ambaixador de la cultura de Síria. La veu de les tradicions en perill, com la del <em>Hakawati</em>, i la de tots aquells sirians que es van enfrontar al règim d’Assad i que van patir-ne les conseqüències. Per ells, afirma: “He de recollir aquestes històries perquè no morin, perquè en el futur es pugui saber què va passar a Síria realment”. 
     </p>
     <br>
     
@@ -401,7 +455,7 @@ class="section section-text-over-media section-text-over-image section-text-over
 >
   <aside class="scrollmation-background-container">
     <img
-      src="assets/img/bassam-dawood/Foto6.jpg"
+      src="assets/img/bassam-dawood/Foto6.jpg?nf_resize=fit&w=1500&h=1000"
      
       data-scrollmation-slide
       
@@ -421,18 +475,11 @@ class="section section-text-over-media section-text-over-image section-text-over
     <ul class="pagesLinks">
       <li class="link"><a href="./index.html">Cultura i Síria</a></li>
       <li class="link"><a href="./artistes.html">Artistes</a></li>
-      <li class="link"><a href="./about.html">Qui som ?</a></li>
+      <li class="link"><a href="./about.html">Qui som?</a></li>
       <li class="link"><a href="./contact.html">Contacte</a></li>
   </ul>
-    <p class="rights">Copyright © 2019      L'art de sobreviure.
-            Tots els drets reservats.</p>
-            <div class="media">
-
-                <a href="#"><i class="fab fa-facebook uiMod"></i></a>
-                <a href="#"><i class="fab fa-twitter uiMod"></i></a>
-                <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
-                <a href="#"><i class="fab fa-instagram uiMod"></i></a>
-            </div>
+  <br>
+  <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
 </footer>
     <script src="assets/js/shorthand/head.min.js"></script>
     <script src="assets/js/shorthand/common.min.js"></script>

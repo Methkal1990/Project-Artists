@@ -44,7 +44,7 @@ $(document).on("mouseleave", ".speaker", function() {
   }
 });
 
-$(document).on("click touchend", ".speaker", function() {
+$(document).on("click touch", ".speaker", function() {
   /* Touchend is necessary for mobile devices, click alone won't work */
   if (!$(".speaker").hasClass("speakerplay")) {
     if (audiostatus == "off") {
@@ -91,18 +91,7 @@ function initiateNavigation() {
   let uiModArray = Array.from(uiModNodeList);
   let uiModeBackArray = Array.from(uiModeBackList);
 
-  if ( document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100) {
-    navbar.style.backgroundColor = "#10b6f3";
-    navbar.style.opacity = "0.9";
-    
-  }
-  else if ( document.body.scrollTop < 10 ||
-    document.documentElement.scrollTop < 10) {
-    navbar.style.backgroundColor = "initial";
-    navbar.style.opacity = "1";
-    
-  }
+
 
   if (
     document.body.scrollTop > 1100 ||

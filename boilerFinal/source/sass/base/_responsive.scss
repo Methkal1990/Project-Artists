@@ -88,3 +88,8 @@
 @media only screen and (max-width:730px){
  
 }
+
+
+.ios .section-text-over-media:not(.visible) picture img, .section-media .section-media-details, .section-media .vjs-fullscreen-control {
+    display: initial;
+}

@@ -54,6 +54,9 @@
             );
           } // End if
         });
+        setTimeout(function() {
+    $('#tip').fadeOut('fast');
+}, 20000); // <-- time in milliseconds
       });
     </script>
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cfa8ed34351e9001264fb02&product=inline-share-buttons' async='async'></script>
@@ -70,13 +73,42 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
-  display: block;
+  display: inline;
   position: fixed;
   bottom: 18px;
   left: 10px;
   display: block;
-  z-index: 1000;
+  z-index: 100000;
 }
+.speaker span.tooltip {
+    top: -60px;
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #000000;
+    height: 45px;
+    line-height: 1.5;
+    
+    border-radius: 6px;
+    font-size: .9rem;
+    padding: .5rem;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.speaker span.tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-top: 8px solid #000000;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    z-index: 100000;
+}
+
 .speakerplay {
   background-position: 0 0;
 }
@@ -84,9 +116,26 @@
 #player{
   position: fixed;
 }
+
+@media only screen and (max-width:500px){
+  .speaker span.tooltip{
+    width: 90px;
+    font-size: .7rem;
+
+  }
+
+  .speaker span.tooltip:after{
+    left: 13%;
+  }
+}
     </style>
+
+
   </head>
   <body id="start">
+    <div onclick="void(0)">
+
+    
       <iframe src="assets/mp3/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
       <audio id="player" controls autoplay loop>
 
@@ -99,15 +148,15 @@
       <div class="page-overlay" id="overlay-page"></div>
       <!-- navbar -->
       <nav class="navbar-box">
-        <div class="navbar" id="navbarElement">
-          <a class="logo" href="#">L'art de sobreviure</a>
-          <div class="menu-icon-lines" onclick="openSlideMenu()">
-            <div class="icon-line"></div>
-            <div class="icon-line"></div>
-            <div class="icon-line"></div>
+          <div class="navbar" id="navbarElement">
+            <a class="logo uiMod" href="#">L'art de sobreviure</a>
+            <div class="menu-icon-lines" onclick="openSlideMenu()">
+              <div class="icon-line uiModBack"></div>
+              <div class="icon-line uiModBack"></div>
+              <div class="icon-line uiModBack"></div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
       <div id="side-menu" class="side-nav">
           <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
           <a href="./index.html">Cultura i Síria</a>
@@ -163,7 +212,7 @@
     </nav>
 
     <!-- audio background -->
-    <div class="speaker speakerplay"></div>
+    <div class="speaker speakerplay"><span id="tip" class="tooltip animated pulse">This page use background audio click on the icon to turn on or off</span></div>
     <!-- episode 1 -->
     <!-- change the id to what suits the title of the section -->
 <div
@@ -520,21 +569,14 @@ class="section section-text-over-media section-text-over-image section-text-over
         <ul class="pagesLinks">
           <li class="link"><a href="./index.html">Cultura i Síria</a></li>
           <li class="link"><a href="./artistes.html">Artistes</a></li>
-          <li class="link"><a href="./about.html">Qui som ?</a></li>
+          <li class="link"><a href="./about.html">Qui som?</a></li>
           <li class="link"><a href="./contact.html">Contacte</a></li>
       </ul>
-        <p class="rights">Copyright © 2019      L'art de sobreviure.
-                Tots els drets reservats.</p>
-                <div class="media">
-
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+      <br>
+      <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
 </footer>
 
-
+</div>
     
     <script src="assets/js/shorthand/head.min.js"></script>
     <script src="assets/js/shorthand/common.min.js"></script>
@@ -544,11 +586,10 @@ class="section section-text-over-media section-text-over-image section-text-over
       AOS.init({
         duration: 2000,
       });
-    </script>
-    <script>
-    // background audio control
+
 
     </script>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

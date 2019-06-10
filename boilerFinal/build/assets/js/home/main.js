@@ -93,14 +93,16 @@ $(function() {
 //menu slide effect
 function openSlideMenu(e){
         
-        document.getElementById('side-menu').style.width='300px';
-        document.getElementById('main').style.marginLeft='300px';
-    }
-    function closeSlideMenu(){
-        document.getElementById('side-menu').style.width='0';
-        document.getElementById('main').style.marginLeft='0';
+  document.getElementById('side-menu').style.width='300px';
+  // document.getElementById('main').style.marginLeft='300px';
+  
+  document.getElementById("overlay-page").style.display="block";
 }
-
+function closeSlideMenu(){
+  document.getElementById('side-menu').style.width='0';
+  document.getElementById("overlay-page").style.display="none";
+  // document.getElementById('main').style.marginLeft='0';
+}
 
 // parallax
 

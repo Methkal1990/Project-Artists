@@ -54,11 +54,14 @@
             );
           } // End if
         });
+        setTimeout(function() {
+    $('#tip').fadeOut('fast');
+}, 20000); // <-- time in milliseconds
       });
     </script>
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cfa8ed34351e9001264fb02&product=inline-share-buttons' async='async'></script>
     <style>
-    #player {
+     #player {
   height: 0;
   width: 0
 }
@@ -70,19 +73,60 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
-  display: block;
+  display: inline;
   position: fixed;
   bottom: 18px;
   left: 10px;
   display: block;
-  z-index: 1000;
+  z-index: 100000;
 }
+.speaker span.tooltip {
+    top: -60px;
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #000000;
+    height: 45px;
+    line-height: 1.5;
+    
+    border-radius: 6px;
+    font-size: .9rem;
+    padding: .5rem;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.speaker span.tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-top: 8px solid #000000;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    z-index: 100000;
+}
+
 .speakerplay {
   background-position: 0 0;
 }
 
 #player{
   position: fixed;
+}
+
+@media only screen and (max-width:500px){
+  .speaker span.tooltip{
+    width: 90px;
+    font-size: .7rem;
+
+  }
+
+  .speaker span.tooltip:after{
+    left: 13%;
+  }
 }
     </style>
   </head>
@@ -101,15 +145,15 @@
         <div class="page-overlay" id="overlay-page"></div>
         <!-- navbar -->
         <nav class="navbar-box">
-          <div class="navbar" id="navbarElement">
-            <a class="logo" href="#">L'art de sobreviure</a>
-            <div class="menu-icon-lines" onclick="openSlideMenu()">
-              <div class="icon-line"></div>
-              <div class="icon-line"></div>
-              <div class="icon-line"></div>
+            <div class="navbar" id="navbarElement">
+              <a class="logo uiMod" href="#">L'art de sobreviure</a>
+              <div class="menu-icon-lines" onclick="openSlideMenu()">
+                <div class="icon-line uiModBack"></div>
+                <div class="icon-line uiModBack"></div>
+                <div class="icon-line uiModBack"></div>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
         <div id="side-menu" class="side-nav">
             <a href="#!" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="./index.html">Cultura i Síria</a>
@@ -165,7 +209,7 @@
                   </nav>
               
                   <!-- audio background -->
-                  <div class="speaker speakerplay"></div>
+                  <div class="speaker speakerplay"><span id="tip" class="tooltip animated pulse">This page use background audio click on the icon to turn on or off</span></div>
                   
 
     <!-- episode 1 -->
@@ -214,7 +258,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   ></div>
   <style>
     .section-scrollmation-5712 .tiny-scrollmation {
-      background-image: url(assets/img/Athrodeel/Foto2.jpg);
+      background-image: url(assets/img/Athrodeel/Foto2.jpg?nf_resize=fit&w=700&h=700);
       background-position: top left;
     }
   </style>
@@ -260,9 +304,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 >
   <aside class="scrollmation-background-container">
     <img
-      src="assets/img/Athrodeel/Foto2.jpg"
+      src="assets/img/Athrodeel/Foto2.jpg?nf_resize=fit&w=1500&h=1000"
       data-scrollmation-slide
-      data-tablet-img="assets/img/Athrodeel/Foto2.jpg"
+      data-tablet-img="assets/img/Athrodeel/Foto2.jpg?nf_resize=fit&w=1500&h=1000"
       data-object-fit="cover"
     />
   </aside>
@@ -339,7 +383,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/Athrodeel/Foto1-1.jpg"
+        src="assets/img/Athrodeel/Foto1-1.jpg?nf_resize=fit&w=1500&h=1000"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -365,7 +409,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   ></div>
   <style>
     .section-scrollmation-571 .tiny-scrollmation {
-      background-image: url(assets/img/Athrodeel/Foto3-1.jpg);
+      background-image: url(assets/img/Athrodeel/Foto3-1.jpg?nf_resize=fit&w=1500&h=1000);
       background-position: top left;
     }
   </style>
@@ -397,13 +441,16 @@ class="section section-text-over-media section-text-over-image section-text-over
     <div class="block media-block media-block-image">
             <div class="inline-media">
               <div class="inline-image">
-                <img class="image" src="assets/img/Athrodeel/Foto4-1.jpg" />
+                <img class="image" src="assets/img/Athrodeel/Foto4-1.jpg?nf_resize=fit&w=800&h=800" />
               </div>
           
               
             </div>
           </div>
-          
+          <p class="media-block-caption caption">
+            <!-- caption here if you want, if not remove this p tag -->
+            <strong>"Vull canvi però no vull sang, no vull que ningú mori" // Nil Montilla</strong>
+          <br>
     <br>
     <p>
         Amb això en ment, l’any 2012 l’Ahmad va decidir marxar de Síria per continuar els seus estudis. La seva primera intenció va ser anar a Andalusia, on estaven <strong>les millors escoles de flamenc</strong>, però com que no sabia parlar castellà, va decidir venir a Barcelona, on sí que hi havia escoles de música en anglès. Primer, però, el guitarrista es va matricular en un màster d’Administració i Direcció d’Empreses.
@@ -417,12 +464,16 @@ class="section section-text-over-media section-text-over-image section-text-over
     <div class="block media-block media-block-image">
             <div class="inline-media">
               <div class="inline-image">
-                <img class="image" src="assets/img/Athrodeel/Foto4.jpg" />
+                <img class="image" src="assets/img/Athrodeel/Foto4.jpg?nf_resize=fit&w=800&h=800" />
               </div>
           
               
             </div>
           </div>
+          <p class="media-block-caption caption">
+            <!-- caption here if you want, if not remove this p tag -->
+            <strong>L’Aseel sent que té la “responsabilitat” de mostrar com és Síria de debò // <br> Cedida per Athrodeel</strong>
+          <br>
     <br>
     <p>
         Un any després, el 2013, l’Aseel va graduar-se en Medicina General a Síria, i va ser llavors quan va decidir seguir-lo a Barcelona per viure amb ell, també amb la intenció de continuar els seus estudis. L’adaptació va ser instantània: “Catalunya, com qualsevol país mediterrani, és una cultura tan familiar per nosaltres que <strong>no ens va costar gens adaptar-nos</strong> -comenta la cantant-. Encara que no parlis l’idioma, la gent és tan amable que pot ajudar-te en qualsevol cosa”. 
@@ -450,9 +501,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 >
   <aside class="scrollmation-background-container">
     <img
-      src="assets/img/Athrodeel/Foto3-1.jpg"
+      src="assets/img/Athrodeel/Foto3-1.jpg?nf_resize=fit&w=1500&h=1000"
       data-scrollmation-slide
-      data-tablet-img="assets/img/Athrodeel/Foto3-1.jpg"
+      data-tablet-img="assets/img/Athrodeel/Foto3-1.jpg?nf_resize=fit&w=1500&h=1000"
       data-object-fit="cover"
     />
   </aside>
@@ -508,7 +559,7 @@ class="section section-text-over-media section-text-over-image section-text-over
   ></div>
   <style>
     .section-scrollmation-57125 .tiny-scrollmation {
-      background-image: url(assets/img/Athrodeel/Foto5.jpg);
+      background-image: url(assets/img/Athrodeel/Foto5.jpg?nf_resize=fit&w=700&h=700);
       background-position: top left;
     }
   </style>
@@ -596,9 +647,9 @@ class="section section-text-over-media section-text-over-image section-text-over
 >
   <aside class="scrollmation-background-container">
     <img
-      src="assets/img/Athrodeel/Foto5.jpg"
+      src="assets/img/Athrodeel/Foto5.jpg?nf_resize=fit&w=1500&h=1000"
       data-scrollmation-slide
-      data-tablet-img="assets/img/Athrodeel/Foto5.jpg"
+      data-tablet-img="assets/img/Athrodeel/Foto5.jpg?nf_resize=fit&w=1500&h=1000"
       data-object-fit="cover"
     />
   </aside>
@@ -633,7 +684,7 @@ class="section section-text-over-media section-text-over-image section-text-over
     <picture class="section-background-image text-over-media-background-image">
       <!-- change the image -->
       <img
-        src="assets/img/Athrodeel/Foto6.jpg"
+        src="assets/img/Athrodeel/Foto6.jpg?nf_resize=fit&w=1500&h=1000"
         data-object-fit="cover"
         data-autoscale-content-ratio="1.77777777778"
       />
@@ -656,7 +707,7 @@ class="section section-text-over-media section-text-over-image section-text-over
                   ></div>
                   <style>
                     .section-scrollmation-57137 .tiny-scrollmation {
-                      background-image: url(assets/img/Athrodeel/Foto7.jpg);
+                      background-image: url(assets/img/Athrodeel/Foto7.jpg?nf_resize=fit&w=1500&h=1000);
                       background-position: top right;
                     }
                   </style>
@@ -697,7 +748,7 @@ class="section section-text-over-media section-text-over-image section-text-over
 >
   <aside class="scrollmation-background-container">
     <img
-      src="assets/img/Athrodeel/Foto7.jpg"
+      src="assets/img/Athrodeel/Foto7.jpg?nf_resize=fit&w=1500&h=1000"
      
       data-scrollmation-slide
       
@@ -717,18 +768,11 @@ class="section section-text-over-media section-text-over-image section-text-over
     <ul class="pagesLinks">
       <li class="link"><a href="./index.html">Cultura i Síria</a></li>
       <li class="link"><a href="./artistes.html">Artistes</a></li>
-      <li class="link"><a href="./about.html">Qui som ?</a></li>
+      <li class="link"><a href="./about.html">Qui som?</a></li>
       <li class="link"><a href="./contact.html">Contacte</a></li>
   </ul>
-    <p class="rights">Copyright © 2019      L'art de sobreviure.
-            Tots els drets reservats.</p>
-            <div class="media">
-
-                <a href="#"><i class="fab fa-facebook uiMod"></i></a>
-                <a href="#"><i class="fab fa-twitter uiMod"></i></a>
-                <a href="#"><i class="fab fa-linkedin uiMod"></i></a>
-                <a href="#"><i class="fab fa-instagram uiMod"></i></a>
-            </div>
+  <br>
+  <p class="rights"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a></p>
 </footer>
 
 
